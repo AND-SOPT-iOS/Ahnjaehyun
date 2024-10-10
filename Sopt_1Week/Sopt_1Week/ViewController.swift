@@ -6,7 +6,9 @@
 //
 import UIKit
 
-class ViewController: UIViewController {
+
+// 커스텀 뷰를 위한 UITextViewDelegate 추가
+class ViewController: UIViewController, UITextViewDelegate {
 
   
     
@@ -82,7 +84,12 @@ class ViewController: UIViewController {
         return label
       }()
       
-      
+    
+    
+    
+    //커스텀 UITextView를 위한 변수 초기화
+    private let placeholderText = "다짐을 적어주세요!"
+
       
       /*
         -----------------------
@@ -106,12 +113,27 @@ class ViewController: UIViewController {
       textView.layer.borderWidth = 1
       textView.layer.cornerRadius = 5
       textView.backgroundColor = .white
-      textView.textColor = .black
+      textView.textColor = .lightGray // 기본 placeholder 색상
+      textView.text = "다짐을 적어주세요!" // 초기 placeholder 텍스트
 
         return textView
     }()
 
-      
+    // UITextViewDelegate 메서드: 텍스트뷰가 편집을 시작할 때 호출됨
+       func textViewDidBeginEditing(_ textView: UITextView) {
+           if textView.text == placeholderText {
+               textView.text = "" // placeholder를 지우고
+               textView.textColor = .black // 실제 입력 색상으로 변경
+           }
+       }
+
+       // UITextViewDelegate 메서드: 텍스트뷰 편집이 끝날 때 호출됨
+       func textViewDidEndEditing(_ textView: UITextView) {
+           if textView.text.isEmpty { // 아무 내용이 없으면 placeholder 다시 설정
+               textView.text = placeholderText
+               textView.textColor = .lightGray
+           }
+       }
       
       
       
@@ -275,8 +297,15 @@ class ViewController: UIViewController {
         self.view.backgroundColor = .red
         setUI()
         setLayout()
+        
+        // 델리게이트 설정
+        contentTextView.delegate = self
     }
 
+    
+    
+    
+    
     // UI 설정
     private func setUI() {
         [titleLabel_1, idTextField, titleLabel_2, contentTextView, nextButton, changeButton].forEach {
