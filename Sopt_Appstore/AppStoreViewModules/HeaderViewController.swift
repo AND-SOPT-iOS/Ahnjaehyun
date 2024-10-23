@@ -63,9 +63,11 @@ class HeaderViewController: UIViewController {
         // 1. 앱 아이콘 설정
         view.addSubview(appIconImageView)
         appIconImageView.snp.makeConstraints { make in
+            
             make.leading.equalToSuperview().offset(20)
             make.top.equalToSuperview().offset(20)
             make.width.height.equalTo(100)
+            
         }
         
         // 2. 앱 이름 설정
