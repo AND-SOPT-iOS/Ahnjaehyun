@@ -6,6 +6,10 @@
 	objectVersion = 77;
 	objects = {
 
+/* Begin PBXBuildFile section */
+		D6F6185F2CC959DB001EE4EA /* SnapKit in Frameworks */ = {isa = PBXBuildFile; productRef = D6F6185E2CC959DB001EE4EA /* SnapKit */; };
+/* End PBXBuildFile section */
+
 /* Begin PBXContainerItemProxy section */
 		D620236E2CC956FD002554FC /* PBXContainerItemProxy */ = {
 			isa = PBXContainerItemProxy;
@@ -65,6 +69,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				D6F6185F2CC959DB001EE4EA /* SnapKit in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -125,6 +130,7 @@
 			);
 			name = Sopt_Appstore;
 			packageProductDependencies = (
+				D6F6185E2CC959DB001EE4EA /* SnapKit */,
 			);
 			productName = Sopt_Appstore;
 			productReference = D62023572CC956FC002554FC /* Sopt_Appstore.app */;
@@ -208,6 +214,9 @@
 			);
 			mainGroup = D620234E2CC956FC002554FC;
 			minimizedProjectReferenceProxies = 1;
+			packageReferences = (
+				D6F6185D2CC959DB001EE4EA /* XCRemoteSwiftPackageReference "SnapKit" */,
+			);
 			preferredProjectObjectVersion = 77;
 			productRefGroup = D62023582CC956FC002554FC /* Products */;
 			projectDirPath = "";
@@ -569,6 +578,25 @@
 			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
+
+/* Begin XCRemoteSwiftPackageReference section */
+		D6F6185D2CC959DB001EE4EA /* XCRemoteSwiftPackageReference "SnapKit" */ = {
+			isa = XCRemoteSwiftPackageReference;
+			repositoryURL = "https://github.com/SnapKit/SnapKit.git";
+			requirement = {
+				kind = upToNextMajorVersion;
+				minimumVersion = 5.7.1;
+			};
+		};
+/* End XCRemoteSwiftPackageReference section */
+
+/* Begin XCSwiftPackageProductDependency section */
+		D6F6185E2CC959DB001EE4EA /* SnapKit */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = D6F6185D2CC959DB001EE4EA /* XCRemoteSwiftPackageReference "SnapKit" */;
+			productName = SnapKit;
+		};
+/* End XCSwiftPackageProductDependency section */
 	};
 	rootObject = D620234F2CC956FC002554FC /* Project object */;
 }
