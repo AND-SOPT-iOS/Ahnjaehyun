@@ -156,9 +156,9 @@ class ViewController: UIViewController, UIScrollViewDelegate {
         updateInfoViewController.didMove(toParent: self)
         
         updateInfoViewController.view.snp.makeConstraints { make in
-            make.top.equalTo(ratingViewController.view.snp.bottom).offset(20)
+            make.top.equalTo(ratingViewController.view.snp.bottom)
             make.leading.trailing.equalTo(contentView)
-            make.height.equalTo(contentView.snp.width).multipliedBy(0.35)
+            make.height.equalTo(contentView.snp.width).multipliedBy(0.3)
         }
         
         addChild(previewViewController)
