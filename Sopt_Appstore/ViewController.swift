@@ -14,6 +14,7 @@ class ViewController: UIViewController, UIScrollViewDelegate {
     let updateInfoViewController = UpdateInfoViewController()
     let previewViewController = PreviewViewController()
     let infoViewController = InfoViewController()
+    let reviewTopViewController = ReviewTopViewController()
 
     
     
@@ -123,18 +124,16 @@ class ViewController: UIViewController, UIScrollViewDelegate {
 
     // MARK: - ScrollView 설정
     func setupScrollView() {
-        // ScrollView와 ContentView 추가
+
         view.addSubview(scrollView)
         scrollView.addSubview(contentView)
 
-        // ScrollView 레이아웃 설정
         scrollView.snp.makeConstraints { make in
             make.top.equalTo(view.safeAreaLayoutGuide)
             make.leading.trailing.equalToSuperview()
             make.bottom.equalTo(myTabBarController.tabBar.snp.top)
         }
 
-        // ContentView 레이아웃 설정
         contentView.snp.makeConstraints { make in
             make.edges.equalToSuperview()
             make.width.equalToSuperview()
@@ -152,7 +151,6 @@ class ViewController: UIViewController, UIScrollViewDelegate {
         }
         
         
-        // ratingViewController 추가 및 레이아웃 설정
         addChild(ratingViewController)
         contentView.addSubview(ratingViewController.view)
         ratingViewController.didMove(toParent: self)
@@ -163,7 +161,6 @@ class ViewController: UIViewController, UIScrollViewDelegate {
             make.height.equalTo(150)
         }
         
-        // InfoViewController 추가 및 레이아웃 설정
         addChild(updateInfoViewController)
         contentView.addSubview(updateInfoViewController.view)
         updateInfoViewController.didMove(toParent: self)
@@ -193,6 +190,17 @@ class ViewController: UIViewController, UIScrollViewDelegate {
             make.leading.trailing.equalTo(contentView)
             make.height.equalTo(100)
         }
+        
+        addChild(reviewTopViewController)
+        contentView.addSubview(reviewTopViewController.view)
+        reviewTopViewController.didMove(toParent: self)
+
+        reviewTopViewController.view.snp.makeConstraints { make in
+            make.top.equalTo(infoViewController.view.snp.bottom)
+            make.leading.trailing.equalTo(contentView)
+            make.height.equalTo(150)
+        }
+
 
         
         
