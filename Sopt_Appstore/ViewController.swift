@@ -15,6 +15,7 @@ class ViewController: UIViewController, UIScrollViewDelegate {
     let previewViewController = PreviewViewController()
     let infoViewController = InfoViewController()
     let reviewTopViewController = ReviewTopViewController()
+    let reviewMidViewController = ReviewMidViewController()
 
     
     
@@ -137,7 +138,7 @@ class ViewController: UIViewController, UIScrollViewDelegate {
         contentView.snp.makeConstraints { make in
             make.edges.equalToSuperview()
             make.width.equalToSuperview()
-            make.height.equalTo(1000)
+            make.height.equalTo(1500)
         }
 
         // HeaderViewController 추가 및 레이아웃 설정
@@ -146,8 +147,8 @@ class ViewController: UIViewController, UIScrollViewDelegate {
         headerViewController.didMove(toParent: self)
 
         headerViewController.view.snp.makeConstraints { make in
-            make.top.leading.trailing.equalTo(contentView)
-            make.height.equalTo(150)
+            make.top.leading.trailing.equalTo(contentView).offset(20)
+            make.height.equalTo(contentView.snp.width).multipliedBy(0.4)
         }
         
         
@@ -156,9 +157,9 @@ class ViewController: UIViewController, UIScrollViewDelegate {
         ratingViewController.didMove(toParent: self)
 
         ratingViewController.view.snp.makeConstraints { make in
-            make.top.equalTo(headerViewController.view.snp.bottom)
+            make.top.equalTo(headerViewController.view.snp.bottom).offset(20)
             make.leading.trailing.equalTo(contentView)
-            make.height.equalTo(150)
+            make.height.equalTo(contentView.snp.width).multipliedBy(0.3)
         }
         
         addChild(updateInfoViewController)
@@ -166,9 +167,9 @@ class ViewController: UIViewController, UIScrollViewDelegate {
         updateInfoViewController.didMove(toParent: self)
         
         updateInfoViewController.view.snp.makeConstraints { make in
-            make.top.equalTo(ratingViewController.view.snp.bottom)
+            make.top.equalTo(ratingViewController.view.snp.bottom).offset(20)
             make.leading.trailing.equalTo(contentView)
-            make.height.equalTo(200)
+            make.height.equalTo(contentView.snp.width).multipliedBy(0.35)
         }
         
         addChild(previewViewController)
@@ -176,9 +177,9 @@ class ViewController: UIViewController, UIScrollViewDelegate {
         previewViewController.didMove(toParent: self)
         
         previewViewController.view.snp.makeConstraints { make in
-            make.top.equalTo(updateInfoViewController.view.snp.bottom)
+            make.top.equalTo(updateInfoViewController.view.snp.bottom).offset(20)
             make.leading.trailing.equalTo(contentView)
-            make.height.equalTo(300)
+            make.height.equalTo(contentView.snp.width).multipliedBy(0.85)
         }
         
         addChild(infoViewController)
@@ -186,9 +187,9 @@ class ViewController: UIViewController, UIScrollViewDelegate {
         infoViewController.didMove(toParent: self)
 
         infoViewController.view.snp.makeConstraints { make in
-            make.top.equalTo(previewViewController.view.snp.bottom)
+            make.top.equalTo(previewViewController.view.snp.bottom).offset(20)
             make.leading.trailing.equalTo(contentView)
-            make.height.equalTo(100)
+            make.height.equalTo(contentView.snp.width).multipliedBy(0.35)
         }
         
         addChild(reviewTopViewController)
@@ -196,11 +197,26 @@ class ViewController: UIViewController, UIScrollViewDelegate {
         reviewTopViewController.didMove(toParent: self)
 
         reviewTopViewController.view.snp.makeConstraints { make in
-            make.top.equalTo(infoViewController.view.snp.bottom)
+            make.top.equalTo(infoViewController.view.snp.bottom).offset(20)
             make.leading.trailing.equalTo(contentView)
-            make.height.equalTo(150)
+            make.height.equalTo(contentView.snp.width).multipliedBy(0.4)
         }
 
+
+        addChild(reviewMidViewController)
+        contentView.addSubview(reviewMidViewController.view)
+      
+        reviewMidViewController.view.snp.makeConstraints { make in
+            make.top.equalTo(reviewTopViewController.view.snp.bottom).offset(20)
+            make.leading.equalTo(contentView).offset(20)
+            make.trailing.equalTo(contentView).offset(-20) // trailing은 반대로 설정하여 양쪽에서 20씩 여백
+
+            make.height.equalTo(contentView.snp.width).multipliedBy(0.7)
+            
+        }
+        reviewMidViewController.didMove(toParent: self)
+        reviewMidViewController.view.layer.cornerRadius = 20
+        reviewMidViewController.view.clipsToBounds = true
 
         
         

@@ -8,7 +8,7 @@
 
 /* Begin PBXBuildFile section */
 		D63E7C2A2CCB64D50092D225 /* ReviewTopViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = D63E7C162CCB64D50092D225 /* ReviewTopViewController.swift */; };
-		D63E7C2B2CCB64D50092D225 /* FooterViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = D63E7C172CCB64D50092D225 /* FooterViewController.swift */; };
+		D63E7C2B2CCB64D50092D225 /* ReviewMidViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = D63E7C172CCB64D50092D225 /* ReviewMidViewController.swift */; };
 		D63E7C2C2CCB64D50092D225 /* HeaderViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = D63E7C182CCB64D50092D225 /* HeaderViewController.swift */; };
 		D63E7C2D2CCB64D50092D225 /* InfoViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = D63E7C192CCB64D50092D225 /* InfoViewController.swift */; };
 		D63E7C2E2CCB64D50092D225 /* PreviewViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = D63E7C1A2CCB64D50092D225 /* PreviewViewController.swift */; };
@@ -46,7 +46,7 @@
 		D620236D2CC956FD002554FC /* Sopt_AppstoreTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = Sopt_AppstoreTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		D62023772CC956FD002554FC /* Sopt_AppstoreUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = Sopt_AppstoreUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		D63E7C162CCB64D50092D225 /* ReviewTopViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ReviewTopViewController.swift; sourceTree = "<group>"; };
-		D63E7C172CCB64D50092D225 /* FooterViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FooterViewController.swift; sourceTree = "<group>"; };
+		D63E7C172CCB64D50092D225 /* ReviewMidViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ReviewMidViewController.swift; sourceTree = "<group>"; };
 		D63E7C182CCB64D50092D225 /* HeaderViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HeaderViewController.swift; sourceTree = "<group>"; };
 		D63E7C192CCB64D50092D225 /* InfoViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = InfoViewController.swift; sourceTree = "<group>"; };
 		D63E7C1A2CCB64D50092D225 /* PreviewViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PreviewViewController.swift; sourceTree = "<group>"; };
@@ -130,7 +130,7 @@
 				D63E7C1A2CCB64D50092D225 /* PreviewViewController.swift */,
 				D63E7C192CCB64D50092D225 /* InfoViewController.swift */,
 				D63E7C162CCB64D50092D225 /* ReviewTopViewController.swift */,
-				D63E7C172CCB64D50092D225 /* FooterViewController.swift */,
+				D63E7C172CCB64D50092D225 /* ReviewMidViewController.swift */,
 				D63E7C1C2CCB64D50092D225 /* ReviewViewController.swift */,
 			);
 			path = AppStoreViewModules;
@@ -300,7 +300,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				D63E7C2A2CCB64D50092D225 /* ReviewTopViewController.swift in Sources */,
-				D63E7C2B2CCB64D50092D225 /* FooterViewController.swift in Sources */,
+				D63E7C2B2CCB64D50092D225 /* ReviewMidViewController.swift in Sources */,
 				D63E7C2C2CCB64D50092D225 /* HeaderViewController.swift in Sources */,
 				D63E7C2D2CCB64D50092D225 /* InfoViewController.swift in Sources */,
 				D63E7C2E2CCB64D50092D225 /* PreviewViewController.swift in Sources */,
