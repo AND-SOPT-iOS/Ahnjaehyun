@@ -11,7 +11,8 @@ class ViewController: UIViewController, UIScrollViewDelegate {
 
     let headerViewController = HeaderViewController()
     let ratingViewController = RatingViewController()
-    
+    let infoViewController = InfoViewController()
+
     let scrollView = UIScrollView()
     let contentView = UIView()
 
@@ -154,8 +155,20 @@ class ViewController: UIViewController, UIScrollViewDelegate {
         ratingViewController.view.snp.makeConstraints { make in
             make.top.equalTo(headerViewController.view.snp.bottom)
             make.leading.trailing.equalTo(contentView)
-            make.height.equalTo(120)
+            make.height.equalTo(90)
         }
+        
+        // InfoViewController 추가 및 레이아웃 설정
+        addChild(infoViewController)
+        contentView.addSubview(infoViewController.view)
+        infoViewController.didMove(toParent: self)
+        
+        infoViewController.view.snp.makeConstraints { make in
+            make.top.equalTo(ratingViewController.view.snp.bottom)
+            make.leading.trailing.equalTo(contentView)
+            make.height.equalTo(0)
+        }
+        
     }
 
     // MARK: - 스크롤 이벤트 처리
