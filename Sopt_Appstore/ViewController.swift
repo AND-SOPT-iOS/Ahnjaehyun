@@ -16,8 +16,9 @@ class ViewController: UIViewController, UIScrollViewDelegate {
     let infoViewController = InfoViewController()
     let reviewTopViewController = ReviewTopViewController()
     let reviewMidViewController = ReviewMidViewController()
+    let reviewBottomViewController = ReviewBottomViewController()
 
-    
+
     
 
     let scrollView = UIScrollView()
@@ -138,7 +139,7 @@ class ViewController: UIViewController, UIScrollViewDelegate {
         contentView.snp.makeConstraints { make in
             make.edges.equalToSuperview()
             make.width.equalToSuperview()
-            make.height.equalTo(1500)
+            make.height.equalTo(1700)
         }
 
         // HeaderViewController 추가 및 레이아웃 설정
@@ -219,6 +220,16 @@ class ViewController: UIViewController, UIScrollViewDelegate {
         reviewMidViewController.view.clipsToBounds = true
 
         
+        addChild(reviewBottomViewController)
+        contentView.addSubview(reviewBottomViewController.view)
+        reviewBottomViewController.didMove(toParent: self)
+
+        reviewBottomViewController.view.snp.makeConstraints { make in
+            make.top.equalTo(reviewMidViewController.view.snp.bottom).offset(20)
+            make.leading.trailing.equalTo(contentView)
+            make.height.equalTo(150)
+        }
+
         
     }
 

@@ -13,7 +13,7 @@
 		D63E7C2D2CCB64D50092D225 /* InfoViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = D63E7C192CCB64D50092D225 /* InfoViewController.swift */; };
 		D63E7C2E2CCB64D50092D225 /* PreviewViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = D63E7C1A2CCB64D50092D225 /* PreviewViewController.swift */; };
 		D63E7C2F2CCB64D50092D225 /* RatingViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = D63E7C1B2CCB64D50092D225 /* RatingViewController.swift */; };
-		D63E7C302CCB64D50092D225 /* ReviewViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = D63E7C1C2CCB64D50092D225 /* ReviewViewController.swift */; };
+		D63E7C302CCB64D50092D225 /* ReviewBottomViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = D63E7C1C2CCB64D50092D225 /* ReviewBottomViewController.swift */; };
 		D63E7C322CCB64D50092D225 /* UpdateInfoViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = D63E7C1E2CCB64D50092D225 /* UpdateInfoViewController.swift */; };
 		D63E7C332CCB64D50092D225 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = D63E7C202CCB64D50092D225 /* AppDelegate.swift */; };
 		D63E7C342CCB64D50092D225 /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = D63E7C272CCB64D50092D225 /* SceneDelegate.swift */; };
@@ -51,7 +51,7 @@
 		D63E7C192CCB64D50092D225 /* InfoViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = InfoViewController.swift; sourceTree = "<group>"; };
 		D63E7C1A2CCB64D50092D225 /* PreviewViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PreviewViewController.swift; sourceTree = "<group>"; };
 		D63E7C1B2CCB64D50092D225 /* RatingViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RatingViewController.swift; sourceTree = "<group>"; };
-		D63E7C1C2CCB64D50092D225 /* ReviewViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ReviewViewController.swift; sourceTree = "<group>"; };
+		D63E7C1C2CCB64D50092D225 /* ReviewBottomViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ReviewBottomViewController.swift; sourceTree = "<group>"; };
 		D63E7C1E2CCB64D50092D225 /* UpdateInfoViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UpdateInfoViewController.swift; sourceTree = "<group>"; };
 		D63E7C202CCB64D50092D225 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		D63E7C212CCB64D50092D225 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
@@ -131,7 +131,7 @@
 				D63E7C192CCB64D50092D225 /* InfoViewController.swift */,
 				D63E7C162CCB64D50092D225 /* ReviewTopViewController.swift */,
 				D63E7C172CCB64D50092D225 /* ReviewMidViewController.swift */,
-				D63E7C1C2CCB64D50092D225 /* ReviewViewController.swift */,
+				D63E7C1C2CCB64D50092D225 /* ReviewBottomViewController.swift */,
 			);
 			path = AppStoreViewModules;
 			sourceTree = "<group>";
@@ -305,7 +305,7 @@
 				D63E7C2D2CCB64D50092D225 /* InfoViewController.swift in Sources */,
 				D63E7C2E2CCB64D50092D225 /* PreviewViewController.swift in Sources */,
 				D63E7C2F2CCB64D50092D225 /* RatingViewController.swift in Sources */,
-				D63E7C302CCB64D50092D225 /* ReviewViewController.swift in Sources */,
+				D63E7C302CCB64D50092D225 /* ReviewBottomViewController.swift in Sources */,
 				D63E7C322CCB64D50092D225 /* UpdateInfoViewController.swift in Sources */,
 				D63E7C332CCB64D50092D225 /* AppDelegate.swift in Sources */,
 				D63E7C342CCB64D50092D225 /* SceneDelegate.swift in Sources */,
