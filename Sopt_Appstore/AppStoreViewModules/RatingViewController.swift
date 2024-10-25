@@ -147,7 +147,7 @@ class RatingViewController: UIViewController {
         view.addSubview(separatorLine)
         separatorLine.snp.makeConstraints { make in
             make.leading.trailing.equalToSuperview().inset(20)
-            make.centerY.equalToSuperview().offset(20)
+            make.bottom.equalToSuperview().offset(20)
             make.height.equalTo(0.5)
         }
 

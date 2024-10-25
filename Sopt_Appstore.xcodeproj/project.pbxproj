@@ -126,12 +126,12 @@
 			children = (
 				D63E7C182CCB64D50092D225 /* HeaderViewController.swift */,
 				D63E7C1B2CCB64D50092D225 /* RatingViewController.swift */,
-				D63E7C192CCB64D50092D225 /* InfoViewController.swift */,
+				D63E7C1E2CCB64D50092D225 /* UpdateInfoViewController.swift */,
 				D63E7C1A2CCB64D50092D225 /* PreviewViewController.swift */,
+				D63E7C192CCB64D50092D225 /* InfoViewController.swift */,
 				D63E7C162CCB64D50092D225 /* FeatureViewController.swift */,
 				D63E7C172CCB64D50092D225 /* FooterViewController.swift */,
 				D63E7C1C2CCB64D50092D225 /* ReviewViewController.swift */,
-				D63E7C1E2CCB64D50092D225 /* UpdateInfoViewController.swift */,
 			);
 			path = AppStoreViewModules;
 			sourceTree = "<group>";

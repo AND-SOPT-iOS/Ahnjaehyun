@@ -11,7 +11,10 @@ class ViewController: UIViewController, UIScrollViewDelegate {
 
     let headerViewController = HeaderViewController()
     let ratingViewController = RatingViewController()
-    let infoViewController = InfoViewController()
+    let updateInfoViewController = UpdateInfoViewController()
+    let previewViewController = PreviewViewController()
+
+    
 
     let scrollView = UIScrollView()
     let contentView = UIView()
@@ -155,19 +158,30 @@ class ViewController: UIViewController, UIScrollViewDelegate {
         ratingViewController.view.snp.makeConstraints { make in
             make.top.equalTo(headerViewController.view.snp.bottom)
             make.leading.trailing.equalTo(contentView)
-            make.height.equalTo(90)
+            make.height.equalTo(150)
         }
         
         // InfoViewController 추가 및 레이아웃 설정
-        addChild(infoViewController)
-        contentView.addSubview(infoViewController.view)
-        infoViewController.didMove(toParent: self)
+        addChild(updateInfoViewController)
+        contentView.addSubview(updateInfoViewController.view)
+        updateInfoViewController.didMove(toParent: self)
         
-        infoViewController.view.snp.makeConstraints { make in
+        updateInfoViewController.view.snp.makeConstraints { make in
             make.top.equalTo(ratingViewController.view.snp.bottom)
             make.leading.trailing.equalTo(contentView)
-            make.height.equalTo(0)
+            make.height.equalTo(200)
         }
+        
+        addChild(previewViewController)
+        contentView.addSubview(previewViewController.view)
+        previewViewController.didMove(toParent: self)
+        
+        previewViewController.view.snp.makeConstraints { make in
+            make.top.equalTo(updateInfoViewController.view.snp.bottom)
+            make.leading.trailing.equalTo(contentView)
+            make.height.equalTo(300)
+        }
+        
         
     }
 
