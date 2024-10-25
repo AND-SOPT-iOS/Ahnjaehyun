@@ -22,6 +22,7 @@
 		D63E7C382CCB64D50092D225 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = D63E7C242CCB64D50092D225 /* LaunchScreen.storyboard */; };
 		D63E7C392CCB64D50092D225 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = D63E7C262CCB64D50092D225 /* Main.storyboard */; };
 		D63E7C3D2CCBC7BD0092D225 /* VersionPageViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = D63E7C3C2CCBC7BD0092D225 /* VersionPageViewController.swift */; };
+		D63E7C402CCBCA8C0092D225 /* ReviewPageViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = D63E7C3F2CCBCA8C0092D225 /* ReviewPageViewController.swift */; };
 		D6F6185F2CC959DB001EE4EA /* SnapKit in Frameworks */ = {isa = PBXBuildFile; productRef = D6F6185E2CC959DB001EE4EA /* SnapKit */; };
 /* End PBXBuildFile section */
 
@@ -62,6 +63,7 @@
 		D63E7C272CCB64D50092D225 /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
 		D63E7C282CCB64D50092D225 /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
 		D63E7C3C2CCBC7BD0092D225 /* VersionPageViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = VersionPageViewController.swift; sourceTree = "<group>"; };
+		D63E7C3F2CCBCA8C0092D225 /* ReviewPageViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ReviewPageViewController.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFileSystemSynchronizedRootGroup section */
@@ -158,6 +160,7 @@
 			isa = PBXGroup;
 			children = (
 				D63E7C3C2CCBC7BD0092D225 /* VersionPageViewController.swift */,
+				D63E7C3F2CCBCA8C0092D225 /* ReviewPageViewController.swift */,
 			);
 			path = Navigation;
 			sourceTree = "<group>";
@@ -315,6 +318,7 @@
 				D63E7C2C2CCB64D50092D225 /* HeaderViewController.swift in Sources */,
 				D63E7C2D2CCB64D50092D225 /* InfoViewController.swift in Sources */,
 				D63E7C2E2CCB64D50092D225 /* PreviewViewController.swift in Sources */,
+				D63E7C402CCBCA8C0092D225 /* ReviewPageViewController.swift in Sources */,
 				D63E7C2F2CCB64D50092D225 /* RatingViewController.swift in Sources */,
 				D63E7C302CCB64D50092D225 /* ReviewBottomViewController.swift in Sources */,
 				D63E7C322CCB64D50092D225 /* UpdateInfoViewController.swift in Sources */,

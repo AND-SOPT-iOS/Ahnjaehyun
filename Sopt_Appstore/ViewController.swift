@@ -40,21 +40,17 @@ class ViewController: UIViewController, UIScrollViewDelegate {
 
     // MARK: - 네비게이션 바 설정
     func setupNavigationBar() {
-        // 커스텀 뷰로 "< 검색" 버튼 구성
         let backButtonView = UIView()
         let backImageView = UIImageView(image: UIImage(systemName: "chevron.left"))
         let backLabel = UILabel()
 
-        // < 아이콘 설정
         backImageView.tintColor = .blue
         backImageView.contentMode = .scaleAspectFit
         
-        // 검색 텍스트 라벨 설정
         backLabel.text = "검색"
         backLabel.textColor = .blue
         backLabel.font = UIFont.systemFont(ofSize: 17)
 
-        // 스택뷰로 아이콘과 라벨을 함께 배치
         let stackView = UIStackView(arrangedSubviews: [backImageView, backLabel])
         stackView.axis = .horizontal
         stackView.spacing = 5
@@ -65,13 +61,11 @@ class ViewController: UIViewController, UIScrollViewDelegate {
             make.edges.equalToSuperview()
         }
 
-        // 커스텀 뷰로 UIBarButtonItem 생성 및 추가
         let backButton = UIBarButtonItem(customView: backButtonView)
         navigationItem.leftBarButtonItem = backButton
 
-        // 네비게이션 바 스타일 초기 설정
         let appearance = UINavigationBarAppearance()
-        appearance.configureWithTransparentBackground() // 투명 배경 설정
+        appearance.configureWithTransparentBackground()
         navigationController?.navigationBar.standardAppearance = appearance
         navigationController?.navigationBar.scrollEdgeAppearance = appearance
     }
@@ -87,7 +81,6 @@ class ViewController: UIViewController, UIScrollViewDelegate {
         let arcadeVC = UIViewController()
         let searchVC = UIViewController()
 
-        // 각 탭바 아이템 설정
         todayVC.tabBarItem = UITabBarItem(title: "투데이", image: UIImage(systemName: "house.fill"), tag: 0)
         gameVC.tabBarItem = UITabBarItem(title: "게임", image: UIImage(systemName: "gamecontroller.fill"), tag: 1)
         appVC.tabBarItem = UITabBarItem(title: "앱", image: UIImage(systemName: "app.fill"), tag: 2)
@@ -97,27 +90,22 @@ class ViewController: UIViewController, UIScrollViewDelegate {
         
         myTabBarController.viewControllers = [todayVC, gameVC, appVC, arcadeVC, searchVC]
 
-        // 탭바 외형
         let appearance = UITabBarAppearance()
         appearance.configureWithOpaqueBackground()
         appearance.backgroundColor = UIColor(red: 25/255, green: 25/255, blue: 25/255, alpha: 1)
 
-        // 탭바 스타일
         myTabBarController.tabBar.standardAppearance = appearance
         if #available(iOS 15.0, *) {
             myTabBarController.tabBar.scrollEdgeAppearance = appearance
         }
 
-        // 탭바 아이템 색상
         myTabBarController.tabBar.tintColor = .white
         myTabBarController.tabBar.unselectedItemTintColor = .lightGray
 
-        // 탭바를 현재 ViewController에 추가
         addChild(myTabBarController)
         view.addSubview(myTabBarController.view)
         myTabBarController.didMove(toParent: self)
 
-        // 탭바의 위치 및 크기 설정
         myTabBarController.view.snp.makeConstraints { make in
             make.leading.trailing.bottom.equalTo(view)
             make.height.equalTo(50)
@@ -142,7 +130,6 @@ class ViewController: UIViewController, UIScrollViewDelegate {
             make.height.equalTo(1700)
         }
 
-        // HeaderViewController 추가 및 레이아웃 설정
         addChild(headerViewController)
         contentView.addSubview(headerViewController.view)
         headerViewController.didMove(toParent: self)
@@ -213,7 +200,7 @@ class ViewController: UIViewController, UIScrollViewDelegate {
             make.leading.equalTo(contentView).offset(20)
             make.trailing.equalTo(contentView).offset(-20) // trailing은 반대로 설정하여 양쪽에서 20씩 여백
 
-            make.height.equalTo(contentView.snp.width).multipliedBy(0.7)
+            make.height.equalTo(contentView.snp.width).multipliedBy(0.6)
             
         }
         reviewMidViewController.didMove(toParent: self)

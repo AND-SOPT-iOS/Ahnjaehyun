@@ -126,8 +126,16 @@ class ReviewTopViewController: UIViewController {
             make.bottom.equalTo(ratingLabel)
             make.trailing.equalToSuperview().offset(-20)
 
+            
+        arrowButton.addTarget(self, action: #selector(arrowButtonTapped), for: .touchUpInside)
+
         }
+        
     }
+    @objc func arrowButtonTapped() {
+           let reviewPage = ReviewPageViewController()
+           navigationController?.pushViewController(reviewPage, animated: true)
+       }
 }
 
 #Preview {

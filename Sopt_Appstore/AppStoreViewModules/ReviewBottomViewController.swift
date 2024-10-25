@@ -50,7 +50,7 @@ class ReviewBottomViewController: UIViewController {
         config.preferredSymbolConfigurationForImage = largeConfig
            
         config.baseForegroundColor = .systemBlue
-        config.imagePadding = 8 // 텍스트와 이미지 간의 간격 설정
+        config.imagePadding = 8 
         config.background.backgroundColor = UIColor(red: 28/255, green: 28/255, blue: 30/255, alpha: 1.0)
         config.background.cornerRadius = 15
         
@@ -71,7 +71,7 @@ class ReviewBottomViewController: UIViewController {
         config.preferredSymbolConfigurationForImage = largeConfig
            
         config.baseForegroundColor = .systemBlue
-        config.imagePadding = 8 // 텍스트와 이미지 간의 간격 설정
+        config.imagePadding = 8
         config.background.backgroundColor = UIColor(red: 28/255, green: 28/255, blue: 30/255, alpha: 1.0)
         config.background.cornerRadius = 15
         
