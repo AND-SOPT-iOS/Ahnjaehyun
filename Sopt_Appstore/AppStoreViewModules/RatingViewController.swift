@@ -17,7 +17,7 @@ class RatingViewController: UIViewController {
         return label
     }()
 
-    private let ratingValueLabel: UILabel = {
+    private let ratingMid: UILabel = {
         let label = UILabel()
         label.text = "4.4"
         label.font = UIFont.boldSystemFont(ofSize: 24)
@@ -25,7 +25,7 @@ class RatingViewController: UIViewController {
         return label
     }()
 
-    private let starRatingView: UILabel = {
+    private let ratingBottom: UILabel = {
         let label = UILabel()
         label.text = "★★★★★"
         label.font = UIFont.systemFont(ofSize: 14)
@@ -33,14 +33,7 @@ class RatingViewController: UIViewController {
         return label
     }()
 
-    private let awardImageView: UIImageView = {
-        let imageView = UIImageView()
-        let symbolConfiguration = UIImage.SymbolConfiguration(pointSize: 24)
-        imageView.image = UIImage(systemName: "star.fill", withConfiguration: symbolConfiguration)
-        imageView.tintColor = .systemGray
-        imageView.contentMode = .scaleAspectFit
-        return imageView
-    }()
+   
 
     private let awardLabel: UILabel = {
         let label = UILabel()
@@ -49,16 +42,27 @@ class RatingViewController: UIViewController {
         label.textColor = .systemGray
         return label
     }()
+    
+    private let awardMid: UIImageView = {
+        let imageView = UIImageView()
+        let symbolConfiguration = UIImage.SymbolConfiguration(pointSize: 24)
+        imageView.image = UIImage(systemName: "star.fill", withConfiguration: symbolConfiguration)
+        imageView.tintColor = .systemGray
+        imageView.contentMode = .scaleAspectFit
+        return imageView
+    }()
 
-    private let appLabel: UILabel = {
+    private let awardBottom: UILabel = {
         let label = UILabel()
         label.text = "앱"
         label.font = UIFont.systemFont(ofSize: 12)
         label.textColor = .systemGray
         return label
     }()
+    
+    
 
-    private let ageLabel2: UILabel = {
+    private let ageLabel: UILabel = {
         let label = UILabel()
         label.text = "연령"
         label.font = UIFont.boldSystemFont(ofSize: 12)
@@ -66,7 +70,7 @@ class RatingViewController: UIViewController {
         return label
     }()
 
-    private let ageLabel: UILabel = {
+    private let ageMid: UILabel = {
         let label = UILabel()
         label.text = "4+"
         label.font = UIFont.boldSystemFont(ofSize: 24)
@@ -74,7 +78,7 @@ class RatingViewController: UIViewController {
         return label
     }()
 
-    private let ageTextLabel: UILabel = {
+    private let ageBottom: UILabel = {
         let label = UILabel()
         label.text = "세"
         label.font = UIFont.systemFont(ofSize: 12)
@@ -82,23 +86,8 @@ class RatingViewController: UIViewController {
         return label
     }()
 
+    
     private let chartLabel: UILabel = {
-        let label = UILabel()
-        label.text = "#6"
-        label.font = UIFont.boldSystemFont(ofSize: 24)
-        label.textColor = .systemGray
-        return label
-    }()
-
-    private let chartTextLabel: UILabel = {
-        let label = UILabel()
-        label.text = "차트"
-        label.font = UIFont.systemFont(ofSize: 12)
-        label.textColor = .systemGray
-        return label
-    }()
-
-    private let chartLabel2: UILabel = {
         let label = UILabel()
         label.text = "금융"
         label.font = UIFont.boldSystemFont(ofSize: 12)
@@ -106,6 +95,25 @@ class RatingViewController: UIViewController {
         return label
     }()
 
+    private let chartMid: UILabel = {
+        let label = UILabel()
+        label.text = "#6"
+        label.font = UIFont.boldSystemFont(ofSize: 24)
+        label.textColor = .systemGray
+        return label
+    }()
+
+    private let chartBottom: UILabel = {
+        let label = UILabel()
+        label.text = "차트"
+        label.font = UIFont.systemFont(ofSize: 12)
+        label.textColor = .systemGray
+        return label
+    }()
+
+ 
+    
+    
     private let separatorTopLine: UIView = {
         let view = UIView()
         view.backgroundColor = .systemGray
@@ -118,24 +126,28 @@ class RatingViewController: UIViewController {
         return view
     }()
 
-    private let verticalSeparator1: UIView = {
+    
+    
+    private let verticalSeparatorLeft: UIView = {
         let view = UIView()
         view.backgroundColor = .systemGray
         return view
     }()
 
-    private let verticalSeparator2: UIView = {
+    private let verticalSeparatorMid: UIView = {
         let view = UIView()
         view.backgroundColor = .systemGray
         return view
     }()
 
-    private let verticalSeparator3: UIView = {
+    private let verticalSeparatorRight: UIView = {
         let view = UIView()
         view.backgroundColor = .systemGray
         return view
     }()
 
+    
+    
     override func viewDidLoad() {
         super.viewDidLoad()
         setupUI()
@@ -147,117 +159,142 @@ class RatingViewController: UIViewController {
         view.addSubview(separatorTopLine)
         view.addSubview(separatorBottomLine)
         view.addSubview(ratingLabel)
-        view.addSubview(ratingValueLabel)
-        view.addSubview(starRatingView)
-        view.addSubview(verticalSeparator1)
-        view.addSubview(appLabel)
-        view.addSubview(awardImageView)
+        view.addSubview(ratingMid)
+        view.addSubview(ratingBottom)
+        view.addSubview(verticalSeparatorLeft)
+        view.addSubview(awardBottom)
+        view.addSubview(awardMid)
         view.addSubview(awardLabel)
-        view.addSubview(verticalSeparator2)
-        view.addSubview(ageTextLabel)
+        view.addSubview(verticalSeparatorMid)
+        view.addSubview(ageBottom)
+        view.addSubview(ageMid)
         view.addSubview(ageLabel)
-        view.addSubview(ageLabel2)
-        view.addSubview(verticalSeparator3)
-        view.addSubview(chartLabel2)
+        view.addSubview(verticalSeparatorRight)
         view.addSubview(chartLabel)
-        view.addSubview(chartTextLabel)
+        view.addSubview(chartMid)
+        view.addSubview(chartBottom)
 
 
         separatorTopLine.snp.makeConstraints { make in
             make.leading.trailing.equalToSuperview().inset(20)
-            make.bottom.equalToSuperview().offset(20)
-            make.height.equalTo(0.5)
+            make.top.equalToSuperview().offset(500)
+            make.height.equalTo(1)
         }
 
+        
+        ratingLabel.snp.makeConstraints { make in
+            make.top.equalTo(separatorTopLine.snp.bottom).offset(10)
+            make.leading.equalToSuperview().offset(20)
+        }
+
+        ratingMid.snp.makeConstraints { make in
+            make.top.equalTo(ratingLabel.snp.bottom).offset(5)
+            make.centerX.equalTo(ratingLabel)
+        }
+
+        
+        ratingBottom.snp.makeConstraints { make in
+            make.centerX.equalTo(ratingLabel)
+            make.top.equalTo(ratingMid.snp.bottom).offset(5)
+        }
+        
+        
+        
+        
         separatorBottomLine.snp.makeConstraints { make in
             make.leading.trailing.equalToSuperview().inset(20)
-            make.bottom.equalTo(separatorTopLine.snp.top).offset(-10)
-            make.height.equalTo(3)
+            make.top.equalTo(ratingBottom.snp.bottom).offset(10)
+            make.height.equalTo(1)
         }
 
-        starRatingView.snp.makeConstraints { make in
-            make.centerX.equalToSuperview().offset(-view.frame.width * 3.4 / 9)
-            make.bottom.equalTo(separatorTopLine.snp.top).offset(-5)
-        }
 
-        ratingValueLabel.snp.makeConstraints { make in
-            make.centerX.equalTo(starRatingView.snp.centerX)
-            make.bottom.equalTo(starRatingView.snp.top).offset(-5)
-        }
+        
 
-        ratingLabel.snp.makeConstraints { make in
-            make.centerX.equalTo(ratingValueLabel.snp.centerX)
-            make.bottom.equalTo(ratingValueLabel.snp.top).offset(-5)
-        }
+        
 
-        verticalSeparator1.snp.makeConstraints { make in
-            make.centerX.equalToSuperview().offset(-view.frame.width * 2.3 / 9)
-            make.bottom.equalTo(separatorTopLine.snp.top).offset(-20)
+        verticalSeparatorLeft.snp.makeConstraints { make in
+            make.centerX.equalToSuperview().offset(-view.frame.width * 2.0 / 9)
+            make.top.equalTo(separatorTopLine.snp.bottom).offset(30)
             make.width.equalTo(0.5)
             make.height.equalTo(30)
         }
-
-        appLabel.snp.makeConstraints { make in
-            make.centerX.equalToSuperview().offset(-view.frame.width * 1.14 / 9)
-            make.bottom.equalTo(separatorTopLine.snp.top).offset(-5)
-        }
-
-        awardImageView.snp.makeConstraints { make in
-            make.centerX.equalTo(appLabel.snp.centerX)
-            make.bottom.equalTo(appLabel.snp.top).offset(-5)
-        }
-
-        awardLabel.snp.makeConstraints { make in
-            make.centerX.equalTo(appLabel.snp.centerX)
-            make.bottom.equalTo(awardImageView.snp.top).offset(-5)
-        }
-
-        verticalSeparator2.snp.makeConstraints { make in
+        
+        
+        verticalSeparatorMid.snp.makeConstraints { make in
             make.centerX.equalToSuperview()
-            make.bottom.equalTo(separatorTopLine.snp.top).offset(-20)
+            make.top.equalTo(separatorTopLine.snp.bottom).offset(30)
             make.width.equalTo(0.5)
             make.height.equalTo(30)
         }
 
-        ageTextLabel.snp.makeConstraints { make in
-            make.centerX.equalToSuperview().offset(view.frame.width * 1.14 / 9)
-            make.bottom.equalTo(separatorTopLine.snp.top).offset(-5)
+        verticalSeparatorRight.snp.makeConstraints { make in
+            make.centerX.equalToSuperview().offset(view.frame.width * 2.0 / 9)
+            make.top.equalTo(separatorTopLine.snp.bottom).offset(30)
+            make.width.equalTo(0.5)
+            make.height.equalTo(30)
+        }
+        
+        
+        
+        awardLabel.snp.makeConstraints { make in
+            make.centerY.equalTo(ratingLabel)
+            make.centerX.equalToSuperview().offset(-view.frame.width * 0.98 / 9)
+        }
+        
+        awardMid.snp.makeConstraints { make in
+            make.centerY.equalTo(ratingMid)
+            make.centerX.equalTo(awardLabel)
         }
 
+        awardBottom.snp.makeConstraints { make in
+            make.centerY.equalTo(ratingBottom)
+            make.centerX.equalTo(awardLabel)
+        }
+
+        
+        
+        
         ageLabel.snp.makeConstraints { make in
-            make.centerX.equalTo(ageTextLabel.snp.centerX)
-            make.bottom.equalTo(ageTextLabel.snp.top).offset(-5)
+            make.centerX.equalToSuperview().offset(view.frame.width * 0.98 / 9)
+            make.centerY.equalTo(ratingLabel)
+        }
+        
+        ageMid.snp.makeConstraints { make in
+            make.centerX.equalTo(ageLabel)
+            make.centerY.equalTo(ratingMid)
         }
 
-        ageLabel2.snp.makeConstraints { make in
-            make.centerX.equalTo(ageTextLabel.snp.centerX)
-            make.bottom.equalTo(ageLabel.snp.top).offset(-5)
+        ageBottom.snp.makeConstraints { make in
+            make.centerX.equalTo(ageLabel)
+            make.centerY.equalTo(ratingBottom)
         }
 
-        verticalSeparator3.snp.makeConstraints { make in
-            make.centerX.equalToSuperview().offset(view.frame.width * 2.3 / 9)
-            make.bottom.equalTo(separatorTopLine.snp.top).offset(-20)
-            make.width.equalTo(0.5)
-            make.height.equalTo(30)
-        }
-
-        chartLabel2.snp.makeConstraints { make in
-            make.centerX.equalToSuperview().offset(view.frame.width * 3.4 / 9)
-            make.bottom.equalTo(separatorTopLine.snp.top).offset(-5)
-        }
-
+        
         chartLabel.snp.makeConstraints { make in
-            make.centerX.equalTo(chartLabel2.snp.centerX)
-            make.bottom.equalTo(chartLabel2.snp.top).offset(-5)
+            make.trailing.equalToSuperview().offset(-55)
+            make.centerY.equalTo(ratingLabel)
         }
 
-        chartTextLabel.snp.makeConstraints { make in
-            make.centerX.equalTo(chartLabel2.snp.centerX)
-            make.bottom.equalTo(chartLabel.snp.top).offset(-5)
+        chartMid.snp.makeConstraints { make in
+            make.centerX.equalTo(chartLabel)
+            make.centerY.equalTo(ratingMid)
         }
+
+        chartBottom.snp.makeConstraints { make in
+            make.centerX.equalTo(chartLabel)
+            make.centerY.equalTo(ratingBottom)
+        }
+
+
+
     }
 }
 
+    
+    
+    
+    
+    
 #Preview {
     RatingViewController()
 }
