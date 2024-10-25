@@ -148,8 +148,9 @@ class ViewController: UIViewController, UIScrollViewDelegate {
         headerViewController.didMove(toParent: self)
 
         headerViewController.view.snp.makeConstraints { make in
-            make.top.leading.trailing.equalTo(contentView).offset(20)
-            make.height.equalTo(contentView.snp.width).multipliedBy(0.4)
+            make.edges.equalToSuperview()
+
+            make.height.equalTo(contentView.snp.width).multipliedBy(0.3)
         }
         
         
