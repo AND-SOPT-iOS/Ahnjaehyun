@@ -4,56 +4,181 @@
 //
 //  Created by Jaehyun Ahn on 10/24/24.
 //
-
-
 import UIKit
 import SnapKit
 
-class ViewController: UIViewController {
+class ViewController: UIViewController, UIScrollViewDelegate {
 
+    let headerViewController = HeaderViewController()
+    let ratingViewController = RatingViewController()
+    
     let scrollView = UIScrollView()
     let contentView = UIView()
+
+    let myTabBarController = UITabBarController()
 
     override func viewDidLoad() {
         super.viewDidLoad()
 
+        view.backgroundColor = .black
+        
+        setupNavigationBar()
+
+        setupTabBarController()
+
         setupScrollView()
-
-        let headerVC = HeaderViewController()
-        addChild(headerVC)
-        contentView.addSubview(headerVC.view)
-        headerVC.view.snp.makeConstraints { make in
-            make.top.equalToSuperview()
-            make.leading.trailing.equalToSuperview()
-            make.height.equalTo(200)
-        }
-        headerVC.didMove(toParent: self)
-
-        let ratingVC = RatingViewController()
-        addChild(ratingVC)
-        contentView.addSubview(ratingVC.view)
-        ratingVC.view.snp.makeConstraints { make in
-            make.top.equalTo(headerVC.view.snp.bottom)
-            make.leading.trailing.equalToSuperview()
-            make.bottom.equalToSuperview()
-        }
-        ratingVC.didMove(toParent: self)
     }
 
-    func setupScrollView() {
-        view.addSubview(scrollView)
-        scrollView.snp.makeConstraints { make in
-            make.edges.equalTo(view.safeAreaLayoutGuide)
+    // MARK: - 네비게이션 바 설정
+    func setupNavigationBar() {
+        // 커스텀 뷰로 "< 검색" 버튼 구성
+        let backButtonView = UIView()
+        let backImageView = UIImageView(image: UIImage(systemName: "chevron.left"))
+        let backLabel = UILabel()
+
+        // < 아이콘 설정
+        backImageView.tintColor = .blue
+        backImageView.contentMode = .scaleAspectFit
+        
+        // 검색 텍스트 라벨 설정
+        backLabel.text = "검색"
+        backLabel.textColor = .blue
+        backLabel.font = UIFont.systemFont(ofSize: 17)
+
+        // 스택뷰로 아이콘과 라벨을 함께 배치
+        let stackView = UIStackView(arrangedSubviews: [backImageView, backLabel])
+        stackView.axis = .horizontal
+        stackView.spacing = 5
+        stackView.alignment = .center
+        
+        backButtonView.addSubview(stackView)
+        stackView.snp.makeConstraints { make in
+            make.edges.equalToSuperview()
         }
 
+        // 커스텀 뷰로 UIBarButtonItem 생성 및 추가
+        let backButton = UIBarButtonItem(customView: backButtonView)
+        navigationItem.leftBarButtonItem = backButton
+
+        // 네비게이션 바 스타일 초기 설정
+        let appearance = UINavigationBarAppearance()
+        appearance.configureWithTransparentBackground() // 투명 배경 설정
+        navigationController?.navigationBar.standardAppearance = appearance
+        navigationController?.navigationBar.scrollEdgeAppearance = appearance
+    }
+    
+    // MARK: - 탭바 설정
+    func setupTabBarController() {
+        scrollView.delegate = self // 스크롤 이벤트 처리?
+
+
+        let todayVC = UIViewController()
+        let gameVC = UIViewController()
+        let appVC = UIViewController()
+        let arcadeVC = UIViewController()
+        let searchVC = UIViewController()
+
+        // 각 탭바 아이템 설정
+        todayVC.tabBarItem = UITabBarItem(title: "투데이", image: UIImage(systemName: "house.fill"), tag: 0)
+        gameVC.tabBarItem = UITabBarItem(title: "게임", image: UIImage(systemName: "gamecontroller.fill"), tag: 1)
+        appVC.tabBarItem = UITabBarItem(title: "앱", image: UIImage(systemName: "app.fill"), tag: 2)
+        arcadeVC.tabBarItem = UITabBarItem(title: "아케이드", image: UIImage(systemName: "cube.box.fill"), tag: 3)
+        searchVC.tabBarItem = UITabBarItem(title: "검색", image: UIImage(systemName: "magnifyingglass"), tag: 4)
+
+        
+        myTabBarController.viewControllers = [todayVC, gameVC, appVC, arcadeVC, searchVC]
+
+        // 탭바 외형
+        let appearance = UITabBarAppearance()
+        appearance.configureWithOpaqueBackground()
+        appearance.backgroundColor = UIColor(red: 25/255, green: 25/255, blue: 25/255, alpha: 1)
+
+        // 탭바 스타일
+        myTabBarController.tabBar.standardAppearance = appearance
+        if #available(iOS 15.0, *) {
+            myTabBarController.tabBar.scrollEdgeAppearance = appearance
+        }
+
+        // 탭바 아이템 색상
+        myTabBarController.tabBar.tintColor = .white
+        myTabBarController.tabBar.unselectedItemTintColor = .lightGray
+
+        // 탭바를 현재 ViewController에 추가
+        addChild(myTabBarController)
+        view.addSubview(myTabBarController.view)
+        myTabBarController.didMove(toParent: self)
+
+        // 탭바의 위치 및 크기 설정
+        myTabBarController.view.snp.makeConstraints { make in
+            make.leading.trailing.bottom.equalTo(view)
+            make.height.equalTo(50)
+        }
+    }
+
+    // MARK: - ScrollView 설정
+    func setupScrollView() {
+        // ScrollView와 ContentView 추가
+        view.addSubview(scrollView)
         scrollView.addSubview(contentView)
+
+        // ScrollView 레이아웃 설정
+        scrollView.snp.makeConstraints { make in
+            make.top.equalTo(view.safeAreaLayoutGuide)
+            make.leading.trailing.equalToSuperview()
+            make.bottom.equalTo(myTabBarController.tabBar.snp.top)
+        }
+
+        // ContentView 레이아웃 설정
         contentView.snp.makeConstraints { make in
             make.edges.equalToSuperview()
             make.width.equalToSuperview()
+            make.height.equalTo(1000)
+        }
+
+        // HeaderViewController 추가 및 레이아웃 설정
+        addChild(headerViewController)
+        contentView.addSubview(headerViewController.view)
+        headerViewController.didMove(toParent: self)
+
+        headerViewController.view.snp.makeConstraints { make in
+            make.top.leading.trailing.equalTo(contentView)
+            make.height.equalTo(150)
+        }
+        
+        
+        // ratingViewController 추가 및 레이아웃 설정
+        addChild(ratingViewController)
+        contentView.addSubview(ratingViewController.view)
+        ratingViewController.didMove(toParent: self)
+
+        ratingViewController.view.snp.makeConstraints { make in
+            make.top.equalTo(headerViewController.view.snp.bottom)
+            make.leading.trailing.equalTo(contentView)
+            make.height.equalTo(120)
+        }
+    }
+
+    // MARK: - 스크롤 이벤트 처리
+    @objc func scrollViewDidScroll(_ scrollView: UIScrollView) {
+        let offset = scrollView.contentOffset.y
+        
+        
+        if offset > 100 {
+            let appearance = UINavigationBarAppearance()
+            appearance.configureWithDefaultBackground()
+            appearance.backgroundColor = UIColor(red: 85/255, green: 85/255, blue: 85/255, alpha: 0.9)
+            navigationController?.navigationBar.standardAppearance = appearance
+            navigationController?.navigationBar.scrollEdgeAppearance = appearance
+        } else {
+            let appearance = UINavigationBarAppearance()
+            appearance.configureWithTransparentBackground()
+            navigationController?.navigationBar.standardAppearance = appearance
+            navigationController?.navigationBar.scrollEdgeAppearance = appearance
         }
     }
 }
 
 #Preview {
-    ViewController()
+    let navController = UINavigationController(rootViewController: ViewController())
+    return navController
 }
