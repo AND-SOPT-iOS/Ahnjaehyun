@@ -45,7 +45,7 @@ class HeaderViewController: UIViewController {
     
     private let shareButton: UIButton = {
         let button = UIButton(type: .system)
-        let shareImage = UIImage(systemName: "square.and.arrow.up")  // SF Symbol 사용
+        let shareImage = UIImage(systemName: "square.and.arrow.up")  
         button.setImage(shareImage, for: .normal)
         button.tintColor = .systemBlue
         return button
@@ -60,33 +60,30 @@ class HeaderViewController: UIViewController {
         
         view.backgroundColor = .black
         
-        // 1. 앱 아이콘 설정
         view.addSubview(appIconImageView)
+        view.addSubview(appNameLabel)
+        view.addSubview(appDescriptionLabel)
+        view.addSubview(updateButton)
+        view.addSubview(shareButton)
+
         appIconImageView.snp.makeConstraints { make in
             make.leading.equalTo(view.safeAreaLayoutGuide).offset(20)
             make.top.equalTo(view.safeAreaLayoutGuide).offset(20)
-        
-
             make.width.height.equalTo(100)
-            
         }
-        
-        // 2. 앱 이름 설정
-        view.addSubview(appNameLabel)
+ 
         appNameLabel.snp.makeConstraints { make in
             make.leading.equalTo(appIconImageView.snp.trailing).offset(20)
             make.top.equalTo(appIconImageView.snp.top)
         }
         
-        // 3. 앱 설명 설정
-        view.addSubview(appDescriptionLabel)
+
         appDescriptionLabel.snp.makeConstraints { make in
             make.leading.equalTo(appIconImageView.snp.trailing).offset(20)
             make.top.equalTo(appNameLabel.snp.bottom).offset(5)
         }
         
-        // 4. 업데이트 버튼 설정
-        view.addSubview(updateButton)
+ 
         updateButton.snp.makeConstraints { make in
             make.leading.equalTo(appIconImageView.snp.trailing).offset(20)
             make.bottom.equalTo(appIconImageView.snp.bottom)
@@ -94,8 +91,7 @@ class HeaderViewController: UIViewController {
             make.height.equalTo(30)
         }
         
-        // 5. 공유 버튼 설정
-        view.addSubview(shareButton)
+        
         shareButton.snp.makeConstraints { make in
             make.trailing.equalToSuperview().offset(-20)
             make.bottom.equalTo(appIconImageView.snp.bottom)

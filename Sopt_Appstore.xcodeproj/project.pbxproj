@@ -21,6 +21,7 @@
 		D63E7C362CCB64D50092D225 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = D63E7C212CCB64D50092D225 /* Assets.xcassets */; };
 		D63E7C382CCB64D50092D225 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = D63E7C242CCB64D50092D225 /* LaunchScreen.storyboard */; };
 		D63E7C392CCB64D50092D225 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = D63E7C262CCB64D50092D225 /* Main.storyboard */; };
+		D63E7C3D2CCBC7BD0092D225 /* VersionPageViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = D63E7C3C2CCBC7BD0092D225 /* VersionPageViewController.swift */; };
 		D6F6185F2CC959DB001EE4EA /* SnapKit in Frameworks */ = {isa = PBXBuildFile; productRef = D6F6185E2CC959DB001EE4EA /* SnapKit */; };
 /* End PBXBuildFile section */
 
@@ -60,6 +61,7 @@
 		D63E7C252CCB64D50092D225 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
 		D63E7C272CCB64D50092D225 /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
 		D63E7C282CCB64D50092D225 /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
+		D63E7C3C2CCBC7BD0092D225 /* VersionPageViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = VersionPageViewController.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFileSystemSynchronizedRootGroup section */
@@ -141,6 +143,7 @@
 			children = (
 				D63E7C1F2CCB64D50092D225 /* AppStoreViewModules */,
 				D63E7C282CCB64D50092D225 /* ViewController.swift */,
+				D63E7C3E2CCBC7CD0092D225 /* Navigation */,
 				D63E7C212CCB64D50092D225 /* Assets.xcassets */,
 				D63E7C222CCB64D50092D225 /* Info.plist */,
 				D63E7C242CCB64D50092D225 /* LaunchScreen.storyboard */,
@@ -149,6 +152,14 @@
 				D63E7C272CCB64D50092D225 /* SceneDelegate.swift */,
 			);
 			path = Sopt_Appstore;
+			sourceTree = "<group>";
+		};
+		D63E7C3E2CCBC7CD0092D225 /* Navigation */ = {
+			isa = PBXGroup;
+			children = (
+				D63E7C3C2CCBC7BD0092D225 /* VersionPageViewController.swift */,
+			);
+			path = Navigation;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -307,6 +318,7 @@
 				D63E7C2F2CCB64D50092D225 /* RatingViewController.swift in Sources */,
 				D63E7C302CCB64D50092D225 /* ReviewBottomViewController.swift in Sources */,
 				D63E7C322CCB64D50092D225 /* UpdateInfoViewController.swift in Sources */,
+				D63E7C3D2CCBC7BD0092D225 /* VersionPageViewController.swift in Sources */,
 				D63E7C332CCB64D50092D225 /* AppDelegate.swift in Sources */,
 				D63E7C342CCB64D50092D225 /* SceneDelegate.swift in Sources */,
 				D63E7C352CCB64D50092D225 /* ViewController.swift in Sources */,

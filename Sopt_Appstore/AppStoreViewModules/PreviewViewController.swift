@@ -12,7 +12,6 @@ class PreviewViewController: UIViewController {
     private let previewImageView: UIImageView = {
         let imageView = UIImageView()
         imageView.image = UIImage(named: "preview_toss")
-        //이미지 뷰의 크기와 비율에 맞춰 표시
         imageView.contentMode = .scaleAspectFit
         return imageView
     }()
@@ -49,13 +48,13 @@ class PreviewViewController: UIViewController {
         setupUI()
     }
     private func setupUI() {
-            // 모든 뷰가 동일한 부모 뷰에 추가되어야 함
+            
             view.addSubview(titleLabel)
             view.addSubview(previewImageView)
             view.addSubview(iphoneImage)
             view.addSubview(iphoneLabel)
 
-            // 제약 설정
+            
             titleLabel.snp.makeConstraints { make in
                 make.top.equalTo(view.safeAreaLayoutGuide).offset(20)
                 make.leading.equalToSuperview().offset(20)

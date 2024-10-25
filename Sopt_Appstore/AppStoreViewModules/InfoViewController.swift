@@ -41,11 +41,10 @@ class InfoViewController: UIViewController {
         attributedString.addAttribute(.foregroundColor, value: UIColor.systemBlue, range: NSRange(location: 0, length: attributedString.length))
         button.setAttributedTitle(attributedString, for: .normal)
         button.titleLabel?.font = UIFont.systemFont(ofSize: 14)
-        button.contentHorizontalAlignment = .left // 텍스트 왼쪽 정렬
+        button.contentHorizontalAlignment = .left
         return button
     }()
 
-    
     private let developerLabel: UILabel = {
         let label = UILabel()
         let attributedString = NSMutableAttributedString(string: "Viva Republica")
@@ -134,7 +133,7 @@ class InfoViewController: UIViewController {
     private func applyGradientMaskToLabel(_ label: UILabel) {
            let gradientLayer = CAGradientLayer()
            gradientLayer.colors = [UIColor.lightGray.cgColor, UIColor.clear.cgColor]
-           gradientLayer.locations = [0.7, 1.0] // 그라데이션 시작 및 끝 지점
+           gradientLayer.locations = [0.7, 1.0]
            gradientLayer.startPoint = CGPoint(x: 0, y: 0.5)
            gradientLayer.endPoint = CGPoint(x: 1, y: 0.5)
            gradientLayer.frame = label.bounds
@@ -146,7 +145,9 @@ class InfoViewController: UIViewController {
     //원래 컴포넌트가 로딩이되고 그다음 그라데이션을 넣어야 잘 보임
        override func viewDidLayoutSubviews() {
            super.viewDidLayoutSubviews()
-           applyGradientMaskToLabel(accountInfoLabel) // 레이아웃이 완료된 후 그라데이션 다시 적용
+           // 레이아웃이 완료된 후 그라데이션 다시 적용
+           applyGradientMaskToLabel(accountInfoLabel)
+           
        }
     
 }

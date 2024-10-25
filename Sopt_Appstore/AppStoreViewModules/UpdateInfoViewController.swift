@@ -66,7 +66,7 @@ class UpdateInfoViewController: UIViewController {
         view.addSubview(arrowButton)
 
         titleLabel.snp.makeConstraints { make in
-            make.top.equalTo(view.safeAreaLayoutGuide).offset(20)
+            make.top.equalTo(view.safeAreaLayoutGuide)
             make.leading.equalToSuperview().offset(20)
         }
         
@@ -96,8 +96,9 @@ class UpdateInfoViewController: UIViewController {
     }
 
     @objc func arrowButtonTapped() {
-        print("화살표 버튼 클릭됨")
-    }
+          let versionPage = VersionPageViewController()
+          navigationController?.pushViewController(versionPage, animated: true)  
+      }
 }
 
 #Preview {

@@ -10,7 +10,7 @@ import SnapKit
 
 class ReviewTopViewController: UIViewController {
 
-    // "평가 및 리뷰" 레이블
+    
     private let reviewTitleLabel: UILabel = {
         let label = UILabel()
         label.text = "평가 및 리뷰"
@@ -19,7 +19,7 @@ class ReviewTopViewController: UIViewController {
         return label
     }()
 
-    // 별점 레이팅
+    
     private let ratingLabel: UILabel = {
         let label = UILabel()
         label.text = "4.4"
@@ -28,7 +28,7 @@ class ReviewTopViewController: UIViewController {
         return label
     }()
 
-    // 가장 도움이 되는 리뷰 텍스트
+    
     private let helpfulReviewLabel: UILabel = {
         let label = UILabel()
         label.text = "가장 도움이 되는 리뷰"
@@ -37,7 +37,7 @@ class ReviewTopViewController: UIViewController {
         return label
     }()
 
-    // 별점 이미지 배열 (4.5개의 별)
+    
     private let starStackView: UIStackView = {
         let starFilled = UIImage(systemName: "star.fill")
         let starHalf = UIImage(systemName: "star.leadinghalf.filled")
@@ -61,9 +61,7 @@ class ReviewTopViewController: UIViewController {
             make.width.height.equalTo(20)
         }
         stackView.addArrangedSubview(halfStarImageView)
-        
-       
-        
+    
         return stackView
     }()
 
@@ -75,7 +73,7 @@ class ReviewTopViewController: UIViewController {
         return label
     }()
 
-    // 오른쪽 화살표 버튼
+    
     private let arrowButton: UIButton = {
         let button = UIButton(type: .system)
         let arrowImage = UIImage(systemName: "chevron.right")

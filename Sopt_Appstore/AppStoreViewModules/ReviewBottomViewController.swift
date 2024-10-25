@@ -10,7 +10,7 @@ import SnapKit
 
 class ReviewBottomViewController: UIViewController {
 
-    // "탭하여 평가하기" 레이블
+    
     private let rateLabel: UILabel = {
         let label = UILabel()
         label.text = "탭하여 평가하기"
@@ -19,7 +19,7 @@ class ReviewBottomViewController: UIViewController {
         return label
     }()
 
-    // 별점 스택뷰
+    
     private let starStackView: UIStackView = {
         let stackView = UIStackView()
         stackView.axis = .horizontal
@@ -38,7 +38,7 @@ class ReviewBottomViewController: UIViewController {
         return stackView
     }()
 
-    // "리뷰 작성" 버튼
+    
     private let writeReviewButton: UIButton = {
         let button = UIButton(type: .system)
         
@@ -59,7 +59,7 @@ class ReviewBottomViewController: UIViewController {
         return button
     }()
     
-    // "앱 지원" 버튼
+    
     private let supportButton: UIButton = {
         let button = UIButton(type: .system)
         
