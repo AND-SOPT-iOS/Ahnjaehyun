@@ -177,7 +177,7 @@ class RatingViewController: UIViewController {
 
         separatorTopLine.snp.makeConstraints { make in
             make.leading.trailing.equalToSuperview().inset(20)
-            make.top.equalToSuperview().offset(500)
+            make.top.equalToSuperview()
             make.height.equalTo(1)
         }
 
