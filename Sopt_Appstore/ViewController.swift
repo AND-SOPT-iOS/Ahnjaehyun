@@ -13,7 +13,9 @@ class ViewController: UIViewController, UIScrollViewDelegate {
     let ratingViewController = RatingViewController()
     let updateInfoViewController = UpdateInfoViewController()
     let previewViewController = PreviewViewController()
+    let infoViewController = InfoViewController()
 
+    
     
 
     let scrollView = UIScrollView()
@@ -181,6 +183,17 @@ class ViewController: UIViewController, UIScrollViewDelegate {
             make.leading.trailing.equalTo(contentView)
             make.height.equalTo(300)
         }
+        
+        addChild(infoViewController)
+        contentView.addSubview(infoViewController.view)
+        infoViewController.didMove(toParent: self)
+
+        infoViewController.view.snp.makeConstraints { make in
+            make.top.equalTo(previewViewController.view.snp.bottom)
+            make.leading.trailing.equalTo(contentView)
+            make.height.equalTo(100)
+        }
+
         
         
     }
