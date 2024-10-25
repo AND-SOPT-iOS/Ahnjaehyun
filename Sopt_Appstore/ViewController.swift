@@ -44,11 +44,11 @@ class ViewController: UIViewController, UIScrollViewDelegate {
         let backImageView = UIImageView(image: UIImage(systemName: "chevron.left"))
         let backLabel = UILabel()
 
-        backImageView.tintColor = .blue
+        backImageView.tintColor = .systemBlue
         backImageView.contentMode = .scaleAspectFit
         
         backLabel.text = "검색"
-        backLabel.textColor = .blue
+        backLabel.textColor = .systemBlue
         backLabel.font = UIFont.systemFont(ofSize: 17)
 
         let stackView = UIStackView(arrangedSubviews: [backImageView, backLabel])
@@ -127,7 +127,7 @@ class ViewController: UIViewController, UIScrollViewDelegate {
         contentView.snp.makeConstraints { make in
             make.edges.equalToSuperview()
             make.width.equalToSuperview()
-            make.height.equalTo(1700)
+            make.height.equalTo(1550)
         }
 
         addChild(headerViewController)
@@ -198,8 +198,7 @@ class ViewController: UIViewController, UIScrollViewDelegate {
         reviewMidViewController.view.snp.makeConstraints { make in
             make.top.equalTo(reviewTopViewController.view.snp.bottom).offset(20)
             make.leading.equalTo(contentView).offset(20)
-            make.trailing.equalTo(contentView).offset(-20) // trailing은 반대로 설정하여 양쪽에서 20씩 여백
-
+            make.trailing.equalTo(contentView).offset(-20)
             make.height.equalTo(contentView.snp.width).multipliedBy(0.6)
             
         }
@@ -229,7 +228,8 @@ class ViewController: UIViewController, UIScrollViewDelegate {
         if offset > 100 {
             let appearance = UINavigationBarAppearance()
             appearance.configureWithDefaultBackground()
-            appearance.backgroundColor = UIColor(red: 85/255, green: 85/255, blue: 85/255, alpha: 0.9)
+            appearance.backgroundColor = UIColor(red: 25/255, green: 25/255, blue: 25/255, alpha: 1)
+
             navigationController?.navigationBar.standardAppearance = appearance
             navigationController?.navigationBar.scrollEdgeAppearance = appearance
         } else {
@@ -245,3 +245,5 @@ class ViewController: UIViewController, UIScrollViewDelegate {
     let navController = UINavigationController(rootViewController: ViewController())
     return navController
 }
+
+
