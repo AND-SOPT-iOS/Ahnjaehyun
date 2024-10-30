@@ -23,6 +23,7 @@
 		D63E7C392CCB64D50092D225 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = D63E7C262CCB64D50092D225 /* Main.storyboard */; };
 		D63E7C3D2CCBC7BD0092D225 /* VersionPageViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = D63E7C3C2CCBC7BD0092D225 /* VersionPageViewController.swift */; };
 		D63E7C402CCBCA8C0092D225 /* ReviewPageViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = D63E7C3F2CCBCA8C0092D225 /* ReviewPageViewController.swift */; };
+		D6B32D8B2CD1DD74003EF497 /* HorizontalScrollViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = D6B32D8A2CD1DD74003EF497 /* HorizontalScrollViewController.swift */; };
 		D6F6185F2CC959DB001EE4EA /* SnapKit in Frameworks */ = {isa = PBXBuildFile; productRef = D6F6185E2CC959DB001EE4EA /* SnapKit */; };
 /* End PBXBuildFile section */
 
@@ -64,6 +65,7 @@
 		D63E7C282CCB64D50092D225 /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
 		D63E7C3C2CCBC7BD0092D225 /* VersionPageViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = VersionPageViewController.swift; sourceTree = "<group>"; };
 		D63E7C3F2CCBCA8C0092D225 /* ReviewPageViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ReviewPageViewController.swift; sourceTree = "<group>"; };
+		D6B32D8A2CD1DD74003EF497 /* HorizontalScrollViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HorizontalScrollViewController.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFileSystemSynchronizedRootGroup section */
@@ -143,15 +145,12 @@
 		D63E7C292CCB64D50092D225 /* Sopt_Appstore */ = {
 			isa = PBXGroup;
 			children = (
+				D63E7C222CCB64D50092D225 /* Info.plist */,
 				D63E7C1F2CCB64D50092D225 /* AppStoreViewModules */,
 				D63E7C282CCB64D50092D225 /* ViewController.swift */,
+				D6B32D892CD1DD3D003EF497 /* HorizontalScrollView */,
 				D63E7C3E2CCBC7CD0092D225 /* Navigation */,
-				D63E7C212CCB64D50092D225 /* Assets.xcassets */,
-				D63E7C222CCB64D50092D225 /* Info.plist */,
-				D63E7C242CCB64D50092D225 /* LaunchScreen.storyboard */,
-				D63E7C262CCB64D50092D225 /* Main.storyboard */,
-				D63E7C202CCB64D50092D225 /* AppDelegate.swift */,
-				D63E7C272CCB64D50092D225 /* SceneDelegate.swift */,
+				D6B32D882CD1DD20003EF497 /* New Group */,
 			);
 			path = Sopt_Appstore;
 			sourceTree = "<group>";
@@ -163,6 +162,26 @@
 				D63E7C3F2CCBCA8C0092D225 /* ReviewPageViewController.swift */,
 			);
 			path = Navigation;
+			sourceTree = "<group>";
+		};
+		D6B32D882CD1DD20003EF497 /* New Group */ = {
+			isa = PBXGroup;
+			children = (
+				D63E7C242CCB64D50092D225 /* LaunchScreen.storyboard */,
+				D63E7C262CCB64D50092D225 /* Main.storyboard */,
+				D63E7C202CCB64D50092D225 /* AppDelegate.swift */,
+				D63E7C272CCB64D50092D225 /* SceneDelegate.swift */,
+				D63E7C212CCB64D50092D225 /* Assets.xcassets */,
+			);
+			path = "New Group";
+			sourceTree = "<group>";
+		};
+		D6B32D892CD1DD3D003EF497 /* HorizontalScrollView */ = {
+			isa = PBXGroup;
+			children = (
+				D6B32D8A2CD1DD74003EF497 /* HorizontalScrollViewController.swift */,
+			);
+			path = HorizontalScrollView;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -314,6 +333,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				D63E7C2A2CCB64D50092D225 /* ReviewTopViewController.swift in Sources */,
+				D6B32D8B2CD1DD74003EF497 /* HorizontalScrollViewController.swift in Sources */,
 				D63E7C2B2CCB64D50092D225 /* ReviewMidViewController.swift in Sources */,
 				D63E7C2C2CCB64D50092D225 /* HeaderViewController.swift in Sources */,
 				D63E7C2D2CCB64D50092D225 /* InfoViewController.swift in Sources */,
