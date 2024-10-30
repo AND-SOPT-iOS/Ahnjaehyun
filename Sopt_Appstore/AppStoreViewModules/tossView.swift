@@ -7,7 +7,7 @@
 import UIKit
 import SnapKit
 
-class ViewController: UIViewController, UIScrollViewDelegate {
+class TossView: UIViewController, UIScrollViewDelegate {
 
     let headerViewController = HeaderViewController()
     let ratingViewController = RatingViewController()
@@ -242,7 +242,7 @@ class ViewController: UIViewController, UIScrollViewDelegate {
 }
 
 #Preview {
-    let navController = UINavigationController(rootViewController: ViewController())
+    let navController = UINavigationController(rootViewController: TossView())
     return navController
 }
 

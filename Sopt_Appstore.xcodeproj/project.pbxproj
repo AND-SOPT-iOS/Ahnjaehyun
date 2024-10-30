@@ -7,7 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
-		D636D2352CD247E900C8C1E2 /* ContentCardView.swift in Sources */ = {isa = PBXBuildFile; fileRef = D636D2342CD247E900C8C1E2 /* ContentCardView.swift */; };
+		D636D2352CD247E900C8C1E2 /* HeadScrollView.swift in Sources */ = {isa = PBXBuildFile; fileRef = D636D2342CD247E900C8C1E2 /* HeadScrollView.swift */; };
 		D636D2382CD24E9900C8C1E2 /* ComponentExtension.swift in Sources */ = {isa = PBXBuildFile; fileRef = D636D2372CD24E9900C8C1E2 /* ComponentExtension.swift */; };
 		D63E7C2A2CCB64D50092D225 /* ReviewTopViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = D63E7C162CCB64D50092D225 /* ReviewTopViewController.swift */; };
 		D63E7C2B2CCB64D50092D225 /* ReviewMidViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = D63E7C172CCB64D50092D225 /* ReviewMidViewController.swift */; };
@@ -19,13 +19,13 @@
 		D63E7C322CCB64D50092D225 /* UpdateInfoViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = D63E7C1E2CCB64D50092D225 /* UpdateInfoViewController.swift */; };
 		D63E7C332CCB64D50092D225 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = D63E7C202CCB64D50092D225 /* AppDelegate.swift */; };
 		D63E7C342CCB64D50092D225 /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = D63E7C272CCB64D50092D225 /* SceneDelegate.swift */; };
-		D63E7C352CCB64D50092D225 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = D63E7C282CCB64D50092D225 /* ViewController.swift */; };
+		D63E7C352CCB64D50092D225 /* tossView.swift in Sources */ = {isa = PBXBuildFile; fileRef = D63E7C282CCB64D50092D225 /* tossView.swift */; };
 		D63E7C362CCB64D50092D225 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = D63E7C212CCB64D50092D225 /* Assets.xcassets */; };
 		D63E7C382CCB64D50092D225 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = D63E7C242CCB64D50092D225 /* LaunchScreen.storyboard */; };
 		D63E7C392CCB64D50092D225 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = D63E7C262CCB64D50092D225 /* Main.storyboard */; };
 		D63E7C3D2CCBC7BD0092D225 /* VersionPageViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = D63E7C3C2CCBC7BD0092D225 /* VersionPageViewController.swift */; };
 		D63E7C402CCBCA8C0092D225 /* ReviewPageViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = D63E7C3F2CCBCA8C0092D225 /* ReviewPageViewController.swift */; };
-		D6B32D8B2CD1DD74003EF497 /* HorizontalScrollViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = D6B32D8A2CD1DD74003EF497 /* HorizontalScrollViewController.swift */; };
+		D6B32D8B2CD1DD74003EF497 /* FinanceView.swift in Sources */ = {isa = PBXBuildFile; fileRef = D6B32D8A2CD1DD74003EF497 /* FinanceView.swift */; };
 		D6F6185F2CC959DB001EE4EA /* SnapKit in Frameworks */ = {isa = PBXBuildFile; productRef = D6F6185E2CC959DB001EE4EA /* SnapKit */; };
 /* End PBXBuildFile section */
 
@@ -50,7 +50,7 @@
 		D62023572CC956FC002554FC /* Sopt_Appstore.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Sopt_Appstore.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		D620236D2CC956FD002554FC /* Sopt_AppstoreTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = Sopt_AppstoreTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		D62023772CC956FD002554FC /* Sopt_AppstoreUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = Sopt_AppstoreUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
-		D636D2342CD247E900C8C1E2 /* ContentCardView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContentCardView.swift; sourceTree = "<group>"; };
+		D636D2342CD247E900C8C1E2 /* HeadScrollView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HeadScrollView.swift; sourceTree = "<group>"; };
 		D636D2372CD24E9900C8C1E2 /* ComponentExtension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ComponentExtension.swift; sourceTree = "<group>"; };
 		D63E7C162CCB64D50092D225 /* ReviewTopViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ReviewTopViewController.swift; sourceTree = "<group>"; };
 		D63E7C172CCB64D50092D225 /* ReviewMidViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ReviewMidViewController.swift; sourceTree = "<group>"; };
@@ -66,10 +66,10 @@
 		D63E7C232CCB64D50092D225 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		D63E7C252CCB64D50092D225 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
 		D63E7C272CCB64D50092D225 /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
-		D63E7C282CCB64D50092D225 /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
+		D63E7C282CCB64D50092D225 /* tossView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = tossView.swift; sourceTree = "<group>"; };
 		D63E7C3C2CCBC7BD0092D225 /* VersionPageViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = VersionPageViewController.swift; sourceTree = "<group>"; };
 		D63E7C3F2CCBCA8C0092D225 /* ReviewPageViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ReviewPageViewController.swift; sourceTree = "<group>"; };
-		D6B32D8A2CD1DD74003EF497 /* HorizontalScrollViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HorizontalScrollViewController.swift; sourceTree = "<group>"; };
+		D6B32D8A2CD1DD74003EF497 /* FinanceView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FinanceView.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFileSystemSynchronizedRootGroup section */
@@ -142,6 +142,7 @@
 		D63E7C1F2CCB64D50092D225 /* AppStoreViewModules */ = {
 			isa = PBXGroup;
 			children = (
+				D63E7C282CCB64D50092D225 /* tossView.swift */,
 				D63E7C182CCB64D50092D225 /* HeaderViewController.swift */,
 				D63E7C1B2CCB64D50092D225 /* RatingViewController.swift */,
 				D63E7C1E2CCB64D50092D225 /* UpdateInfoViewController.swift */,
@@ -160,7 +161,6 @@
 				D636D2362CD24E8600C8C1E2 /* componentAsset */,
 				D63E7C222CCB64D50092D225 /* Info.plist */,
 				D63E7C1F2CCB64D50092D225 /* AppStoreViewModules */,
-				D63E7C282CCB64D50092D225 /* ViewController.swift */,
 				D6B32D892CD1DD3D003EF497 /* HorizontalScrollView */,
 				D63E7C3E2CCBC7CD0092D225 /* Navigation */,
 				D6B32D882CD1DD20003EF497 /* New Group */,
@@ -192,8 +192,8 @@
 		D6B32D892CD1DD3D003EF497 /* HorizontalScrollView */ = {
 			isa = PBXGroup;
 			children = (
-				D6B32D8A2CD1DD74003EF497 /* HorizontalScrollViewController.swift */,
-				D636D2342CD247E900C8C1E2 /* ContentCardView.swift */,
+				D6B32D8A2CD1DD74003EF497 /* FinanceView.swift */,
+				D636D2342CD247E900C8C1E2 /* HeadScrollView.swift */,
 			);
 			path = HorizontalScrollView;
 			sourceTree = "<group>";
@@ -347,11 +347,11 @@
 			buildActionMask = 2147483647;
 			files = (
 				D63E7C2A2CCB64D50092D225 /* ReviewTopViewController.swift in Sources */,
-				D6B32D8B2CD1DD74003EF497 /* HorizontalScrollViewController.swift in Sources */,
+				D6B32D8B2CD1DD74003EF497 /* FinanceView.swift in Sources */,
 				D63E7C2B2CCB64D50092D225 /* ReviewMidViewController.swift in Sources */,
 				D63E7C2C2CCB64D50092D225 /* HeaderViewController.swift in Sources */,
 				D63E7C2D2CCB64D50092D225 /* InfoViewController.swift in Sources */,
-				D636D2352CD247E900C8C1E2 /* ContentCardView.swift in Sources */,
+				D636D2352CD247E900C8C1E2 /* HeadScrollView.swift in Sources */,
 				D63E7C2E2CCB64D50092D225 /* PreviewViewController.swift in Sources */,
 				D63E7C402CCBCA8C0092D225 /* ReviewPageViewController.swift in Sources */,
 				D63E7C2F2CCB64D50092D225 /* RatingViewController.swift in Sources */,
@@ -361,7 +361,7 @@
 				D63E7C332CCB64D50092D225 /* AppDelegate.swift in Sources */,
 				D636D2382CD24E9900C8C1E2 /* ComponentExtension.swift in Sources */,
 				D63E7C342CCB64D50092D225 /* SceneDelegate.swift in Sources */,
-				D63E7C352CCB64D50092D225 /* ViewController.swift in Sources */,
+				D63E7C352CCB64D50092D225 /* tossView.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

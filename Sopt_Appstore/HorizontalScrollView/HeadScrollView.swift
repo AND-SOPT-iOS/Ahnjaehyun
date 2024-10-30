@@ -12,7 +12,7 @@ import SnapKit
 
 
 
-class ContentCardView: UIView {
+class HeadScrollView: UIView {
     
     
     private let describeTitleLabel: UILabel = {
@@ -27,7 +27,7 @@ class ContentCardView: UIView {
         let label = UILabel()
         label.text = "Fortune City - A Finance App"
         label.font = UIFont.boldSystemFont(ofSize: 18)
-        label.textColor = .black
+        label.textColor = .white
         return label
     }()
     
@@ -90,6 +90,7 @@ class ContentCardView: UIView {
     
     // MARK: - Setup Views
     private func setupViews() {
+        backgroundColor = .black
         addSubview(describeTitleLabel)
         addSubview(titleLabel)
         addSubview(subtitleLabel)
@@ -165,5 +166,5 @@ class ContentCardView: UIView {
 }
 
 #Preview{
-    ContentCardView()
+    HeadScrollView()
 }
