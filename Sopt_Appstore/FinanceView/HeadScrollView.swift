@@ -72,8 +72,10 @@ class HeadScrollView: UIView {
     }()
     
     
-    let actionButton = UIButton.makeActionButton()
-    let purchaseLabel = UILabel.makePurchaseLabel()
+    private let actionButton = UIButton.makeActionButton(with: "받기")
+    private let purchaseLabel = UILabel.makePurchaseLabel(with: "앱 내 구입")
+    
+    
     
     override init(frame: CGRect) {
         super.init(frame: frame)

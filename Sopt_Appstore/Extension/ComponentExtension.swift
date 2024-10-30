@@ -10,27 +10,27 @@ import UIKit
 
 
 extension UIButton {
-    static func makeActionButton() -> UIButton {
+    static func makeActionButton(with title: String) -> UIButton {
         var config = UIButton.Configuration.filled()
         
         config.baseBackgroundColor = .systemGray6
-        config.baseForegroundColor = .systemBlue
         config.cornerStyle = .capsule
-        config.attributedTitle = AttributedString("  받기  ", attributes: AttributeContainer([
+        config.attributedTitle = AttributedString("\(title)", attributes: AttributeContainer([
             .font: UIFont.systemFont(ofSize: 10, weight: .bold)
         ]))
-        let button = UIButton(configuration: config, primaryAction: nil)
+        config.contentInsets = NSDirectionalEdgeInsets(top: 5, leading: 20, bottom: 5, trailing: 20)
+        config.baseForegroundColor = .systemBlue
 
+        let button = UIButton(configuration: config, primaryAction: nil)
         return button
     }
 }
 
-
 extension UILabel {
-    static func makePurchaseLabel() -> UILabel {
+    static func makePurchaseLabel(with text: String) -> UILabel {
         let label = UILabel()
-        label.text = "앱 내 구입"
-        label.font = UIFont.systemFont(ofSize: 6)
+        label.text = text
+        label.font = UIFont.systemFont(ofSize: 10)
         label.textColor = UIColor(white: 1.0, alpha: 0.7)
         label.textAlignment = .center
         return label

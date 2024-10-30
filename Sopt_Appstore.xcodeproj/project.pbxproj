@@ -11,6 +11,9 @@
 		D636D2382CD24E9900C8C1E2 /* ComponentExtension.swift in Sources */ = {isa = PBXBuildFile; fileRef = D636D2372CD24E9900C8C1E2 /* ComponentExtension.swift */; };
 		D636D23C2CD260A300C8C1E2 /* ApptitleView.swift in Sources */ = {isa = PBXBuildFile; fileRef = D636D23B2CD260A300C8C1E2 /* ApptitleView.swift */; };
 		D636D23F2CD28F7700C8C1E2 /* Then in Frameworks */ = {isa = PBXBuildFile; productRef = D636D23E2CD28F7700C8C1E2 /* Then */; };
+		D636D2422CD291A700C8C1E2 /* AppDataSet.swift in Sources */ = {isa = PBXBuildFile; fileRef = D636D2412CD291A700C8C1E2 /* AppDataSet.swift */; };
+		D636D2442CD291DF00C8C1E2 /* AppRowView.swift in Sources */ = {isa = PBXBuildFile; fileRef = D636D2432CD291DF00C8C1E2 /* AppRowView.swift */; };
+		D636D2462CD2926800C8C1E2 /* chartViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = D636D2452CD2926800C8C1E2 /* chartViewController.swift */; };
 		D63E7C2A2CCB64D50092D225 /* ReviewTopViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = D63E7C162CCB64D50092D225 /* ReviewTopViewController.swift */; };
 		D63E7C2B2CCB64D50092D225 /* ReviewMidViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = D63E7C172CCB64D50092D225 /* ReviewMidViewController.swift */; };
 		D63E7C2C2CCB64D50092D225 /* HeaderViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = D63E7C182CCB64D50092D225 /* HeaderViewController.swift */; };
@@ -55,6 +58,9 @@
 		D636D2342CD247E900C8C1E2 /* HeadScrollView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HeadScrollView.swift; sourceTree = "<group>"; };
 		D636D2372CD24E9900C8C1E2 /* ComponentExtension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ComponentExtension.swift; sourceTree = "<group>"; };
 		D636D23B2CD260A300C8C1E2 /* ApptitleView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ApptitleView.swift; sourceTree = "<group>"; };
+		D636D2412CD291A700C8C1E2 /* AppDataSet.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDataSet.swift; sourceTree = "<group>"; };
+		D636D2432CD291DF00C8C1E2 /* AppRowView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppRowView.swift; sourceTree = "<group>"; };
+		D636D2452CD2926800C8C1E2 /* chartViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = chartViewController.swift; sourceTree = "<group>"; };
 		D63E7C162CCB64D50092D225 /* ReviewTopViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ReviewTopViewController.swift; sourceTree = "<group>"; };
 		D63E7C172CCB64D50092D225 /* ReviewMidViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ReviewMidViewController.swift; sourceTree = "<group>"; };
 		D63E7C182CCB64D50092D225 /* HeaderViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HeaderViewController.swift; sourceTree = "<group>"; };
@@ -135,12 +141,22 @@
 			name = Products;
 			sourceTree = "<group>";
 		};
-		D636D2362CD24E8600C8C1E2 /* componentAsset */ = {
+		D636D2362CD24E8600C8C1E2 /* Extension */ = {
 			isa = PBXGroup;
 			children = (
 				D636D2372CD24E9900C8C1E2 /* ComponentExtension.swift */,
 			);
-			path = componentAsset;
+			path = Extension;
+			sourceTree = "<group>";
+		};
+		D636D2402CD2903700C8C1E2 /* AppView */ = {
+			isa = PBXGroup;
+			children = (
+				D636D2412CD291A700C8C1E2 /* AppDataSet.swift */,
+				D636D2432CD291DF00C8C1E2 /* AppRowView.swift */,
+				D636D2452CD2926800C8C1E2 /* chartViewController.swift */,
+			);
+			path = AppView;
 			sourceTree = "<group>";
 		};
 		D63E7C1F2CCB64D50092D225 /* AppStoreViewModules */ = {
@@ -162,12 +178,12 @@
 		D63E7C292CCB64D50092D225 /* Sopt_Appstore */ = {
 			isa = PBXGroup;
 			children = (
-				D636D2362CD24E8600C8C1E2 /* componentAsset */,
+				D636D2362CD24E8600C8C1E2 /* Extension */,
 				D63E7C222CCB64D50092D225 /* Info.plist */,
 				D63E7C1F2CCB64D50092D225 /* AppStoreViewModules */,
 				D6B32D892CD1DD3D003EF497 /* FinanceView */,
 				D63E7C3E2CCBC7CD0092D225 /* Navigation */,
-				D6B32D882CD1DD20003EF497 /* New Group */,
+				D6B32D882CD1DD20003EF497 /* Delegate */,
 			);
 			path = Sopt_Appstore;
 			sourceTree = "<group>";
@@ -181,7 +197,7 @@
 			path = Navigation;
 			sourceTree = "<group>";
 		};
-		D6B32D882CD1DD20003EF497 /* New Group */ = {
+		D6B32D882CD1DD20003EF497 /* Delegate */ = {
 			isa = PBXGroup;
 			children = (
 				D63E7C242CCB64D50092D225 /* LaunchScreen.storyboard */,
@@ -190,7 +206,7 @@
 				D63E7C272CCB64D50092D225 /* SceneDelegate.swift */,
 				D63E7C212CCB64D50092D225 /* Assets.xcassets */,
 			);
-			path = "New Group";
+			path = Delegate;
 			sourceTree = "<group>";
 		};
 		D6B32D892CD1DD3D003EF497 /* FinanceView */ = {
@@ -199,6 +215,7 @@
 				D6B32D8A2CD1DD74003EF497 /* FinanceView.swift */,
 				D636D2342CD247E900C8C1E2 /* HeadScrollView.swift */,
 				D636D23B2CD260A300C8C1E2 /* ApptitleView.swift */,
+				D636D2402CD2903700C8C1E2 /* AppView */,
 			);
 			path = FinanceView;
 			sourceTree = "<group>";
@@ -357,10 +374,13 @@
 				D6B32D8B2CD1DD74003EF497 /* FinanceView.swift in Sources */,
 				D63E7C2B2CCB64D50092D225 /* ReviewMidViewController.swift in Sources */,
 				D63E7C2C2CCB64D50092D225 /* HeaderViewController.swift in Sources */,
+				D636D2442CD291DF00C8C1E2 /* AppRowView.swift in Sources */,
+				D636D2462CD2926800C8C1E2 /* chartViewController.swift in Sources */,
 				D63E7C2D2CCB64D50092D225 /* InfoViewController.swift in Sources */,
 				D636D2352CD247E900C8C1E2 /* HeadScrollView.swift in Sources */,
 				D63E7C2E2CCB64D50092D225 /* PreviewViewController.swift in Sources */,
 				D63E7C402CCBCA8C0092D225 /* ReviewPageViewController.swift in Sources */,
+				D636D2422CD291A700C8C1E2 /* AppDataSet.swift in Sources */,
 				D63E7C2F2CCB64D50092D225 /* RatingViewController.swift in Sources */,
 				D63E7C302CCB64D50092D225 /* ReviewBottomViewController.swift in Sources */,
 				D63E7C322CCB64D50092D225 /* UpdateInfoViewController.swift in Sources */,
