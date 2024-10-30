@@ -9,6 +9,7 @@
 /* Begin PBXBuildFile section */
 		D636D2352CD247E900C8C1E2 /* HeadScrollView.swift in Sources */ = {isa = PBXBuildFile; fileRef = D636D2342CD247E900C8C1E2 /* HeadScrollView.swift */; };
 		D636D2382CD24E9900C8C1E2 /* ComponentExtension.swift in Sources */ = {isa = PBXBuildFile; fileRef = D636D2372CD24E9900C8C1E2 /* ComponentExtension.swift */; };
+		D636D23C2CD260A300C8C1E2 /* ApptitleView.swift in Sources */ = {isa = PBXBuildFile; fileRef = D636D23B2CD260A300C8C1E2 /* ApptitleView.swift */; };
 		D63E7C2A2CCB64D50092D225 /* ReviewTopViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = D63E7C162CCB64D50092D225 /* ReviewTopViewController.swift */; };
 		D63E7C2B2CCB64D50092D225 /* ReviewMidViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = D63E7C172CCB64D50092D225 /* ReviewMidViewController.swift */; };
 		D63E7C2C2CCB64D50092D225 /* HeaderViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = D63E7C182CCB64D50092D225 /* HeaderViewController.swift */; };
@@ -52,6 +53,7 @@
 		D62023772CC956FD002554FC /* Sopt_AppstoreUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = Sopt_AppstoreUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		D636D2342CD247E900C8C1E2 /* HeadScrollView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HeadScrollView.swift; sourceTree = "<group>"; };
 		D636D2372CD24E9900C8C1E2 /* ComponentExtension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ComponentExtension.swift; sourceTree = "<group>"; };
+		D636D23B2CD260A300C8C1E2 /* ApptitleView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ApptitleView.swift; sourceTree = "<group>"; };
 		D63E7C162CCB64D50092D225 /* ReviewTopViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ReviewTopViewController.swift; sourceTree = "<group>"; };
 		D63E7C172CCB64D50092D225 /* ReviewMidViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ReviewMidViewController.swift; sourceTree = "<group>"; };
 		D63E7C182CCB64D50092D225 /* HeaderViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HeaderViewController.swift; sourceTree = "<group>"; };
@@ -161,7 +163,7 @@
 				D636D2362CD24E8600C8C1E2 /* componentAsset */,
 				D63E7C222CCB64D50092D225 /* Info.plist */,
 				D63E7C1F2CCB64D50092D225 /* AppStoreViewModules */,
-				D6B32D892CD1DD3D003EF497 /* HorizontalScrollView */,
+				D6B32D892CD1DD3D003EF497 /* FinanceView */,
 				D63E7C3E2CCBC7CD0092D225 /* Navigation */,
 				D6B32D882CD1DD20003EF497 /* New Group */,
 			);
@@ -189,13 +191,14 @@
 			path = "New Group";
 			sourceTree = "<group>";
 		};
-		D6B32D892CD1DD3D003EF497 /* HorizontalScrollView */ = {
+		D6B32D892CD1DD3D003EF497 /* FinanceView */ = {
 			isa = PBXGroup;
 			children = (
 				D6B32D8A2CD1DD74003EF497 /* FinanceView.swift */,
 				D636D2342CD247E900C8C1E2 /* HeadScrollView.swift */,
+				D636D23B2CD260A300C8C1E2 /* ApptitleView.swift */,
 			);
-			path = HorizontalScrollView;
+			path = FinanceView;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -360,6 +363,7 @@
 				D63E7C3D2CCBC7BD0092D225 /* VersionPageViewController.swift in Sources */,
 				D63E7C332CCB64D50092D225 /* AppDelegate.swift in Sources */,
 				D636D2382CD24E9900C8C1E2 /* ComponentExtension.swift in Sources */,
+				D636D23C2CD260A300C8C1E2 /* ApptitleView.swift in Sources */,
 				D63E7C342CCB64D50092D225 /* SceneDelegate.swift in Sources */,
 				D63E7C352CCB64D50092D225 /* tossView.swift in Sources */,
 			);

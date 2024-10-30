@@ -1,5 +1,5 @@
 //
-//  test.swift
+//  HeadScrollView.swift
 //  Sopt_Appstore
 //
 //  Created by Jaehyun Ahn on 10/30/24.
@@ -41,7 +41,7 @@ class HeadScrollView: UIView {
     
     private let mainImageView: UIImageView = {
         let imageView = UIImageView()
-        imageView.image = UIImage(named: "scrollBackground") // 메인 이미지 설정
+        imageView.image = UIImage(named: "scrollBackground")
         imageView.contentMode = .scaleAspectFill
         imageView.clipsToBounds = true
         imageView.layer.cornerRadius = 10
@@ -50,7 +50,7 @@ class HeadScrollView: UIView {
     
     private let overlayImageView: UIImageView = {
         let imageView = UIImageView()
-        imageView.image = UIImage(named: "tictokIcon") // 겹쳐질 이미지 설정
+        imageView.image = UIImage(named: "tictokIcon")
         imageView.contentMode = .scaleAspectFit
         return imageView
     }()
@@ -75,9 +75,6 @@ class HeadScrollView: UIView {
     let actionButton = UIButton.makeActionButton()
     let purchaseLabel = UILabel.makePurchaseLabel()
     
-    
-    
-    // MARK: - Initializer
     override init(frame: CGRect) {
         super.init(frame: frame)
         setupViews()
@@ -88,7 +85,6 @@ class HeadScrollView: UIView {
         fatalError("init(coder:) has not been implemented")
     }
     
-    // MARK: - Setup Views
     private func setupViews() {
         backgroundColor = .black
         addSubview(describeTitleLabel)
@@ -97,19 +93,15 @@ class HeadScrollView: UIView {
         addSubview(actionButton)
         addSubview(mainImageView)
         
-
-
-
         mainImageView.addSubview(overlayImageView)
         mainImageView.addSubview(subDescriptionLabel)
         mainImageView.addSubview(descriptionLabel)
         mainImageView.addSubview(actionButton)
         mainImageView.addSubview(purchaseLabel)
-
-      
+        
     }
     
-    // MARK: - Setup Constraints
+    
     private func setupConstraints() {
 
         describeTitleLabel.snp.makeConstraints { make in
