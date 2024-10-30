@@ -12,6 +12,10 @@ import SwiftUI
 
 class AppRowView: UITableViewCell {
     
+    
+    var onActionButtonTapped: (() -> Void)?
+
+    
     static let identifier: String = "AppRowView"
     
     
@@ -116,6 +120,14 @@ class AppRowView: UITableViewCell {
         purchaseLabel.text = app.subTitle
         actionButton.setTitle(app.downloadState.rawValue, for: .normal)
     }
+    private func setupActions() {
+           actionButton.addTarget(self, action: #selector(actionButtonTapped), for: .touchUpInside)
+       }
+       
+       @objc private func actionButtonTapped() {
+           onActionButtonTapped?()
+       }
+    
 }
 
 
@@ -134,6 +146,7 @@ struct AppRowViewPreview: UIViewRepresentable {
     }
     
     func updateUIView(_ uiView: AppRowView, context: Context) {}
+    
 }
 
 #Preview {

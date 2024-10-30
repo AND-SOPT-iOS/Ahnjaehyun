@@ -16,16 +16,16 @@ extension UIButton {
         config.baseBackgroundColor = .systemGray6
         config.cornerStyle = .capsule
         config.attributedTitle = AttributedString("\(title)", attributes: AttributeContainer([
-            .font: UIFont.systemFont(ofSize: 10, weight: .bold)
+            .font: UIFont.systemFont(ofSize: 12, weight: .bold) 
         ]))
-        config.contentInsets = NSDirectionalEdgeInsets(top: 5, leading: 20, bottom: 5, trailing: 20)
+        config.contentInsets = NSDirectionalEdgeInsets(top: 5, leading: 10, bottom: 5, trailing: 10)
         config.baseForegroundColor = .systemBlue
-
+        
         let button = UIButton(configuration: config, primaryAction: nil)
+        button.snp.makeConstraints { $0.width.greaterThanOrEqualTo(60) }
         return button
     }
 }
-
 extension UILabel {
     static func makePurchaseLabel(with text: String) -> UILabel {
         let label = UILabel()

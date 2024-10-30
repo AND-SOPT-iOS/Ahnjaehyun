@@ -63,8 +63,26 @@ extension ChartViewController: UITableViewDataSource {
         cell.configure(app: appList[indexPath.row])
         
         
+        let app = appList[indexPath.row]
+              cell.configure(app: app)
+              
+              
+              cell.onActionButtonTapped = { [weak self] in
+                  
+                  if app.title == "토스" {
+                      self?.navigateToTossView()
+                  }
+              }
+              
+        
+        
         return cell
     }
+    
+    private func navigateToTossView() {
+           let tossViewController = TossView() // 이동할 뷰 컨트롤러 생성
+           navigationController?.pushViewController(tossViewController, animated: true)
+       }
     
     
     
