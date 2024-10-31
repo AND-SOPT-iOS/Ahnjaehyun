@@ -1,16 +1,16 @@
 //
-//  AppRowView.swift
+//  CollectionViewRow.swift
 //  Sopt_Appstore
 //
 //  Created by Jaehyun Ahn on 10/31/24.
 //
 
 import UIKit
-import Then
 import SnapKit
 import SwiftUI
 
-class AppRowView: UITableViewCell {
+
+class AppRowView_Collection: UICollectionViewCell {
     
     
     var onActionButtonTapped: (() -> Void)?
@@ -26,22 +26,24 @@ class AppRowView: UITableViewCell {
     private let categoryLabel = UILabel()
     private let rankingLabel = UILabel()
     
- 
     
-    override init(style: UITableViewCell.CellStyle, reuseIdentifier: String?) {
-        super.init(style: style, reuseIdentifier: reuseIdentifier)
-        selectionStyle = .none
+    override init(frame: CGRect) {
+        super.init(frame: frame)
+        contentView.backgroundColor = .black
         setUI()
+        setupActions()
         setStyle()
         setLayout()
+
     }
-    
+
     required init?(coder: NSCoder) {
         fatalError("init(coder:) has not been implemented")
     }
     
     private func setStyle() {
-        backgroundColor = .black
+
+
         titleLabel.do {
             $0.numberOfLines = 2
             $0.textColor = .white
@@ -61,20 +63,23 @@ class AppRowView: UITableViewCell {
             $0.textColor = .lightGray
         }
     }
+            
     
     private func setUI() {
         [
-                iconImageView,
-                rankingLabel,
-                actionButton,
-                categoryLabel,
-                titleLabel,
-                purchaseLabel
-            ].forEach { contentView.addSubview($0) } 
+            iconImageView,
+            rankingLabel,
+            actionButton,
+            categoryLabel,
+            titleLabel,
+            purchaseLabel
+        ].forEach { addSubview($0) }
 
     }
     
     private func setLayout() {
+        
+
             iconImageView.snp.makeConstraints {
                 $0.top.equalToSuperview().offset(10)
                 $0.leading.equalToSuperview().offset(20)
@@ -108,7 +113,8 @@ class AppRowView: UITableViewCell {
             actionButton.snp.makeConstraints {
                 $0.top.equalTo(rankingLabel)
                 $0.trailing.equalToSuperview().offset(-20)
-                $0.bottom.lessThanOrEqualToSuperview().offset(-10) 
+                $0.width.equalTo(50)
+                $0.height.equalTo(24)
             }
     }
     
@@ -131,9 +137,15 @@ class AppRowView: UITableViewCell {
 }
 
 
-struct AppRowViewPreview: UIViewRepresentable {
-    func makeUIView(context: Context) -> AppRowView {
-        let cell = AppRowView(style: .default, reuseIdentifier: AppRowView.identifier)
+
+
+
+
+
+
+struct AppRowView_CollectionPreview: UIViewRepresentable {
+    func makeUIView(context: Context) -> AppRowView_Collection {
+        let cell = AppRowView_Collection()
         cell.configure(app: App(
             iconImage: UIImage(named: "Toss_App_Icon")!,
             title: "facebook",
@@ -145,7 +157,14 @@ struct AppRowViewPreview: UIViewRepresentable {
         return cell
     }
     
-    func updateUIView(_ uiView: AppRowView, context: Context) {}
+    func updateUIView(_ uiView: AppRowView_Collection, context: Context) {}
     
+}
+
+
+
+
+#Preview {
+    AppRowView_CollectionPreview()
 }
 

@@ -14,6 +14,8 @@
 		D636D2422CD291A700C8C1E2 /* AppDataSet.swift in Sources */ = {isa = PBXBuildFile; fileRef = D636D2412CD291A700C8C1E2 /* AppDataSet.swift */; };
 		D636D2442CD291DF00C8C1E2 /* AppRowView.swift in Sources */ = {isa = PBXBuildFile; fileRef = D636D2432CD291DF00C8C1E2 /* AppRowView.swift */; };
 		D636D2462CD2926800C8C1E2 /* chartViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = D636D2452CD2926800C8C1E2 /* chartViewController.swift */; };
+		D636D2492CD2ABCA00C8C1E2 /* AppHorizontalScrollView.swift in Sources */ = {isa = PBXBuildFile; fileRef = D636D2482CD2ABCA00C8C1E2 /* AppHorizontalScrollView.swift */; };
+		D636D24B2CD315FE00C8C1E2 /* CollectionViewRow.swift in Sources */ = {isa = PBXBuildFile; fileRef = D636D24A2CD315FE00C8C1E2 /* CollectionViewRow.swift */; };
 		D63E7C2A2CCB64D50092D225 /* ReviewTopViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = D63E7C162CCB64D50092D225 /* ReviewTopViewController.swift */; };
 		D63E7C2B2CCB64D50092D225 /* ReviewMidViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = D63E7C172CCB64D50092D225 /* ReviewMidViewController.swift */; };
 		D63E7C2C2CCB64D50092D225 /* HeaderViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = D63E7C182CCB64D50092D225 /* HeaderViewController.swift */; };
@@ -61,6 +63,8 @@
 		D636D2412CD291A700C8C1E2 /* AppDataSet.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDataSet.swift; sourceTree = "<group>"; };
 		D636D2432CD291DF00C8C1E2 /* AppRowView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppRowView.swift; sourceTree = "<group>"; };
 		D636D2452CD2926800C8C1E2 /* chartViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = chartViewController.swift; sourceTree = "<group>"; };
+		D636D2482CD2ABCA00C8C1E2 /* AppHorizontalScrollView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppHorizontalScrollView.swift; sourceTree = "<group>"; };
+		D636D24A2CD315FE00C8C1E2 /* CollectionViewRow.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CollectionViewRow.swift; sourceTree = "<group>"; };
 		D63E7C162CCB64D50092D225 /* ReviewTopViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ReviewTopViewController.swift; sourceTree = "<group>"; };
 		D63E7C172CCB64D50092D225 /* ReviewMidViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ReviewMidViewController.swift; sourceTree = "<group>"; };
 		D63E7C182CCB64D50092D225 /* HeaderViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HeaderViewController.swift; sourceTree = "<group>"; };
@@ -159,6 +163,15 @@
 			path = AppView;
 			sourceTree = "<group>";
 		};
+		D636D2472CD2ABA800C8C1E2 /* AppScrollView */ = {
+			isa = PBXGroup;
+			children = (
+				D636D2482CD2ABCA00C8C1E2 /* AppHorizontalScrollView.swift */,
+				D636D24A2CD315FE00C8C1E2 /* CollectionViewRow.swift */,
+			);
+			path = AppScrollView;
+			sourceTree = "<group>";
+		};
 		D63E7C1F2CCB64D50092D225 /* AppStoreViewModules */ = {
 			isa = PBXGroup;
 			children = (
@@ -215,6 +228,7 @@
 				D6B32D8A2CD1DD74003EF497 /* FinanceView.swift */,
 				D636D2342CD247E900C8C1E2 /* HeadScrollView.swift */,
 				D636D23B2CD260A300C8C1E2 /* ApptitleView.swift */,
+				D636D2472CD2ABA800C8C1E2 /* AppScrollView */,
 				D636D2402CD2903700C8C1E2 /* AppView */,
 			);
 			path = FinanceView;
@@ -383,8 +397,10 @@
 				D636D2422CD291A700C8C1E2 /* AppDataSet.swift in Sources */,
 				D63E7C2F2CCB64D50092D225 /* RatingViewController.swift in Sources */,
 				D63E7C302CCB64D50092D225 /* ReviewBottomViewController.swift in Sources */,
+				D636D24B2CD315FE00C8C1E2 /* CollectionViewRow.swift in Sources */,
 				D63E7C322CCB64D50092D225 /* UpdateInfoViewController.swift in Sources */,
 				D63E7C3D2CCBC7BD0092D225 /* VersionPageViewController.swift in Sources */,
+				D636D2492CD2ABCA00C8C1E2 /* AppHorizontalScrollView.swift in Sources */,
 				D63E7C332CCB64D50092D225 /* AppDelegate.swift in Sources */,
 				D636D2382CD24E9900C8C1E2 /* ComponentExtension.swift in Sources */,
 				D636D23C2CD260A300C8C1E2 /* ApptitleView.swift in Sources */,

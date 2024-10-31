@@ -20,7 +20,7 @@ struct App {
 
 extension App {
     static let mockData: [App] = [
-        App(iconImage: UIImage(named: "1")!, title: "Home", downloadState: .dawnload, subTitle: "다운", category: "utilities", ranking: 1),
+        App(iconImage: UIImage(named: "Toss_App_Icon")!, title: "토스", downloadState: .dawnload, subTitle: "앱내 구입", category: "browsing", ranking: 1),
         App(iconImage: UIImage(named: "2")!, title: "Books", downloadState: .dawnload, subTitle: "앱내 구입", category: "education", ranking: 2),
         App(iconImage: UIImage(named: "3")!, title: "Clock", downloadState: .dawnload, subTitle: "앱내 구입", category: "utilities", ranking: 3),
         App(iconImage: UIImage(named: "4")!, title: "App Store", downloadState: .dawnload, subTitle: "앱내 구입", category: "shopping", ranking: 4),
@@ -39,7 +39,8 @@ extension App {
         App(iconImage: UIImage(named: "17")!, title: "Phone", downloadState: .dawnload, subTitle: "앱내 구입", category: "communication", ranking: 17),
         App(iconImage: UIImage(named: "18")!, title: "Safari", downloadState: .dawnload, subTitle: "앱내 구입", category: "browsing", ranking: 18),
         App(iconImage: UIImage(named: "tictokIcon")!, title: "抖音", downloadState: .dawnload, subTitle: "入手", category: "browsing", ranking: 19),
-        App(iconImage: UIImage(named: "Toss_App_Icon")!, title: "토스", downloadState: .dawnload, subTitle: "앱내 구입", category: "browsing", ranking: 20)
+        App(iconImage: UIImage(named: "1")!, title: "Home", downloadState: .dawnload, subTitle: "다운", category: "utilities", ranking: 20),
+
     ]
 }
 
