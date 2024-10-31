@@ -14,8 +14,6 @@ class AppRowView_Collection: UICollectionViewCell {
     
     
     var onActionButtonTapped: (() -> Void)?
-
-    
     static let identifier: String = "AppRowView"
     
     
@@ -82,7 +80,7 @@ class AppRowView_Collection: UICollectionViewCell {
 
             iconImageView.snp.makeConstraints {
                 $0.top.equalToSuperview().offset(10)
-                $0.leading.equalToSuperview().offset(20)
+                $0.leading.equalToSuperview().offset(15)
                 $0.size.equalTo(65)
                 $0.bottom.lessThanOrEqualToSuperview().offset(-10)
             }
@@ -112,7 +110,7 @@ class AppRowView_Collection: UICollectionViewCell {
             
             actionButton.snp.makeConstraints {
                 $0.top.equalTo(rankingLabel)
-                $0.trailing.equalToSuperview().offset(-20)
+                $0.trailing.equalToSuperview().offset(-15)
                 $0.width.equalTo(50)
                 $0.height.equalTo(24)
             }

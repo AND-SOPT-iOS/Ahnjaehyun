@@ -23,13 +23,12 @@ class AppHorizontalScrollView: UIViewController {
         let layout = UICollectionViewFlowLayout()
         layout.scrollDirection = .horizontal 
         layout.minimumLineSpacing = 10
-        layout.sectionInset = UIEdgeInsets(top: 10, left: 16, bottom: 10, right: 16)
-        layout.itemSize = CGSize(width: view.bounds.width - 32, height: 80) // 너비를 전체 뷰에 맞춤
+        layout.itemSize = CGSize(width: view.bounds.width - 32, height: 80)
 
         collectionView = UICollectionView(frame: .zero, collectionViewLayout: layout)
         collectionView.backgroundColor = .black
         collectionView.showsVerticalScrollIndicator = false
-        collectionView.isPagingEnabled = true
+//        collectionView.isPagingEnabled = true
         collectionView.dataSource = self
         collectionView.delegate = self
         collectionView.register(AppRowView_Collection.self, forCellWithReuseIdentifier: AppRowView_Collection.identifier)

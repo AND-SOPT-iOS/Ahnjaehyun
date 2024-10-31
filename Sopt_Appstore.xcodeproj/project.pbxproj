@@ -7,7 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
-		D636D2352CD247E900C8C1E2 /* HeadScrollView.swift in Sources */ = {isa = PBXBuildFile; fileRef = D636D2342CD247E900C8C1E2 /* HeadScrollView.swift */; };
+		D636D2352CD247E900C8C1E2 /* HeadScrollViewRow.swift in Sources */ = {isa = PBXBuildFile; fileRef = D636D2342CD247E900C8C1E2 /* HeadScrollViewRow.swift */; };
 		D636D2382CD24E9900C8C1E2 /* ComponentExtension.swift in Sources */ = {isa = PBXBuildFile; fileRef = D636D2372CD24E9900C8C1E2 /* ComponentExtension.swift */; };
 		D636D23C2CD260A300C8C1E2 /* ApptitleView.swift in Sources */ = {isa = PBXBuildFile; fileRef = D636D23B2CD260A300C8C1E2 /* ApptitleView.swift */; };
 		D636D23F2CD28F7700C8C1E2 /* Then in Frameworks */ = {isa = PBXBuildFile; productRef = D636D23E2CD28F7700C8C1E2 /* Then */; };
@@ -16,6 +16,7 @@
 		D636D2462CD2926800C8C1E2 /* chartViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = D636D2452CD2926800C8C1E2 /* chartViewController.swift */; };
 		D636D2492CD2ABCA00C8C1E2 /* AppHorizontalScrollView.swift in Sources */ = {isa = PBXBuildFile; fileRef = D636D2482CD2ABCA00C8C1E2 /* AppHorizontalScrollView.swift */; };
 		D636D24B2CD315FE00C8C1E2 /* CollectionViewRow.swift in Sources */ = {isa = PBXBuildFile; fileRef = D636D24A2CD315FE00C8C1E2 /* CollectionViewRow.swift */; };
+		D636D24D2CD3265F00C8C1E2 /* HeadScrollView.swift in Sources */ = {isa = PBXBuildFile; fileRef = D636D24C2CD3265F00C8C1E2 /* HeadScrollView.swift */; };
 		D63E7C2A2CCB64D50092D225 /* ReviewTopViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = D63E7C162CCB64D50092D225 /* ReviewTopViewController.swift */; };
 		D63E7C2B2CCB64D50092D225 /* ReviewMidViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = D63E7C172CCB64D50092D225 /* ReviewMidViewController.swift */; };
 		D63E7C2C2CCB64D50092D225 /* HeaderViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = D63E7C182CCB64D50092D225 /* HeaderViewController.swift */; };
@@ -57,7 +58,7 @@
 		D62023572CC956FC002554FC /* Sopt_Appstore.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Sopt_Appstore.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		D620236D2CC956FD002554FC /* Sopt_AppstoreTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = Sopt_AppstoreTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		D62023772CC956FD002554FC /* Sopt_AppstoreUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = Sopt_AppstoreUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
-		D636D2342CD247E900C8C1E2 /* HeadScrollView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HeadScrollView.swift; sourceTree = "<group>"; };
+		D636D2342CD247E900C8C1E2 /* HeadScrollViewRow.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HeadScrollViewRow.swift; sourceTree = "<group>"; };
 		D636D2372CD24E9900C8C1E2 /* ComponentExtension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ComponentExtension.swift; sourceTree = "<group>"; };
 		D636D23B2CD260A300C8C1E2 /* ApptitleView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ApptitleView.swift; sourceTree = "<group>"; };
 		D636D2412CD291A700C8C1E2 /* AppDataSet.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDataSet.swift; sourceTree = "<group>"; };
@@ -65,6 +66,7 @@
 		D636D2452CD2926800C8C1E2 /* chartViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = chartViewController.swift; sourceTree = "<group>"; };
 		D636D2482CD2ABCA00C8C1E2 /* AppHorizontalScrollView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppHorizontalScrollView.swift; sourceTree = "<group>"; };
 		D636D24A2CD315FE00C8C1E2 /* CollectionViewRow.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CollectionViewRow.swift; sourceTree = "<group>"; };
+		D636D24C2CD3265F00C8C1E2 /* HeadScrollView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HeadScrollView.swift; sourceTree = "<group>"; };
 		D63E7C162CCB64D50092D225 /* ReviewTopViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ReviewTopViewController.swift; sourceTree = "<group>"; };
 		D63E7C172CCB64D50092D225 /* ReviewMidViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ReviewMidViewController.swift; sourceTree = "<group>"; };
 		D63E7C182CCB64D50092D225 /* HeaderViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HeaderViewController.swift; sourceTree = "<group>"; };
@@ -226,7 +228,8 @@
 			isa = PBXGroup;
 			children = (
 				D6B32D8A2CD1DD74003EF497 /* FinanceView.swift */,
-				D636D2342CD247E900C8C1E2 /* HeadScrollView.swift */,
+				D636D2342CD247E900C8C1E2 /* HeadScrollViewRow.swift */,
+				D636D24C2CD3265F00C8C1E2 /* HeadScrollView.swift */,
 				D636D23B2CD260A300C8C1E2 /* ApptitleView.swift */,
 				D636D2472CD2ABA800C8C1E2 /* AppScrollView */,
 				D636D2402CD2903700C8C1E2 /* AppView */,
@@ -387,11 +390,12 @@
 				D63E7C2A2CCB64D50092D225 /* ReviewTopViewController.swift in Sources */,
 				D6B32D8B2CD1DD74003EF497 /* FinanceView.swift in Sources */,
 				D63E7C2B2CCB64D50092D225 /* ReviewMidViewController.swift in Sources */,
+				D636D24D2CD3265F00C8C1E2 /* HeadScrollView.swift in Sources */,
 				D63E7C2C2CCB64D50092D225 /* HeaderViewController.swift in Sources */,
 				D636D2442CD291DF00C8C1E2 /* AppRowView.swift in Sources */,
 				D636D2462CD2926800C8C1E2 /* chartViewController.swift in Sources */,
 				D63E7C2D2CCB64D50092D225 /* InfoViewController.swift in Sources */,
-				D636D2352CD247E900C8C1E2 /* HeadScrollView.swift in Sources */,
+				D636D2352CD247E900C8C1E2 /* HeadScrollViewRow.swift in Sources */,
 				D63E7C2E2CCB64D50092D225 /* PreviewViewController.swift in Sources */,
 				D63E7C402CCBCA8C0092D225 /* ReviewPageViewController.swift in Sources */,
 				D636D2422CD291A700C8C1E2 /* AppDataSet.swift in Sources */,
