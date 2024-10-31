@@ -4,17 +4,13 @@
 //
 //  Created by Jaehyun Ahn on 10/24/24.
 //
+
 import UIKit
 import SnapKit
 
 class PreviewViewController: UIViewController {
 
-    private let previewImageView: UIImageView = {
-        let imageView = UIImageView()
-        imageView.image = UIImage(named: "preview_toss")
-        imageView.contentMode = .scaleAspectFit
-        return imageView
-    }()
+    private let previewImageView = PreviewScroll()
 
     private let titleLabel: UILabel = {
         let label = UILabel()
@@ -60,11 +56,12 @@ class PreviewViewController: UIViewController {
                 make.leading.equalToSuperview().offset(20)
             }
 
-            previewImageView.snp.makeConstraints { make in
+        previewImageView.snp.makeConstraints { make in
                 make.top.equalTo(titleLabel.snp.bottom).offset(20)
                 make.leading.equalTo(titleLabel.snp.leading)
                 make.trailing.equalToSuperview().offset(-20)
-                make.height.equalTo(300)
+                make.height.equalTo(550)
+
             }
             
             iphoneImage.snp.makeConstraints { make in

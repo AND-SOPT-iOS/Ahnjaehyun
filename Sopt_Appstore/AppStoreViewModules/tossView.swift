@@ -17,6 +17,7 @@ class TossView: UIViewController, UIScrollViewDelegate {
     let reviewTopViewController = ReviewTopViewController()
     let reviewMidViewController = ReviewMidViewController()
     let reviewBottomViewController = ReviewBottomViewController()
+    
 
 
     
@@ -127,7 +128,7 @@ class TossView: UIViewController, UIScrollViewDelegate {
         contentView.snp.makeConstraints { make in
             make.edges.equalToSuperview()
             make.width.equalToSuperview()
-            make.height.equalTo(1550)
+            make.height.equalTo(1860)
         }
 
         addChild(headerViewController)
@@ -168,7 +169,7 @@ class TossView: UIViewController, UIScrollViewDelegate {
         previewViewController.view.snp.makeConstraints { make in
             make.top.equalTo(updateInfoViewController.view.snp.bottom).offset(20)
             make.leading.trailing.equalTo(contentView)
-            make.height.equalTo(contentView.snp.width).multipliedBy(0.85)
+            make.height.equalTo(660)
         }
         
         addChild(infoViewController)

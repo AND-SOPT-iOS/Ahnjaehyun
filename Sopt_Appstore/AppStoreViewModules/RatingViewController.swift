@@ -8,7 +8,7 @@ import UIKit
 import SnapKit
 
 class RatingViewController: UIViewController {
-
+    
     private let ratingLabel: UILabel = {
         let label = UILabel()
         label.text = "8.4만개의 평가"
@@ -16,7 +16,7 @@ class RatingViewController: UIViewController {
         label.textColor = .systemGray
         return label
     }()
-
+    
     private let ratingMid: UILabel = {
         let label = UILabel()
         label.text = "4.4"
@@ -24,7 +24,7 @@ class RatingViewController: UIViewController {
         label.textColor = .systemGray
         return label
     }()
-
+    
     private let ratingBottom: UILabel = {
         let label = UILabel()
         label.text = "★★★★★"
@@ -32,9 +32,9 @@ class RatingViewController: UIViewController {
         label.textColor = .systemGray
         return label
     }()
-
-   
-
+    
+    
+    
     private let awardLabel: UILabel = {
         let label = UILabel()
         label.text = "수상"
@@ -51,7 +51,7 @@ class RatingViewController: UIViewController {
         imageView.contentMode = .scaleAspectFit
         return imageView
     }()
-
+    
     private let awardBottom: UILabel = {
         let label = UILabel()
         label.text = "앱"
@@ -61,7 +61,7 @@ class RatingViewController: UIViewController {
     }()
     
     
-
+    
     private let ageLabel: UILabel = {
         let label = UILabel()
         label.text = "연령"
@@ -69,7 +69,7 @@ class RatingViewController: UIViewController {
         label.textColor = .systemGray
         return label
     }()
-
+    
     private let ageMid: UILabel = {
         let label = UILabel()
         label.text = "4+"
@@ -77,7 +77,7 @@ class RatingViewController: UIViewController {
         label.textColor = .systemGray
         return label
     }()
-
+    
     private let ageBottom: UILabel = {
         let label = UILabel()
         label.text = "세"
@@ -85,7 +85,7 @@ class RatingViewController: UIViewController {
         label.textColor = .systemGray
         return label
     }()
-
+    
     
     private let chartLabel: UILabel = {
         let label = UILabel()
@@ -94,7 +94,7 @@ class RatingViewController: UIViewController {
         label.textColor = .systemGray
         return label
     }()
-
+    
     private let chartMid: UILabel = {
         let label = UILabel()
         label.text = "#6"
@@ -102,7 +102,7 @@ class RatingViewController: UIViewController {
         label.textColor = .systemGray
         return label
     }()
-
+    
     private let chartBottom: UILabel = {
         let label = UILabel()
         label.text = "차트"
@@ -110,8 +110,8 @@ class RatingViewController: UIViewController {
         label.textColor = .systemGray
         return label
     }()
-
- 
+    
+    
     
     
     private let separatorTopLine: UIView = {
@@ -119,13 +119,13 @@ class RatingViewController: UIViewController {
         view.backgroundColor = .systemGray
         return view
     }()
-
+    
     private let separatorBottomLine: UIView = {
         let view = UIView()
         view.backgroundColor = .systemGray
         return view
     }()
-
+    
     
     
     private let verticalSeparatorLeft: UIView = {
@@ -133,29 +133,29 @@ class RatingViewController: UIViewController {
         view.backgroundColor = .systemGray
         return view
     }()
-
+    
     private let verticalSeparatorMid: UIView = {
         let view = UIView()
         view.backgroundColor = .systemGray
         return view
     }()
-
+    
     private let verticalSeparatorRight: UIView = {
         let view = UIView()
         view.backgroundColor = .systemGray
         return view
     }()
-
+    
     
     
     override func viewDidLoad() {
         super.viewDidLoad()
         setupUI()
     }
-
+    
     func setupUI() {
         view.backgroundColor = .black
-
+        
         view.addSubview(separatorTopLine)
         view.addSubview(separatorBottomLine)
         view.addSubview(ratingLabel)
@@ -173,25 +173,25 @@ class RatingViewController: UIViewController {
         view.addSubview(chartLabel)
         view.addSubview(chartMid)
         view.addSubview(chartBottom)
-
-
+        
+        
         separatorTopLine.snp.makeConstraints { make in
             make.leading.trailing.equalToSuperview().inset(20)
             make.top.equalToSuperview()
             make.height.equalTo(1)
         }
-
+        
         
         ratingLabel.snp.makeConstraints { make in
             make.top.equalTo(separatorTopLine.snp.bottom).offset(10)
             make.leading.equalToSuperview().offset(20)
         }
-
+        
         ratingMid.snp.makeConstraints { make in
             make.top.equalTo(ratingLabel.snp.bottom).offset(5)
             make.centerX.equalTo(ratingLabel)
         }
-
+        
         
         ratingBottom.snp.makeConstraints { make in
             make.centerX.equalTo(ratingLabel)
@@ -206,12 +206,12 @@ class RatingViewController: UIViewController {
             make.top.equalTo(ratingBottom.snp.bottom).offset(10)
             make.height.equalTo(1)
         }
-
-
         
-
         
-
+        
+        
+        
+        
         verticalSeparatorLeft.snp.makeConstraints { make in
             make.centerX.equalToSuperview().offset(-view.frame.width * 2.0 / 9)
             make.top.equalTo(separatorTopLine.snp.bottom).offset(30)
@@ -226,7 +226,7 @@ class RatingViewController: UIViewController {
             make.width.equalTo(0.5)
             make.height.equalTo(30)
         }
-
+        
         verticalSeparatorRight.snp.makeConstraints { make in
             make.centerX.equalToSuperview().offset(view.frame.width * 2.0 / 9)
             make.top.equalTo(separatorTopLine.snp.bottom).offset(30)
@@ -245,12 +245,12 @@ class RatingViewController: UIViewController {
             make.centerY.equalTo(ratingMid)
             make.centerX.equalTo(awardLabel)
         }
-
+        
         awardBottom.snp.makeConstraints { make in
             make.centerY.equalTo(ratingBottom)
             make.centerX.equalTo(awardLabel)
         }
-
+        
         
         
         
@@ -263,38 +263,38 @@ class RatingViewController: UIViewController {
             make.centerX.equalTo(ageLabel)
             make.centerY.equalTo(ratingMid)
         }
-
+        
         ageBottom.snp.makeConstraints { make in
             make.centerX.equalTo(ageLabel)
             make.centerY.equalTo(ratingBottom)
         }
-
+        
         
         chartLabel.snp.makeConstraints { make in
             make.trailing.equalToSuperview().offset(-55)
             make.centerY.equalTo(ratingLabel)
         }
-
+        
         chartMid.snp.makeConstraints { make in
             make.centerX.equalTo(chartLabel)
             make.centerY.equalTo(ratingMid)
         }
-
+        
         chartBottom.snp.makeConstraints { make in
             make.centerX.equalTo(chartLabel)
             make.centerY.equalTo(ratingBottom)
         }
-
-
-
+        
+        
+        
     }
 }
 
-    
-    
-    
-    
-    
+
+
+
+
+
 #Preview {
     RatingViewController()
 }
