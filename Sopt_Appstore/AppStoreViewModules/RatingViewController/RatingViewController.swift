@@ -1,16 +1,17 @@
 //
-//  ReviewMidViewController.swift
+//  RatingViewController.swift
 //  Sopt_Appstore
 //
-//  Created by Jaehyun Ahn on 10/31/24.
+//  Created by Jaehyun Ahn on 10/24/24.
 //
+
 
 import UIKit
 import SnapKit
 
-class ReviewMidViewController: UIViewController {
+class RatingViewController: UIViewController {
 
-    private let scrollView = ReviewMidScrollView()
+    private let scrollView = RatingScrollView()
 
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -24,10 +25,13 @@ class ReviewMidViewController: UIViewController {
         
         scrollView.snp.makeConstraints { make in
             make.edges.equalTo(view.safeAreaLayoutGuide)
+            make.leading.trailing.equalToSuperview()
+                      make.height.equalTo(200)
+            
         }
     }
 }
 
 #Preview {
-    ReviewMidViewController()
+    RatingViewController()
 }

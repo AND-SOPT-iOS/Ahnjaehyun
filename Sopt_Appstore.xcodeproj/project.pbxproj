@@ -25,7 +25,6 @@
 		D63E7C2C2CCB64D50092D225 /* HeaderViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = D63E7C182CCB64D50092D225 /* HeaderViewController.swift */; };
 		D63E7C2D2CCB64D50092D225 /* InfoViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = D63E7C192CCB64D50092D225 /* InfoViewController.swift */; };
 		D63E7C2E2CCB64D50092D225 /* PreviewViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = D63E7C1A2CCB64D50092D225 /* PreviewViewController.swift */; };
-		D63E7C2F2CCB64D50092D225 /* RatingViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = D63E7C1B2CCB64D50092D225 /* RatingViewController.swift */; };
 		D63E7C302CCB64D50092D225 /* ReviewBottomViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = D63E7C1C2CCB64D50092D225 /* ReviewBottomViewController.swift */; };
 		D63E7C322CCB64D50092D225 /* UpdateInfoViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = D63E7C1E2CCB64D50092D225 /* UpdateInfoViewController.swift */; };
 		D63E7C332CCB64D50092D225 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = D63E7C202CCB64D50092D225 /* AppDelegate.swift */; };
@@ -78,7 +77,6 @@
 		D63E7C182CCB64D50092D225 /* HeaderViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HeaderViewController.swift; sourceTree = "<group>"; };
 		D63E7C192CCB64D50092D225 /* InfoViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = InfoViewController.swift; sourceTree = "<group>"; };
 		D63E7C1A2CCB64D50092D225 /* PreviewViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PreviewViewController.swift; sourceTree = "<group>"; };
-		D63E7C1B2CCB64D50092D225 /* RatingViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RatingViewController.swift; sourceTree = "<group>"; };
 		D63E7C1C2CCB64D50092D225 /* ReviewBottomViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ReviewBottomViewController.swift; sourceTree = "<group>"; };
 		D63E7C1E2CCB64D50092D225 /* UpdateInfoViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UpdateInfoViewController.swift; sourceTree = "<group>"; };
 		D63E7C202CCB64D50092D225 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
@@ -102,6 +100,11 @@
 		D620237A2CC956FD002554FC /* Sopt_AppstoreUITests */ = {
 			isa = PBXFileSystemSynchronizedRootGroup;
 			path = Sopt_AppstoreUITests;
+			sourceTree = "<group>";
+		};
+		D65BFEC42CD3B30000797234 /* RatingViewController */ = {
+			isa = PBXFileSystemSynchronizedRootGroup;
+			path = RatingViewController;
 			sourceTree = "<group>";
 		};
 /* End PBXFileSystemSynchronizedRootGroup section */
@@ -204,7 +207,7 @@
 			children = (
 				D63E7C282CCB64D50092D225 /* tossView.swift */,
 				D63E7C182CCB64D50092D225 /* HeaderViewController.swift */,
-				D63E7C1B2CCB64D50092D225 /* RatingViewController.swift */,
+				D65BFEC42CD3B30000797234 /* RatingViewController */,
 				D636D24E2CD32B6300C8C1E2 /* PreViewScrollView */,
 				D63E7C1E2CCB64D50092D225 /* UpdateInfoViewController.swift */,
 				D63E7C192CCB64D50092D225 /* InfoViewController.swift */,
@@ -276,6 +279,9 @@
 			buildRules = (
 			);
 			dependencies = (
+			);
+			fileSystemSynchronizedGroups = (
+				D65BFEC42CD3B30000797234 /* RatingViewController */,
 			);
 			name = Sopt_Appstore;
 			packageProductDependencies = (
@@ -427,7 +433,6 @@
 				D63E7C402CCBCA8C0092D225 /* ReviewPageViewController.swift in Sources */,
 				D636D2422CD291A700C8C1E2 /* AppDataSet.swift in Sources */,
 				D636D2532CD33A2E00C8C1E2 /* ReviewMidScrollView.swift in Sources */,
-				D63E7C2F2CCB64D50092D225 /* RatingViewController.swift in Sources */,
 				D63E7C302CCB64D50092D225 /* ReviewBottomViewController.swift in Sources */,
 				D636D24B2CD315FE00C8C1E2 /* CollectionViewRow.swift in Sources */,
 				D63E7C322CCB64D50092D225 /* UpdateInfoViewController.swift in Sources */,
