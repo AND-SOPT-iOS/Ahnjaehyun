@@ -4,11 +4,12 @@
 //
 //  Created by Jaehyun Ahn on 10/30/24.
 //
-
 import UIKit
 import SnapKit
 
 class ApptitleView: UIView {
+
+    var onArrowButtonTapped: (() -> Void)?
 
     private let titleLabel: UILabel = {
         let label = UILabel()
@@ -17,26 +18,27 @@ class ApptitleView: UIView {
         return label
     }()
     
-    private let arrowImageView: UIImageView = {
-        let imageView = UIImageView()
-        imageView.image = UIImage(systemName: "chevron.right")
-        imageView.tintColor = .white
-        imageView.contentMode = .scaleAspectFit
-        return imageView
+    private let arrowButton: UIButton = {
+        let button = UIButton()
+        button.setImage(UIImage(systemName: "chevron.right"), for: .normal)
+        button.tintColor = .white
+        button.contentMode = .scaleAspectFit
+        return button
     }()
     
+    override init(frame: CGRect) {
+        super.init(frame: frame)
+        setupViews()
+        setupConstraints()
+        setupActions()
+    }
     
-     override init(frame: CGRect) {
-         super.init(frame: frame)
-         setupViews()
-         setupConstraints()
-     }
-     
-     required init?(coder: NSCoder) {
-         super.init(coder: coder)
-         setupViews()
-         setupConstraints()
-     }
+    required init?(coder: NSCoder) {
+        super.init(coder: coder)
+        setupViews()
+        setupConstraints()
+        setupActions()
+    }
     
     func configure(title: String) {
         titleLabel.text = title
@@ -45,10 +47,8 @@ class ApptitleView: UIView {
     private func setupViews() {
         backgroundColor = .black
         addSubview(titleLabel)
-        addSubview(arrowImageView)
+        addSubview(arrowButton)
     }
-    
-    
     
     private func setupConstraints() {
         titleLabel.snp.makeConstraints { make in
@@ -56,16 +56,18 @@ class ApptitleView: UIView {
             make.centerY.equalToSuperview()
         }
         
-        arrowImageView.snp.makeConstraints { make in
+        arrowButton.snp.makeConstraints { make in
             make.leading.equalTo(titleLabel.snp.trailing).offset(5)
             make.centerY.equalTo(titleLabel)
             make.width.height.equalTo(20)
         }
     }
-}
 
-#Preview{
-    let appTitleView = ApptitleView()
-    appTitleView.configure(title: "유료 순위")
-    return appTitleView
+    private func setupActions() {
+        arrowButton.addTarget(self, action: #selector(arrowButtonTapped), for: .touchUpInside)
+    }
+    
+    @objc private func arrowButtonTapped() {
+        onArrowButtonTapped?()
+    }
 }

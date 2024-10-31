@@ -29,12 +29,13 @@
 		D63E7C322CCB64D50092D225 /* UpdateInfoViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = D63E7C1E2CCB64D50092D225 /* UpdateInfoViewController.swift */; };
 		D63E7C332CCB64D50092D225 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = D63E7C202CCB64D50092D225 /* AppDelegate.swift */; };
 		D63E7C342CCB64D50092D225 /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = D63E7C272CCB64D50092D225 /* SceneDelegate.swift */; };
-		D63E7C352CCB64D50092D225 /* tossView.swift in Sources */ = {isa = PBXBuildFile; fileRef = D63E7C282CCB64D50092D225 /* tossView.swift */; };
+		D63E7C352CCB64D50092D225 /* TossView.swift in Sources */ = {isa = PBXBuildFile; fileRef = D63E7C282CCB64D50092D225 /* TossView.swift */; };
 		D63E7C362CCB64D50092D225 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = D63E7C212CCB64D50092D225 /* Assets.xcassets */; };
 		D63E7C382CCB64D50092D225 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = D63E7C242CCB64D50092D225 /* LaunchScreen.storyboard */; };
 		D63E7C392CCB64D50092D225 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = D63E7C262CCB64D50092D225 /* Main.storyboard */; };
 		D63E7C3D2CCBC7BD0092D225 /* VersionPageViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = D63E7C3C2CCBC7BD0092D225 /* VersionPageViewController.swift */; };
 		D63E7C402CCBCA8C0092D225 /* ReviewPageViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = D63E7C3F2CCBCA8C0092D225 /* ReviewPageViewController.swift */; };
+		D65BFECE2CD3FB1700797234 /* CharListView.swift in Sources */ = {isa = PBXBuildFile; fileRef = D65BFECD2CD3FB1700797234 /* CharListView.swift */; };
 		D6B32D8B2CD1DD74003EF497 /* FinanceView.swift in Sources */ = {isa = PBXBuildFile; fileRef = D6B32D8A2CD1DD74003EF497 /* FinanceView.swift */; };
 		D6F6185F2CC959DB001EE4EA /* SnapKit in Frameworks */ = {isa = PBXBuildFile; productRef = D6F6185E2CC959DB001EE4EA /* SnapKit */; };
 /* End PBXBuildFile section */
@@ -85,9 +86,10 @@
 		D63E7C232CCB64D50092D225 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		D63E7C252CCB64D50092D225 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
 		D63E7C272CCB64D50092D225 /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
-		D63E7C282CCB64D50092D225 /* tossView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = tossView.swift; sourceTree = "<group>"; };
+		D63E7C282CCB64D50092D225 /* TossView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TossView.swift; sourceTree = "<group>"; };
 		D63E7C3C2CCBC7BD0092D225 /* VersionPageViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = VersionPageViewController.swift; sourceTree = "<group>"; };
 		D63E7C3F2CCBCA8C0092D225 /* ReviewPageViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ReviewPageViewController.swift; sourceTree = "<group>"; };
+		D65BFECD2CD3FB1700797234 /* CharListView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CharListView.swift; sourceTree = "<group>"; };
 		D6B32D8A2CD1DD74003EF497 /* FinanceView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FinanceView.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
@@ -170,6 +172,7 @@
 				D636D2412CD291A700C8C1E2 /* AppDataSet.swift */,
 				D636D2432CD291DF00C8C1E2 /* AppRowView.swift */,
 				D636D2452CD2926800C8C1E2 /* chartViewController.swift */,
+				D65BFECD2CD3FB1700797234 /* CharListView.swift */,
 			);
 			path = AppView;
 			sourceTree = "<group>";
@@ -205,7 +208,7 @@
 		D63E7C1F2CCB64D50092D225 /* AppStoreViewModules */ = {
 			isa = PBXGroup;
 			children = (
-				D63E7C282CCB64D50092D225 /* tossView.swift */,
+				D63E7C282CCB64D50092D225 /* TossView.swift */,
 				D63E7C182CCB64D50092D225 /* HeaderViewController.swift */,
 				D65BFEC42CD3B30000797234 /* RatingViewController */,
 				D636D24E2CD32B6300C8C1E2 /* PreViewScrollView */,
@@ -437,12 +440,13 @@
 				D636D24B2CD315FE00C8C1E2 /* CollectionViewRow.swift in Sources */,
 				D63E7C322CCB64D50092D225 /* UpdateInfoViewController.swift in Sources */,
 				D63E7C3D2CCBC7BD0092D225 /* VersionPageViewController.swift in Sources */,
+				D65BFECE2CD3FB1700797234 /* CharListView.swift in Sources */,
 				D636D2492CD2ABCA00C8C1E2 /* AppHorizontalScrollView.swift in Sources */,
 				D63E7C332CCB64D50092D225 /* AppDelegate.swift in Sources */,
 				D636D2382CD24E9900C8C1E2 /* ComponentExtension.swift in Sources */,
 				D636D23C2CD260A300C8C1E2 /* ApptitleView.swift in Sources */,
 				D63E7C342CCB64D50092D225 /* SceneDelegate.swift in Sources */,
-				D63E7C352CCB64D50092D225 /* tossView.swift in Sources */,
+				D63E7C352CCB64D50092D225 /* TossView.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

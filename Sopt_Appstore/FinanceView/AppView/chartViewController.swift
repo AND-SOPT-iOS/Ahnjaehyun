@@ -80,7 +80,7 @@ extension ChartViewController: UITableViewDataSource {
     }
     
     private func navigateToTossView() {
-           let tossViewController = TossView() // 이동할 뷰 컨트롤러 생성
+           let tossViewController = TossView()
            navigationController?.pushViewController(tossViewController, animated: true)
        }
     
@@ -89,7 +89,6 @@ extension ChartViewController: UITableViewDataSource {
     
 }
 
-//프리뷰
 struct ChartViewControllerPreview: UIViewControllerRepresentable {
     func makeUIViewController(context: Context) -> ChartViewController {
         return ChartViewController()
