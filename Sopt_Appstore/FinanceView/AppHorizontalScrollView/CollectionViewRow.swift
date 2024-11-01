@@ -124,6 +124,7 @@ class AppRowView_Collection: UICollectionViewCell {
         purchaseLabel.text = app.subTitle
         actionButton.setTitle(app.downloadState.rawValue, for: .normal)
     }
+    
     private func setupActions() {
            actionButton.addTarget(self, action: #selector(actionButtonTapped), for: .touchUpInside)
        }
