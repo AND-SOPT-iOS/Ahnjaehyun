@@ -40,6 +40,8 @@ class TossView: UIViewController, UIScrollViewDelegate {
 
         setupScrollView()
     }
+    
+    
 
     // MARK: - 네비게이션 바 설정
     func setupNavigationBar() {
@@ -72,6 +74,9 @@ class TossView: UIViewController, UIScrollViewDelegate {
         navigationController?.navigationBar.standardAppearance = appearance
         navigationController?.navigationBar.scrollEdgeAppearance = appearance
     }
+    
+    
+    
     
     // MARK: - 탭바 설정
     func setupTabBarController() {
@@ -114,6 +119,10 @@ class TossView: UIViewController, UIScrollViewDelegate {
             make.height.equalTo(50)
         }
     }
+    
+    
+    
+    
 
     // MARK: - ScrollView 설정
     func setupScrollView() {

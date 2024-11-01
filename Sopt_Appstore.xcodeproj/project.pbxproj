@@ -13,7 +13,7 @@
 		D636D23F2CD28F7700C8C1E2 /* Then in Frameworks */ = {isa = PBXBuildFile; productRef = D636D23E2CD28F7700C8C1E2 /* Then */; };
 		D636D2422CD291A700C8C1E2 /* AppDataSet.swift in Sources */ = {isa = PBXBuildFile; fileRef = D636D2412CD291A700C8C1E2 /* AppDataSet.swift */; };
 		D636D2442CD291DF00C8C1E2 /* AppRowView.swift in Sources */ = {isa = PBXBuildFile; fileRef = D636D2432CD291DF00C8C1E2 /* AppRowView.swift */; };
-		D636D2462CD2926800C8C1E2 /* chartViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = D636D2452CD2926800C8C1E2 /* chartViewController.swift */; };
+		D636D2462CD2926800C8C1E2 /* ChartViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = D636D2452CD2926800C8C1E2 /* ChartViewController.swift */; };
 		D636D2492CD2ABCA00C8C1E2 /* AppHorizontalScrollView.swift in Sources */ = {isa = PBXBuildFile; fileRef = D636D2482CD2ABCA00C8C1E2 /* AppHorizontalScrollView.swift */; };
 		D636D24B2CD315FE00C8C1E2 /* CollectionViewRow.swift in Sources */ = {isa = PBXBuildFile; fileRef = D636D24A2CD315FE00C8C1E2 /* CollectionViewRow.swift */; };
 		D636D24D2CD3265F00C8C1E2 /* HeadScrollView.swift in Sources */ = {isa = PBXBuildFile; fileRef = D636D24C2CD3265F00C8C1E2 /* HeadScrollView.swift */; };
@@ -66,7 +66,7 @@
 		D636D23B2CD260A300C8C1E2 /* ApptitleView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ApptitleView.swift; sourceTree = "<group>"; };
 		D636D2412CD291A700C8C1E2 /* AppDataSet.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDataSet.swift; sourceTree = "<group>"; };
 		D636D2432CD291DF00C8C1E2 /* AppRowView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppRowView.swift; sourceTree = "<group>"; };
-		D636D2452CD2926800C8C1E2 /* chartViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = chartViewController.swift; sourceTree = "<group>"; };
+		D636D2452CD2926800C8C1E2 /* ChartViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ChartViewController.swift; sourceTree = "<group>"; };
 		D636D2482CD2ABCA00C8C1E2 /* AppHorizontalScrollView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppHorizontalScrollView.swift; sourceTree = "<group>"; };
 		D636D24A2CD315FE00C8C1E2 /* CollectionViewRow.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CollectionViewRow.swift; sourceTree = "<group>"; };
 		D636D24C2CD3265F00C8C1E2 /* HeadScrollView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HeadScrollView.swift; sourceTree = "<group>"; };
@@ -166,24 +166,24 @@
 			path = Extension;
 			sourceTree = "<group>";
 		};
-		D636D2402CD2903700C8C1E2 /* AppView */ = {
+		D636D2402CD2903700C8C1E2 /* AppChartView */ = {
 			isa = PBXGroup;
 			children = (
 				D636D2412CD291A700C8C1E2 /* AppDataSet.swift */,
 				D636D2432CD291DF00C8C1E2 /* AppRowView.swift */,
-				D636D2452CD2926800C8C1E2 /* chartViewController.swift */,
+				D636D2452CD2926800C8C1E2 /* ChartViewController.swift */,
 				D65BFECD2CD3FB1700797234 /* CharListView.swift */,
 			);
-			path = AppView;
+			path = AppChartView;
 			sourceTree = "<group>";
 		};
-		D636D2472CD2ABA800C8C1E2 /* AppScrollView */ = {
+		D636D2472CD2ABA800C8C1E2 /* AppHorizontalScrollView */ = {
 			isa = PBXGroup;
 			children = (
 				D636D2482CD2ABCA00C8C1E2 /* AppHorizontalScrollView.swift */,
 				D636D24A2CD315FE00C8C1E2 /* CollectionViewRow.swift */,
 			);
-			path = AppScrollView;
+			path = AppHorizontalScrollView;
 			sourceTree = "<group>";
 		};
 		D636D24E2CD32B6300C8C1E2 /* PreViewScrollView */ = {
@@ -243,6 +243,15 @@
 			path = Navigation;
 			sourceTree = "<group>";
 		};
+		D67AC1C72CD4952C00C1A948 /* HeadScrollViewRow */ = {
+			isa = PBXGroup;
+			children = (
+				D636D2342CD247E900C8C1E2 /* HeadScrollViewRow.swift */,
+				D636D24C2CD3265F00C8C1E2 /* HeadScrollView.swift */,
+			);
+			path = HeadScrollViewRow;
+			sourceTree = "<group>";
+		};
 		D6B32D882CD1DD20003EF497 /* Delegate */ = {
 			isa = PBXGroup;
 			children = (
@@ -259,11 +268,10 @@
 			isa = PBXGroup;
 			children = (
 				D6B32D8A2CD1DD74003EF497 /* FinanceView.swift */,
-				D636D2342CD247E900C8C1E2 /* HeadScrollViewRow.swift */,
-				D636D24C2CD3265F00C8C1E2 /* HeadScrollView.swift */,
+				D67AC1C72CD4952C00C1A948 /* HeadScrollViewRow */,
 				D636D23B2CD260A300C8C1E2 /* ApptitleView.swift */,
-				D636D2472CD2ABA800C8C1E2 /* AppScrollView */,
-				D636D2402CD2903700C8C1E2 /* AppView */,
+				D636D2472CD2ABA800C8C1E2 /* AppHorizontalScrollView */,
+				D636D2402CD2903700C8C1E2 /* AppChartView */,
 			);
 			path = FinanceView;
 			sourceTree = "<group>";
@@ -428,7 +436,7 @@
 				D636D2552CD33A4600C8C1E2 /* ReviewMidViewController.swift in Sources */,
 				D63E7C2C2CCB64D50092D225 /* HeaderViewController.swift in Sources */,
 				D636D2442CD291DF00C8C1E2 /* AppRowView.swift in Sources */,
-				D636D2462CD2926800C8C1E2 /* chartViewController.swift in Sources */,
+				D636D2462CD2926800C8C1E2 /* ChartViewController.swift in Sources */,
 				D636D2502CD32D8300C8C1E2 /* PreviewScroll.swift in Sources */,
 				D63E7C2D2CCB64D50092D225 /* InfoViewController.swift in Sources */,
 				D636D2352CD247E900C8C1E2 /* HeadScrollViewRow.swift in Sources */,

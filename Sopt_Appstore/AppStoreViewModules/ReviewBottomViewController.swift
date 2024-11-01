@@ -80,7 +80,7 @@ class ReviewBottomViewController: UIViewController {
         return button
     }()
 
-    // 버튼 스택뷰
+    
     private let buttonStackView: UIStackView = {
         let stackView = UIStackView()
         stackView.axis = .horizontal

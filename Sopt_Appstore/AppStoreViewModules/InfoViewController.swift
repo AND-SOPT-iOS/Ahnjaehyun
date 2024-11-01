@@ -44,7 +44,7 @@ class InfoViewController: UIViewController {
         button.contentHorizontalAlignment = .left
         return button
     }()
-
+    
     private let developerLabel: UILabel = {
         let label = UILabel()
         let attributedString = NSMutableAttributedString(string: "Viva Republica")
@@ -69,17 +69,24 @@ class InfoViewController: UIViewController {
         button.tintColor = .gray
         return button
     }()
-
+    
+    
+    
+    
+    
     override func viewDidLoad() {
         super.viewDidLoad()
         view.backgroundColor = .black
         
         setupUI()
         
-        //accountInfoLabel 에 그라데이션을 넣었습니더.
         applyGradientMaskToLabel(accountInfoLabel)
-
+        
     }
+    
+    
+    
+    
     
     private func setupUI() {
         view.addSubview(infoLabel)
@@ -89,7 +96,7 @@ class InfoViewController: UIViewController {
         view.addSubview(developerLabel)
         view.addSubview(developerInfoLabel)
         view.addSubview(chevronButton)
-
+        
         infoLabel.snp.makeConstraints { make in
             make.top.equalTo(view.safeAreaLayoutGuide).offset(20)
             make.leading.equalToSuperview().offset(20)
@@ -110,7 +117,7 @@ class InfoViewController: UIViewController {
         
         moreInfoButton.snp.makeConstraints { make in
             make.centerY.equalTo(accountInfoLabel)
-
+            
             make.trailing.equalToSuperview().offset(-20)
         }
         
@@ -118,7 +125,7 @@ class InfoViewController: UIViewController {
             make.top.equalTo(moreInfoButton.snp.bottom).offset(15)
             make.leading.equalTo(infoLabel)
         }
-
+        
         developerInfoLabel.snp.makeConstraints { make in
             make.leading.equalTo(developerLabel.snp.trailing).offset(10)
             make.bottom.equalTo(developerLabel.snp.bottom)
@@ -131,24 +138,24 @@ class InfoViewController: UIViewController {
         }
     }
     private func applyGradientMaskToLabel(_ label: UILabel) {
-           let gradientLayer = CAGradientLayer()
-           gradientLayer.colors = [UIColor.lightGray.cgColor, UIColor.clear.cgColor]
-           gradientLayer.locations = [0.7, 1.0]
-           gradientLayer.startPoint = CGPoint(x: 0, y: 0.5)
-           gradientLayer.endPoint = CGPoint(x: 1, y: 0.5)
-           gradientLayer.frame = label.bounds
-           
-           label.layer.mask = gradientLayer
-       }
-       
+        let gradientLayer = CAGradientLayer()
+        gradientLayer.colors = [UIColor.lightGray.cgColor, UIColor.clear.cgColor]
+        gradientLayer.locations = [0.7, 1.0]
+        gradientLayer.startPoint = CGPoint(x: 0, y: 0.5)
+        gradientLayer.endPoint = CGPoint(x: 1, y: 0.5)
+        gradientLayer.frame = label.bounds
+        
+        label.layer.mask = gradientLayer
+    }
     
-    //원래 컴포넌트가 로딩이되고 그다음 그라데이션을 넣어야 잘 보임
-       override func viewDidLayoutSubviews() {
-           super.viewDidLayoutSubviews()
-           // 레이아웃이 완료된 후 그라데이션 다시 적용
-           applyGradientMaskToLabel(accountInfoLabel)
-           
-       }
+    
+    
+    override func viewDidLayoutSubviews() {
+        super.viewDidLayoutSubviews()
+        
+        applyGradientMaskToLabel(accountInfoLabel)
+        
+    }
     
 }
 
