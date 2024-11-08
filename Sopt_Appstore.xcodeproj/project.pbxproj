@@ -165,6 +165,27 @@
 			name = Products;
 			sourceTree = "<group>";
 		};
+		D621CD7B2CDE002D00B3A420 /* VIew */ = {
+			isa = PBXGroup;
+			children = (
+				D636D2362CD24E8600C8C1E2 /* Extension */,
+				D63E7C1F2CCB64D50092D225 /* AppStoreViewModules */,
+				D6B32D892CD1DD3D003EF497 /* FinanceView */,
+				D63E7C3E2CCBC7CD0092D225 /* Navigation */,
+			);
+			path = VIew;
+			sourceTree = "<group>";
+		};
+		D621CD7C2CDE004400B3A420 /* Server */ = {
+			isa = PBXGroup;
+			children = (
+				D621CD762CDDF6CD00B3A420 /* Config.xcconfig */,
+				D621CD772CDDFEEA00B3A420 /* Environment.swift */,
+				D621CD792CDDFF1100B3A420 /* ErrorEnum.swift */,
+			);
+			path = Server;
+			sourceTree = "<group>";
+		};
 		D636D2362CD24E8600C8C1E2 /* Extension */ = {
 			isa = PBXGroup;
 			children = (
@@ -231,14 +252,9 @@
 		D63E7C292CCB64D50092D225 /* Sopt_Appstore */ = {
 			isa = PBXGroup;
 			children = (
-				D636D2362CD24E8600C8C1E2 /* Extension */,
 				D63E7C222CCB64D50092D225 /* Info.plist */,
-				D621CD762CDDF6CD00B3A420 /* Config.xcconfig */,
-				D621CD772CDDFEEA00B3A420 /* Environment.swift */,
-				D621CD792CDDFF1100B3A420 /* ErrorEnum.swift */,
-				D63E7C1F2CCB64D50092D225 /* AppStoreViewModules */,
-				D6B32D892CD1DD3D003EF497 /* FinanceView */,
-				D63E7C3E2CCBC7CD0092D225 /* Navigation */,
+				D621CD7C2CDE004400B3A420 /* Server */,
+				D621CD7B2CDE002D00B3A420 /* VIew */,
 				D6B32D882CD1DD20003EF497 /* Delegate */,
 			);
 			path = Sopt_Appstore;
