@@ -10,6 +10,11 @@
 #           - AS PER https://guides.cocoapods.org/using/using-cocoapods.html NEVER IGNORE THE LOCK FILE
 Pods/
 
+### Env
+*.xcconfig
+.env
+
+
 ### macOS ###
 # General
 .DS_Store
@@ -120,6 +125,10 @@ fastlane/report.xml
 fastlane/Preview.html
 fastlane/screenshots/**/*.png
 fastlane/test_output
+
+# Ignore all .plist files
+*.plist
+
 
 # Code Injection
 # After new code Injection tools there's a generated folder /iOSInjectionProject

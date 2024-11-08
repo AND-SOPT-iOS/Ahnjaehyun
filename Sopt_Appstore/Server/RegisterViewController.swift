@@ -35,7 +35,7 @@ class RegisterViewController: UIViewController {
     private let registerButton: UIButton = {
         let button = UIButton(type: .system)
         button.setTitle("회원 등록", for: .normal)
-        button.addTarget(RegisterViewController.self, action: #selector(handleRegister), for: .touchUpInside)
+        button.addTarget(self, action: #selector(handleRegister), for: .touchUpInside)
         return button
     }()
 
