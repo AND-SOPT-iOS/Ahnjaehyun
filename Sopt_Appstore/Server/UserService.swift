@@ -60,7 +60,7 @@ class UserService {
     func login(username: String, password: String, completion: @escaping (Result<String, NetworkError>) -> Void) {
         let url = Environment.baseURL + "/login"
         
-        
+                
         let parameters: [String: String] = ["username": username, "password": password]
         
         AF.request(
