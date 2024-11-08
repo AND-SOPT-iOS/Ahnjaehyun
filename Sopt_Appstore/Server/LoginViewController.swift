@@ -11,8 +11,9 @@ import KeychainSwift
 import SnapKit
 
 
+
 class LoginViewController: UIViewController {
-    
+    // UI Elements
     private let usernameTextField: UITextField = {
         let textField = UITextField()
         textField.placeholder = "사용자 이름"
@@ -43,6 +44,7 @@ class LoginViewController: UIViewController {
     }()
 
     let keychain = KeychainSwift()
+    let userService = UserService()
 
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -52,10 +54,12 @@ class LoginViewController: UIViewController {
     private func setupUI() {
         view.backgroundColor = .white
         
+        
         view.addSubview(usernameTextField)
         view.addSubview(passwordTextField)
         view.addSubview(hobbyTextField)
         view.addSubview(loginButton)
+        
         
         usernameTextField.snp.makeConstraints { make in
             make.top.equalTo(view.safeAreaLayoutGuide).offset(100)
@@ -80,7 +84,6 @@ class LoginViewController: UIViewController {
     }
 
     @objc private func handleLogin() {
-        //if 3 filed empty
         guard let username = usernameTextField.text, !username.isEmpty,
               let password = passwordTextField.text, !password.isEmpty,
               let hobby = hobbyTextField.text, !hobby.isEmpty else {
@@ -88,34 +91,26 @@ class LoginViewController: UIViewController {
             return
         }
         
-        let loginRequest = RegisterRequest(username: username, password: password, hobby: hobby)
-        simulateLogin(request: loginRequest) { [weak self] response in
+        /// UserService의 register 메소드를 호출하여 네트워크 요청을 처리함
+        userService.register(username: username, password: password, hobby: hobby) { [weak self] result in
             guard let self = self else { return }
             
-            if let token = response?.token {
-                if self.secureSaveToken(token: token) {
-                    self.showAlert(title: "성공", message: "로그인 성공!") {
-                        // 파이넨스 뷰로 이동
-                        let financeViewController = FinanceView()
-                        self.navigationController?.pushViewController(financeViewController, animated: true)
+            DispatchQueue.main.async {
+                switch result {
+                case .success:
+                    let token = "123456789" // 원래 토근 받는 곳
+                    if self.secureSaveToken(token: token) {
+                        self.showAlert(title: "성공", message: "로그인 성공!") {
+                            let financeViewController = FinanceView()
+                            self.navigationController?.pushViewController(financeViewController, animated: true)
+                        }
+                    } else {
+                        self.showAlert(title: "오류", message: "토큰 저장에 실패했습니다.")
                     }
-                } else {
-                    self.showAlert(title: "오류", message: "토큰 저장에 실패했습니다.")
+                case .failure(let error):
+                    ///  발생한 네트워크 에러에 대한 메시지를 표시
+                    self.showAlert(title: "오류", message: "로그인 실패: \(error.localizedDescription)")
                 }
-            } else {
-                self.showAlert(title: "오류", message: "잘못된 사용자 이름 또는 비밀번호입니다.")
-            }
-        }
-    }
-
-    private func simulateLogin(request: RegisterRequest, completion: @escaping (LoginResponse?) -> Void) {
-        
-        DispatchQueue.global().asyncAfter(deadline: .now() + 1) {
-            if request.username == "test" && request.password == "1234" {
-                let response = LoginResponse(token: "12345679")
-                completion(response)
-            } else {
-                completion(nil)
             }
         }
     }
@@ -127,7 +122,6 @@ class LoginViewController: UIViewController {
         }))
         present(alert, animated: true, completion: nil)
     }
-
     
     func saveToken(token: String) {
         keychain.set(token, forKey: "userToken")
@@ -153,4 +147,5 @@ class LoginViewController: UIViewController {
             return false
         }
     }
+   
 }

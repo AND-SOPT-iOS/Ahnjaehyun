@@ -40,7 +40,7 @@ enum NetworkError: Error {
     case .duplicateError:
       return "중복 에러입니다"
     case .expressionError:
-      return "표현식 오류입니다"
+      return "표현식 오류입니다, 8자 이네로 작성하세요"
     }
   }
 }
