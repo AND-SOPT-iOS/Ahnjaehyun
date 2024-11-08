@@ -154,6 +154,45 @@ class UserService {
         }
     }
     
+    /// 유저 정보 변경 메서드 추가
+    func updateUserInfo(token: String, newPassword: String?, newHobby: String?, completion: @escaping (Result<Bool, NetworkError>) -> Void) {
+        let url = Environment.baseURL + "/user"
+        let headers: HTTPHeaders = ["token": token]
+        
+        var parameters: [String: String] = [:]
+        if let newPassword = newPassword, !newPassword.isEmpty {
+            parameters["password"] = newPassword
+        }
+        if let newHobby = newHobby, !newHobby.isEmpty {
+            parameters["hobby"] = newHobby
+        }
+        
+        AF.request(
+            url,
+            method: .put,
+            parameters: parameters,
+            encoder: JSONParameterEncoder.default,
+            headers: headers
+        )
+        .validate()
+        .response { [weak self] response in
+            guard let statusCode = response.response?.statusCode,
+                  let data = response.data,
+                  let self = self else {
+                completion(.failure(.unknownError))
+                return
+            }
+            
+            switch response.result {
+            case .success:
+                completion(.success(true))
+            case .failure:
+                let error = self.handleStatusCode(statusCode, data: data)
+                completion(.failure(error))
+            }
+        }
+    }
+    
     func decodeError(data: Data) -> String {
         guard let errorResponse = try? JSONDecoder().decode(
             ErrorResponse.self,
