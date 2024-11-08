@@ -11,158 +11,132 @@ import SnapKit
 import SwiftUI
 
 class QueryViewController: UIViewController {
-
+    
     private let userService = UserService()
     private let keychain = KeychainSwift()
-
-    // UI Elements
-    private let userIdTextField: UITextField = {
-        let textField = UITextField()
-        textField.placeholder = "유저 ID 입력"
-        textField.borderStyle = .roundedRect
-        return textField
-    }()
-
-    private let passwordTextField: UITextField = {
-        let textField = UITextField()
-        textField.placeholder = "비밀번호 입력"
-        textField.borderStyle = .roundedRect
-        textField.isSecureTextEntry = true
-        return textField
-    }()
-
-    private let hobbyTextField: UITextField = {
-        let textField = UITextField()
-        textField.placeholder = "취미 입력"
-        textField.borderStyle = .roundedRect
-        return textField
-    }()
-
-    private let myHobbyButton: UIButton = {
-        let button = UIButton(type: .system)
-        button.setTitle("내 취미 조회", for: .normal)
-        return button
-    }()
-
-    private let myHobbyLabel: UILabel = {
-        let label = UILabel()
-        label.text = "내 취미 조회 결과"
-        label.textAlignment = .center
-        label.numberOfLines = 0
-        label.textColor = .darkGray
-        return label
-    }()
-
-    private let otherUserHobbyButton: UIButton = {
-        let button = UIButton(type: .system)
-        button.setTitle("다른 유저 취미 조회", for: .normal)
-        return button
-    }()
-
-    private let otherUserHobbyLabel: UILabel = {
-        let label = UILabel()
-        label.text = "다른 유저 취미 조회 결과"
-        label.textAlignment = .center
-        label.numberOfLines = 0
-        label.textColor = .darkGray
-        return label
-    }()
-
-    private let updateUserInfoButton: UIButton = {
-        let button = UIButton(type: .system)
-        button.setTitle("유저 정보 변경", for: .normal)
-        return button
-    }()
-
-    private let updateUserInfoLabel: UILabel = {
-        let label = UILabel()
-        label.text = "유저 정보 변경 결과"
-        label.textAlignment = .center
-        label.numberOfLines = 0
-        label.textColor = .darkGray
-        return label
-    }()
-
+    
+    private let userIdTextField = UITextField().then {
+        $0.placeholder = "유저 번호 입력"
+        $0.borderStyle = .roundedRect
+        $0.keyboardType = .numberPad
+    }
+    
+    private let passwordTextField = UITextField().then {
+        $0.placeholder = "비밀번호 입력"
+        $0.borderStyle = .roundedRect
+        $0.isSecureTextEntry = true
+    }
+    
+    private let hobbyTextField = UITextField().then {
+        $0.placeholder = "취미 입력"
+        $0.borderStyle = .roundedRect
+    }
+    
+    private let myHobbyButton = UIButton(type: .system).then {
+        $0.setTitle("내 취미 조회", for: .normal)
+    }
+    
+    private let myHobbyLabel = UILabel().then {
+        $0.text = "내 취미 조회 결과"
+        $0.textAlignment = .center
+        $0.numberOfLines = 0
+        $0.textColor = .darkGray
+    }
+    
+    private let otherUserHobbyButton = UIButton(type: .system).then {
+        $0.setTitle("다른 유저 취미 조회", for: .normal)
+    }
+    
+    private let otherUserHobbyLabel = UILabel().then {
+        $0.text = "다른 유저 취미 조회 결과"
+        $0.textAlignment = .center
+        $0.numberOfLines = 0
+        $0.textColor = .darkGray
+    }
+    
+    private let updateUserInfoButton = UIButton(type: .system).then {
+        $0.setTitle("유저 정보 변경", for: .normal)
+    }
+    
+    private let updateUserInfoLabel = UILabel().then {
+        $0.text = "유저 정보 변경 결과"
+        $0.textAlignment = .center
+        $0.numberOfLines = 0
+        $0.textColor = .darkGray
+    }
+    
     override func viewDidLoad() {
         super.viewDidLoad()
         setupUI()
-
-        // Add button targets
+        
         myHobbyButton.addTarget(self, action: #selector(handleMyHobbyQuery), for: .touchUpInside)
         otherUserHobbyButton.addTarget(self, action: #selector(handleOtherUserHobbyQuery), for: .touchUpInside)
         updateUserInfoButton.addTarget(self, action: #selector(handleUpdateUserInfo), for: .touchUpInside)
     }
-
+    
     private func setupUI() {
         view.backgroundColor = .white
-
-        // Add UI elements to view
-        view.addSubview(userIdTextField)
-        view.addSubview(passwordTextField)
-        view.addSubview(hobbyTextField)
-        view.addSubview(myHobbyButton)
-        view.addSubview(myHobbyLabel)
-        view.addSubview(otherUserHobbyButton)
-        view.addSubview(otherUserHobbyLabel)
-        view.addSubview(updateUserInfoButton)
-        view.addSubview(updateUserInfoLabel)
-
-        // Layout using Auto Layout
-        userIdTextField.translatesAutoresizingMaskIntoConstraints = false
-        passwordTextField.translatesAutoresizingMaskIntoConstraints = false
-        hobbyTextField.translatesAutoresizingMaskIntoConstraints = false
-        myHobbyButton.translatesAutoresizingMaskIntoConstraints = false
-        myHobbyLabel.translatesAutoresizingMaskIntoConstraints = false
-        otherUserHobbyButton.translatesAutoresizingMaskIntoConstraints = false
-        otherUserHobbyLabel.translatesAutoresizingMaskIntoConstraints = false
-        updateUserInfoButton.translatesAutoresizingMaskIntoConstraints = false
-        updateUserInfoLabel.translatesAutoresizingMaskIntoConstraints = false
-
-        NSLayoutConstraint.activate([
-            userIdTextField.topAnchor.constraint(equalTo: view.safeAreaLayoutGuide.topAnchor, constant: 20),
-            userIdTextField.leadingAnchor.constraint(equalTo: view.leadingAnchor, constant: 20),
-            userIdTextField.trailingAnchor.constraint(equalTo: view.trailingAnchor, constant: -20),
-
-            passwordTextField.topAnchor.constraint(equalTo: userIdTextField.bottomAnchor, constant: 20),
-            passwordTextField.leadingAnchor.constraint(equalTo: view.leadingAnchor, constant: 20),
-            passwordTextField.trailingAnchor.constraint(equalTo: view.trailingAnchor, constant: -20),
-
-            hobbyTextField.topAnchor.constraint(equalTo: passwordTextField.bottomAnchor, constant: 20),
-            hobbyTextField.leadingAnchor.constraint(equalTo: view.leadingAnchor, constant: 20),
-            hobbyTextField.trailingAnchor.constraint(equalTo: view.trailingAnchor, constant: -20),
-
-            updateUserInfoButton.topAnchor.constraint(equalTo: hobbyTextField.bottomAnchor, constant: 20),
-            updateUserInfoButton.centerXAnchor.constraint(equalTo: view.centerXAnchor),
-            
-            updateUserInfoLabel.topAnchor.constraint(equalTo: updateUserInfoButton.bottomAnchor, constant: 10),
-            updateUserInfoLabel.leadingAnchor.constraint(equalTo: view.leadingAnchor, constant: 20),
-            updateUserInfoLabel.trailingAnchor.constraint(equalTo: view.trailingAnchor, constant: -20),
-
-            otherUserHobbyButton.topAnchor.constraint(equalTo: updateUserInfoLabel.bottomAnchor, constant: 20),
-            otherUserHobbyButton.centerXAnchor.constraint(equalTo: view.centerXAnchor),
-
-            otherUserHobbyLabel.topAnchor.constraint(equalTo: otherUserHobbyButton.bottomAnchor, constant: 10),
-            otherUserHobbyLabel.leadingAnchor.constraint(equalTo: view.leadingAnchor, constant: 20),
-            otherUserHobbyLabel.trailingAnchor.constraint(equalTo: view.trailingAnchor, constant: -20),
-
-            myHobbyButton.topAnchor.constraint(equalTo: otherUserHobbyLabel.bottomAnchor, constant: 20),
-            myHobbyButton.centerXAnchor.constraint(equalTo: view.centerXAnchor),
-
-            myHobbyLabel.topAnchor.constraint(equalTo: myHobbyButton.bottomAnchor, constant: 10),
-            myHobbyLabel.leadingAnchor.constraint(equalTo: view.leadingAnchor, constant: 20),
-            myHobbyLabel.trailingAnchor.constraint(equalTo: view.trailingAnchor, constant: -20)
-        ])
+        
+        [userIdTextField, passwordTextField, hobbyTextField, myHobbyButton, myHobbyLabel,
+         otherUserHobbyButton, otherUserHobbyLabel, updateUserInfoButton, updateUserInfoLabel].forEach {
+            view.addSubview($0)
+        }
+        
+        userIdTextField.snp.makeConstraints {
+            $0.top.equalTo(view.safeAreaLayoutGuide).offset(20)
+            $0.leading.trailing.equalToSuperview().inset(20)
+        }
+        
+        otherUserHobbyButton.snp.makeConstraints {
+            $0.top.equalTo(userIdTextField.snp.bottom).offset(20)
+            $0.centerX.equalToSuperview()
+        }
+        
+        otherUserHobbyLabel.snp.makeConstraints {
+            $0.top.equalTo(otherUserHobbyButton.snp.bottom).offset(10)
+            $0.leading.trailing.equalToSuperview().inset(20)
+        }
+        
+        passwordTextField.snp.makeConstraints {
+            $0.top.equalTo(otherUserHobbyLabel.snp.bottom).offset(20)
+            $0.leading.trailing.equalToSuperview().inset(20)
+        }
+        
+        hobbyTextField.snp.makeConstraints {
+            $0.top.equalTo(passwordTextField.snp.bottom).offset(20)
+            $0.leading.trailing.equalToSuperview().inset(20)
+        }
+        
+        updateUserInfoButton.snp.makeConstraints {
+            $0.top.equalTo(hobbyTextField.snp.bottom).offset(20)
+            $0.centerX.equalToSuperview()
+        }
+        
+        updateUserInfoLabel.snp.makeConstraints {
+            $0.top.equalTo(updateUserInfoButton.snp.bottom).offset(10)
+            $0.leading.trailing.equalToSuperview().inset(20)
+        }
+        
+        myHobbyButton.snp.makeConstraints {
+            $0.top.equalTo(updateUserInfoLabel.snp.bottom).offset(20)
+            $0.centerX.equalToSuperview()
+        }
+        
+        myHobbyLabel.snp.makeConstraints {
+            $0.top.equalTo(myHobbyButton.snp.bottom).offset(10)
+            $0.leading.trailing.equalToSuperview().inset(20)
+        }
     }
-
+    
     @objc private func handleMyHobbyQuery() {
         guard let token = keychain.get("userToken") else {
             myHobbyLabel.text = "오류: 토큰이 없습니다. 다시 로그인해주세요."
             return
         }
-
+        
         userService.getMyHobby(token: token) { [weak self] result in
             guard let self = self else { return }
-
+            
             DispatchQueue.main.async {
                 switch result {
                 case .success(let hobby):
@@ -173,49 +147,50 @@ class QueryViewController: UIViewController {
             }
         }
     }
-
+    
     @objc private func handleOtherUserHobbyQuery() {
         guard let token = keychain.get("userToken") else {
-            otherUserHobbyLabel.text = "오류: 토큰이 없습니다. 다시 로그인해주세요."
+            showAlert(message: "오류: 토큰이 없습니다. 다시 로그인해주세요.")
             return
         }
-
+        
         guard let userNo = userIdTextField.text, !userNo.isEmpty else {
-            otherUserHobbyLabel.text = "오류: 유저 ID를 입력해주세요."
+            showAlert(message: "오류: 유저 ID를 입력해주세요.")
             return
         }
-
+        
         userService.getOtherUserHobby(token: token, userNo: userNo) { [weak self] result in
             guard let self = self else { return }
-
+            
             DispatchQueue.main.async {
                 switch result {
                 case .success(let hobby):
-                    self.otherUserHobbyLabel.text = "유저 \(userNo)의 취미: \(hobby)"
+                    let message = "\(userNo)님의 취미는 \(hobby)입니다."
+                    self.showAlert(message: message)
                 case .failure(let error):
-                    self.otherUserHobbyLabel.text = "오류: 다른 유저 취미 조회 실패 - \(error.errorMessage)"
+                    self.showAlert(message: "오류: 다른 유저 취미 조회 실패 - \(error.errorMessage)")
                 }
             }
         }
     }
-
+    
     @objc private func handleUpdateUserInfo() {
         guard let token = keychain.get("userToken") else {
             updateUserInfoLabel.text = "오류: 토큰이 없습니다. 다시 로그인해주세요."
             return
         }
-
+        
         let newPassword = passwordTextField.text
         let newHobby = hobbyTextField.text
-
+        
         if (newPassword == nil || newPassword!.isEmpty) && (newHobby == nil || newHobby!.isEmpty) {
             updateUserInfoLabel.text = "오류: 변경할 비밀번호 또는 취미를 입력해주세요."
             return
         }
-
+        
         userService.updateUserInfo(token: token, newPassword: newPassword, newHobby: newHobby) { [weak self] result in
             guard let self = self else { return }
-
+            
             DispatchQueue.main.async {
                 switch result {
                 case .success:
@@ -226,8 +201,13 @@ class QueryViewController: UIViewController {
             }
         }
     }
+    
+    private func showAlert(message: String) {
+        let alert = UIAlertController(title: "알림", message: message, preferredStyle: .alert)
+        alert.addAction(UIAlertAction(title: "확인", style: .default))
+        present(alert, animated: true)
+    }
 }
-
 
 struct QueryViewController_Previews: PreviewProvider {
     static var previews: some View {
@@ -240,10 +220,10 @@ struct QueryViewController_Previews: PreviewProvider {
 // UIViewControllerPreview Helper
 struct UIViewControllerPreview: UIViewControllerRepresentable {
     let viewController: () -> UIViewController
-
+    
     func makeUIViewController(context: Context) -> UIViewController {
         return viewController()
     }
-
+    
     func updateUIViewController(_ uiViewController: UIViewController, context: Context) {}
 }
