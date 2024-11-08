@@ -6,7 +6,6 @@
 //
 
 import UIKit
-import KeychainSwift
 import SnapKit
 
 class RegisterViewController: UIViewController {
