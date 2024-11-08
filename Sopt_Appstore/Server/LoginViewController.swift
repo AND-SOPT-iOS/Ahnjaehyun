@@ -13,7 +13,7 @@ import SnapKit
 
 
 class LoginViewController: UIViewController {
-    // UI Elements
+    
     private let usernameTextField: UITextField = {
         let textField = UITextField()
         textField.placeholder = "사용자 이름"
@@ -28,7 +28,7 @@ class LoginViewController: UIViewController {
         textField.isSecureTextEntry = true
         return textField
     }()
-
+    
     private let hobbyTextField: UITextField = {
         let textField = UITextField()
         textField.placeholder = "취미"
@@ -42,15 +42,15 @@ class LoginViewController: UIViewController {
         button.addTarget(LoginViewController.self, action: #selector(handleLogin), for: .touchUpInside)
         return button
     }()
-
+    
     let keychain = KeychainSwift()
     let userService = UserService()
-
+    
     override func viewDidLoad() {
         super.viewDidLoad()
         setupUI()
     }
-
+    
     private func setupUI() {
         view.backgroundColor = .white
         
@@ -82,7 +82,7 @@ class LoginViewController: UIViewController {
             make.centerX.equalToSuperview()
         }
     }
-
+    
     @objc private func handleLogin() {
         guard let username = usernameTextField.text, !username.isEmpty,
               let password = passwordTextField.text, !password.isEmpty,
@@ -114,7 +114,7 @@ class LoginViewController: UIViewController {
             }
         }
     }
-
+    
     private func showAlert(title: String, message: String, completion: (() -> Void)? = nil) {
         let alert = UIAlertController(title: title, message: message, preferredStyle: .alert)
         alert.addAction(UIAlertAction(title: "확인", style: .default, handler: { _ in
@@ -131,7 +131,7 @@ class LoginViewController: UIViewController {
     func getToken() -> String? {
         return keychain.get("userToken")
     }
-
+    
     //토큰삭제
     func deleteToken() {
         keychain.delete("userToken")
@@ -149,5 +149,5 @@ class LoginViewController: UIViewController {
     }
     
     
-   
+    
 }

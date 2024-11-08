@@ -20,6 +20,7 @@ enum NetworkError: Error {
   case unknownError
   case duplicateError
   case expressionError
+  case noUserFound
 
   var errorMessage: String {
     switch self {
@@ -41,6 +42,8 @@ enum NetworkError: Error {
       return "중복 에러입니다"
     case .expressionError:
       return "표현식 오류입니다, 8자 이네로 작성하세요"
+    case .noUserFound:
+        return "유저가 없습니다"
     }
   }
 }
