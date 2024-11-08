@@ -7,6 +7,8 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		D621CD782CDDFEEA00B3A420 /* Environment.swift in Sources */ = {isa = PBXBuildFile; fileRef = D621CD772CDDFEEA00B3A420 /* Environment.swift */; };
+		D621CD7A2CDDFF1100B3A420 /* ErrorEnum.swift in Sources */ = {isa = PBXBuildFile; fileRef = D621CD792CDDFF1100B3A420 /* ErrorEnum.swift */; };
 		D636D2352CD247E900C8C1E2 /* HeadScrollViewRow.swift in Sources */ = {isa = PBXBuildFile; fileRef = D636D2342CD247E900C8C1E2 /* HeadScrollViewRow.swift */; };
 		D636D2382CD24E9900C8C1E2 /* ComponentExtension.swift in Sources */ = {isa = PBXBuildFile; fileRef = D636D2372CD24E9900C8C1E2 /* ComponentExtension.swift */; };
 		D636D23C2CD260A300C8C1E2 /* ApptitleView.swift in Sources */ = {isa = PBXBuildFile; fileRef = D636D23B2CD260A300C8C1E2 /* ApptitleView.swift */; };
@@ -62,6 +64,9 @@
 		D62023572CC956FC002554FC /* Sopt_Appstore.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Sopt_Appstore.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		D620236D2CC956FD002554FC /* Sopt_AppstoreTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = Sopt_AppstoreTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		D62023772CC956FD002554FC /* Sopt_AppstoreUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = Sopt_AppstoreUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
+		D621CD762CDDF6CD00B3A420 /* Config.xcconfig */ = {isa = PBXFileReference; lastKnownFileType = text.xcconfig; path = Config.xcconfig; sourceTree = "<group>"; };
+		D621CD772CDDFEEA00B3A420 /* Environment.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Environment.swift; sourceTree = "<group>"; };
+		D621CD792CDDFF1100B3A420 /* ErrorEnum.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ErrorEnum.swift; sourceTree = "<group>"; };
 		D636D2342CD247E900C8C1E2 /* HeadScrollViewRow.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HeadScrollViewRow.swift; sourceTree = "<group>"; };
 		D636D2372CD24E9900C8C1E2 /* ComponentExtension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ComponentExtension.swift; sourceTree = "<group>"; };
 		D636D23B2CD260A300C8C1E2 /* ApptitleView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ApptitleView.swift; sourceTree = "<group>"; };
@@ -228,6 +233,9 @@
 			children = (
 				D636D2362CD24E8600C8C1E2 /* Extension */,
 				D63E7C222CCB64D50092D225 /* Info.plist */,
+				D621CD762CDDF6CD00B3A420 /* Config.xcconfig */,
+				D621CD772CDDFEEA00B3A420 /* Environment.swift */,
+				D621CD792CDDFF1100B3A420 /* ErrorEnum.swift */,
 				D63E7C1F2CCB64D50092D225 /* AppStoreViewModules */,
 				D6B32D892CD1DD3D003EF497 /* FinanceView */,
 				D63E7C3E2CCBC7CD0092D225 /* Navigation */,
@@ -449,6 +457,7 @@
 				D636D2422CD291A700C8C1E2 /* AppDataSet.swift in Sources */,
 				D636D2532CD33A2E00C8C1E2 /* ReviewMidScrollView.swift in Sources */,
 				D63E7C302CCB64D50092D225 /* ReviewBottomViewController.swift in Sources */,
+				D621CD782CDDFEEA00B3A420 /* Environment.swift in Sources */,
 				D636D24B2CD315FE00C8C1E2 /* CollectionViewRow.swift in Sources */,
 				D63E7C322CCB64D50092D225 /* UpdateInfoViewController.swift in Sources */,
 				D63E7C3D2CCBC7BD0092D225 /* VersionPageViewController.swift in Sources */,
@@ -458,6 +467,7 @@
 				D636D2382CD24E9900C8C1E2 /* ComponentExtension.swift in Sources */,
 				D636D23C2CD260A300C8C1E2 /* ApptitleView.swift in Sources */,
 				D63E7C342CCB64D50092D225 /* SceneDelegate.swift in Sources */,
+				D621CD7A2CDDFF1100B3A420 /* ErrorEnum.swift in Sources */,
 				D63E7C352CCB64D50092D225 /* TossView.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -569,6 +579,7 @@
 		};
 		D62023832CC956FD002554FC /* Debug */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = D621CD762CDDF6CD00B3A420 /* Config.xcconfig */;
 			buildSettings = {
 				ALWAYS_SEARCH_USER_PATHS = NO;
 				ASSETCATALOG_COMPILER_GENERATE_SWIFT_ASSET_SYMBOL_EXTENSIONS = YES;
@@ -632,6 +643,7 @@
 		};
 		D62023842CC956FD002554FC /* Release */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = D621CD762CDDF6CD00B3A420 /* Config.xcconfig */;
 			buildSettings = {
 				ALWAYS_SEARCH_USER_PATHS = NO;
 				ASSETCATALOG_COMPILER_GENERATE_SWIFT_ASSET_SYMBOL_EXTENSIONS = YES;

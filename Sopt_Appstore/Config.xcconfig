@@ -1,0 +1,15 @@
+//
+//  Config.xcconfig
+//  Sopt_Appstore
+//
+//  Created by Jaehyun Ahn on 11/8/24.
+//
+
+// Configuration settings file format documentation can be found at:
+// https://help.apple.com/xcode/#/dev745c5c974
+
+
+
+//$()을 달아준 이유는 주석 처리 하지 않기 위함
+BASE_URL = http:/$()/~
+
