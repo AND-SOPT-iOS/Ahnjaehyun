@@ -13,6 +13,7 @@
 		D621CD812CDE077000B3A420 /* KeychainSwift in Frameworks */ = {isa = PBXBuildFile; productRef = D621CD802CDE077000B3A420 /* KeychainSwift */; };
 		D621CD832CDE07A400B3A420 /* LoginViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = D621CD822CDE07A400B3A420 /* LoginViewController.swift */; };
 		D621CD932CDE0F7A00B3A420 /* UserService.swift in Sources */ = {isa = PBXBuildFile; fileRef = D621CD922CDE0F7A00B3A420 /* UserService.swift */; };
+		D621CD992CDE292200B3A420 /* RegisterViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = D621CD982CDE292200B3A420 /* RegisterViewController.swift */; };
 		D636D2352CD247E900C8C1E2 /* HeadScrollViewRow.swift in Sources */ = {isa = PBXBuildFile; fileRef = D636D2342CD247E900C8C1E2 /* HeadScrollViewRow.swift */; };
 		D636D2382CD24E9900C8C1E2 /* ComponentExtension.swift in Sources */ = {isa = PBXBuildFile; fileRef = D636D2372CD24E9900C8C1E2 /* ComponentExtension.swift */; };
 		D636D23C2CD260A300C8C1E2 /* ApptitleView.swift in Sources */ = {isa = PBXBuildFile; fileRef = D636D23B2CD260A300C8C1E2 /* ApptitleView.swift */; };
@@ -74,6 +75,7 @@
 		D621CD7D2CDE008400B3A420 /* DTO.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DTO.swift; sourceTree = "<group>"; };
 		D621CD822CDE07A400B3A420 /* LoginViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoginViewController.swift; sourceTree = "<group>"; };
 		D621CD922CDE0F7A00B3A420 /* UserService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UserService.swift; sourceTree = "<group>"; };
+		D621CD982CDE292200B3A420 /* RegisterViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RegisterViewController.swift; sourceTree = "<group>"; };
 		D636D2342CD247E900C8C1E2 /* HeadScrollViewRow.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HeadScrollViewRow.swift; sourceTree = "<group>"; };
 		D636D2372CD24E9900C8C1E2 /* ComponentExtension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ComponentExtension.swift; sourceTree = "<group>"; };
 		D636D23B2CD260A300C8C1E2 /* ApptitleView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ApptitleView.swift; sourceTree = "<group>"; };
@@ -192,6 +194,7 @@
 				D621CD772CDDFEEA00B3A420 /* Environment.swift */,
 				D621CD792CDDFF1100B3A420 /* ErrorEnum.swift */,
 				D621CD822CDE07A400B3A420 /* LoginViewController.swift */,
+				D621CD982CDE292200B3A420 /* RegisterViewController.swift */,
 				D621CD922CDE0F7A00B3A420 /* UserService.swift */,
 			);
 			path = Server;
@@ -486,6 +489,7 @@
 				D63E7C402CCBCA8C0092D225 /* ReviewPageViewController.swift in Sources */,
 				D636D2422CD291A700C8C1E2 /* AppDataSet.swift in Sources */,
 				D636D2532CD33A2E00C8C1E2 /* ReviewMidScrollView.swift in Sources */,
+				D621CD992CDE292200B3A420 /* RegisterViewController.swift in Sources */,
 				D63E7C302CCB64D50092D225 /* ReviewBottomViewController.swift in Sources */,
 				D621CD782CDDFEEA00B3A420 /* Environment.swift in Sources */,
 				D636D24B2CD315FE00C8C1E2 /* CollectionViewRow.swift in Sources */,
