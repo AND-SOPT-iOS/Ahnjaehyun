@@ -90,6 +90,37 @@ class UserService {
             }
         }
 
+        /// 내 취미 조회 메서드 추가
+        func getMyHobby(token: String, completion: @escaping (Result<String, NetworkError>) -> Void) {
+            let url = Environment.baseURL + "/user/my-hobby"
+            let headers: HTTPHeaders = ["token": token]
+
+            AF.request(
+                url,
+                method: .get,
+                headers: headers
+            )
+            .validate()
+            .responseDecodable(of: HobbyResponse.self) { [weak self] response in
+                guard let statusCode = response.response?.statusCode,
+                      let data = response.data,
+                      let self = self else {
+                    completion(.failure(.unknownError))
+                    return
+                }
+
+                switch response.result {
+                case .success(let hobbyResponse):
+                    // 성공 시 취미 반환
+                    completion(.success(hobbyResponse.hobby))
+                case .failure:
+                    // 에러 처리
+                    let error = self.handleStatusCode(statusCode, data: data)
+                    completion(.failure(error))
+                }
+            }
+        }
+    
   func decodeError(data: Data) -> String {
     guard let errorResponse = try? JSONDecoder().decode(
       ErrorResponse.self,
@@ -97,6 +128,15 @@ class UserService {
     ) else { return "" }
     return errorResponse.code
   }
+    
+    
+    
+    
+    
+    
+    
+    
+    
 }
 
 

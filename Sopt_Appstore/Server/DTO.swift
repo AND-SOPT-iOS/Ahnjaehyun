@@ -14,7 +14,13 @@ struct RegisterRequest: Codable {
   let hobby: String
 }
 
-
+// 로그인 시 토큰 반환
 struct LoginResponse: Codable {
     let token: String
+}
+
+
+// 취미 조회 결과
+struct HobbyResponse: Codable {
+    let hobby: String
 }
