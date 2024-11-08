@@ -71,24 +71,35 @@ class UserService {
         }
     }
     
-    /// 서버의 명세서 기반으로 에러 처리를 진행
-    func handleStatusCode(_ statusCode: Int, data: Data) -> NetworkError {
-        let errorCode = decodeError(data: data)
-        switch (statusCode, errorCode) {
-        case (400, "00"):
-            return .invalidRequest // 잘못된 요청
-        case (400, "01"):
-            return .expressionError // 유저명, 비밀번호, 취미가 8자 초과
-        case (403, "01"):
-            return .invalidResponse // 비밀번호가 틀림
-        case (404, "00"):
-            return .invalidURL // 잘못된 path
-        case (404, "01"):
-            return .noUserFound // 유저가 없는 경우
-        case (409, "00"):
-            return .duplicateError // 중복 에러
-        default:
-            return .unknownError
+    /// 로그인 API 메서드
+    func login(username: String, password: String, completion: @escaping (Result<String, NetworkError>) -> Void) {
+        let url = Environment.baseURL + "/login"
+        let parameters: [String: String] = ["username": username, "password": password]
+        
+        AF.request(
+            url,
+            method: .post,
+            parameters: parameters,
+            encoder: JSONParameterEncoder.default
+        )
+        .validate()
+        .responseDecodable(of: LoginResponse.self) { [weak self] response in
+            guard let statusCode = response.response?.statusCode,
+                  let data = response.data,
+                  let self = self else {
+                completion(.failure(.unknownError))
+                return
+            }
+            
+            switch response.result {
+            case .success(let loginResponse):
+                // 성공적으로 토큰 반환
+                completion(.success(loginResponse.token))
+            case .failure:
+                // 에러 처리
+                let error = self.handleStatusCode(statusCode, data: data)
+                completion(.failure(error))
+            }
         }
     }
     
@@ -192,6 +203,28 @@ class UserService {
             }
         }
     }
+    
+    /// 서버의 명세서 기반으로 에러 처리를 진행
+    func handleStatusCode(_ statusCode: Int, data: Data) -> NetworkError {
+        let errorCode = decodeError(data: data)
+        switch (statusCode, errorCode) {
+        case (400, "00"):
+            return .invalidRequest // 잘못된 요청
+        case (400, "01"):
+            return .expressionError // 유저명, 비밀번호, 취미가 8자 초과
+        case (403, "01"):
+            return .invalidResponse // 비밀번호가 틀림
+        case (404, "00"):
+            return .invalidURL // 잘못된 path
+        case (404, "01"):
+            return .noUserFound // 유저가 없는 경우
+        case (409, "00"):
+            return .duplicateError // 중복 에러
+        default:
+            return .unknownError
+        }
+    }
+    
     
     func decodeError(data: Data) -> String {
         guard let errorResponse = try? JSONDecoder().decode(
