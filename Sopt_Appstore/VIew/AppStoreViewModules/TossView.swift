@@ -143,6 +143,7 @@ class TossView: UIViewController, UIScrollViewDelegate {
         }
 
         addChild(headerViewController)
+        
         contentView.addSubview(headerViewController.view)
         headerViewController.didMove(toParent: self)
 
