@@ -6,7 +6,7 @@
 import UIKit
 import SnapKit
 
-class HeaderViewController: UIViewController {
+final class HeaderViewController: UIViewController {
     
     private let appIconImageView: UIImageView = {
         let imageView = UIImageView()
@@ -58,12 +58,12 @@ class HeaderViewController: UIViewController {
     func setupUI() {
         
         view.backgroundColor = .black
-        view.addSubview(appIconImageView)
-        view.addSubview(appNameLabel)
-        view.addSubview(appDescriptionLabel)
-        view.addSubview(updateButton)
-        view.addSubview(shareButton)
-
+        
+        [appIconImageView, appNameLabel, appDescriptionLabel, updateButton, shareButton].forEach {
+            view.addSubview($0)
+        }
+        
+        
         appIconImageView.snp.makeConstraints { make in
             make.leading.equalTo(view.safeAreaLayoutGuide).offset(20)
             make.top.equalTo(view.safeAreaLayoutGuide).offset(20)

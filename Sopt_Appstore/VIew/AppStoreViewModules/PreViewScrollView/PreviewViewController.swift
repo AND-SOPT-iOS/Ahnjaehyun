@@ -10,7 +10,7 @@ import SnapKit
 
 class PreviewViewController: UIViewController {
 
-    private let previewImageView = PreviewScroll()
+    private let previewImageView = PreviewScrollView()
 
     private let titleLabel: UILabel = {
         let label = UILabel()

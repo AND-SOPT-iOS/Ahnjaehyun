@@ -8,7 +8,7 @@
 import UIKit
 import SnapKit
 
-class FinanceView: UIViewController {
+class FinanceViewController: UIViewController {
     
     private let scrollView = UIScrollView()
     private let containerView = UIView()
@@ -20,6 +20,7 @@ class FinanceView: UIViewController {
         label.text = "APP Store Editorが触接決めましたんです！"
         return label
     }()
+    
     
     private let headScrollView = HeadScrollView()
     private let appViewTitle_Top = ApptitleView()
@@ -204,7 +205,7 @@ class FinanceView: UIViewController {
 
 #Preview {
     
-    let navController = UINavigationController(rootViewController: FinanceView())
+    let navController = UINavigationController(rootViewController: FinanceViewController())
     return navController
     
 }

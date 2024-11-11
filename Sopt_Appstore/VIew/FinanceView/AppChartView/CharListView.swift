@@ -68,7 +68,7 @@ class ChartListView: UIViewController {
     }
     
     @objc private func backButtonTapped() {
-        let finacaViewController = FinanceView()
+        let finacaViewController = FinanceViewController()
         navigationController?.pushViewController(finacaViewController, animated: true)
     }
     

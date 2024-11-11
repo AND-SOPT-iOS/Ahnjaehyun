@@ -7,7 +7,7 @@
 import UIKit
 import SnapKit
 
-class PreviewScroll: UIView {
+class PreviewScrollView: UIView {
     
     private let scrollView = UIScrollView()
     private let stackView = UIStackView()
@@ -70,5 +70,5 @@ class PreviewScroll: UIView {
 }
 
 #Preview {
-    PreviewScroll()
+    PreviewScrollView()
 }

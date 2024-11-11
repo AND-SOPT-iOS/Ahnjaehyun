@@ -80,7 +80,7 @@ extension ChartViewController: UITableViewDataSource {
     }
     
     private func navigateToTossView() {
-           let tossViewController = TossView()
+           let tossViewController = TossViewController()
            navigationController?.pushViewController(tossViewController, animated: true)
        }
     

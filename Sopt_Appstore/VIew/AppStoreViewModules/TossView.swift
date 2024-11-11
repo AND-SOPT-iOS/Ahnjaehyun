@@ -9,8 +9,12 @@
 import UIKit
 import SnapKit
 
-class TossView: UIViewController, UIScrollViewDelegate {
+class TossViewController: UIViewController, UIScrollViewDelegate {
 
+    
+    
+    ///feedback
+    // 복잡한 기능이없다면 VC -> View로 바꾸세요.
     let headerViewController = HeaderViewController()
     let ratingViewController = RatingViewController()
     let updateInfoViewController = UpdateInfoViewController()
@@ -238,6 +242,9 @@ class TossView: UIViewController, UIScrollViewDelegate {
         let offset = scrollView.contentOffset.y
         
         
+        
+        ///feedback
+        // 2번 중복되는 코드는 함수화 가능하면 하자!
         if offset > 100 {
             let appearance = UINavigationBarAppearance()
             appearance.configureWithDefaultBackground()
@@ -255,7 +262,7 @@ class TossView: UIViewController, UIScrollViewDelegate {
 }
 
 #Preview {
-    let navController = UINavigationController(rootViewController: TossView())
+    let navController = UINavigationController(rootViewController: TossViewController())
     return navController
 }
 
