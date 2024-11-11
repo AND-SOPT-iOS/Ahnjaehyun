@@ -6,12 +6,9 @@
 //
 
 import UIKit
-import Then
 import SnapKit
 import SwiftUI
-import UIKit
 import Then
-import SnapKit
 
 class AppRowView: UITableViewCell {
     

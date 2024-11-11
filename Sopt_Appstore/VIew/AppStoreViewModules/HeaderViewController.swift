@@ -8,9 +8,6 @@ import SnapKit
 
 class HeaderViewController: UIViewController {
     
-    
-    
-    
     private let appIconImageView: UIImageView = {
         let imageView = UIImageView()
         imageView.image = UIImage(named: "Toss_App_Icon")
@@ -57,14 +54,10 @@ class HeaderViewController: UIViewController {
         super.viewDidLoad()
         setupUI()
     }
-    
-    
-    
 
     func setupUI() {
         
         view.backgroundColor = .black
-        
         view.addSubview(appIconImageView)
         view.addSubview(appNameLabel)
         view.addSubview(appDescriptionLabel)
