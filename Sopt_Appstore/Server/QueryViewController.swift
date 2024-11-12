@@ -201,12 +201,7 @@ class QueryViewController: UIViewController {
             }
         }
     }
-    
-    private func showAlert(message: String) {
-        let alert = UIAlertController(title: "알림", message: message, preferredStyle: .alert)
-        alert.addAction(UIAlertAction(title: "확인", style: .default))
-        present(alert, animated: true)
-    }
+
 }
 
 struct QueryViewController_Previews: PreviewProvider {

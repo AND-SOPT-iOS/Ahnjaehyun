@@ -73,39 +73,39 @@ class LoginViewController: UIViewController {
             return
         }
         
-        
         userService.login(username: username, password: password) { [weak self] result in
-            guard let self = self else { return }
-            
-            DispatchQueue.main.async {
-                switch result {
-                case .success(let token):
-                    print("Login successful, received token: \(token)")
-                    
-                    if self.secureSaveToken(token: token) {
-                        self.showAlert(title: "성공", message: "로그인 성공!") {
-                            let queryViewController = QueryViewController()
-                            self.navigationController?.pushViewController(queryViewController, animated: true)
-                        }
-                    } else {
-                        self.showAlert(title: "오류", message: "토큰 저장에 실패했습니다.")
-                    }
-                case .failure(let error):
-                    self.showAlert(title: "오류", message: "로그인 실패: \(error.errorMessage)")
-                }
-            }
+            self?.handleLoginResponse(result: result)
         }
     }
-    
-    private func showAlert(title: String, message: String, completion: (() -> Void)? = nil) {
-        let alert = UIAlertController(title: title, message: message, preferredStyle: .alert)
-        alert.addAction(UIAlertAction(title: "확인", style: .default, handler: { _ in
-            completion?()
-        }))
-        present(alert, animated: true, completion: nil)
-    }
+
     
     func secureSaveToken(token: String) -> Bool {
         return keychain.set(token, forKey: "userToken")
+    }
+}
+
+
+extension LoginViewController {
+    private func handleLoginResponse(result: Result<String, NetworkError>) {
+        DispatchQueue.main.async { [weak self] in
+            guard let self = self else { return }
+            
+            switch result {
+            case .success(let token):
+                print("Login successful, received token: \(token)")
+                
+                if self.secureSaveToken(token: token) {
+                    self.showAlert(title: "성공", message: "로그인 성공!") {
+                        let queryViewController = QueryViewController()
+                        self.navigationController?.pushViewController(queryViewController, animated: true)
+                    }
+                } else {
+                    self.showAlert(title: "오류", message: "토큰 저장에 실패했습니다.")
+                }
+                
+            case .failure(let error):
+                self.showAlert(title: "오류", message: "로그인 실패: \(error.errorMessage)")
+            }
+        }
     }
 }
