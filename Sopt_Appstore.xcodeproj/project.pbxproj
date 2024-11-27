@@ -16,6 +16,7 @@
 		D621CD992CDE292200B3A420 /* RegisterViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = D621CD982CDE292200B3A420 /* RegisterViewController.swift */; };
 		D621CD9B2CDE2A9900B3A420 /* QueryViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = D621CD9A2CDE2A9900B3A420 /* QueryViewController.swift */; };
 		D621CD9D2CDE3D7700B3A420 /* Configs.xcconfig in Resources */ = {isa = PBXBuildFile; fileRef = D621CD9C2CDE3D7700B3A420 /* Configs.xcconfig */; };
+		D63390F92CF756ED001164C8 /* MainView.swift in Sources */ = {isa = PBXBuildFile; fileRef = D63390F82CF756ED001164C8 /* MainView.swift */; };
 		D636D2352CD247E900C8C1E2 /* HeadScrollViewRow.swift in Sources */ = {isa = PBXBuildFile; fileRef = D636D2342CD247E900C8C1E2 /* HeadScrollViewRow.swift */; };
 		D636D2382CD24E9900C8C1E2 /* ComponentExtension.swift in Sources */ = {isa = PBXBuildFile; fileRef = D636D2372CD24E9900C8C1E2 /* ComponentExtension.swift */; };
 		D636D23C2CD260A300C8C1E2 /* ApptitleView.swift in Sources */ = {isa = PBXBuildFile; fileRef = D636D23B2CD260A300C8C1E2 /* ApptitleView.swift */; };
@@ -78,6 +79,7 @@
 		D621CD982CDE292200B3A420 /* RegisterViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RegisterViewController.swift; sourceTree = "<group>"; };
 		D621CD9A2CDE2A9900B3A420 /* QueryViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = QueryViewController.swift; sourceTree = "<group>"; };
 		D621CD9C2CDE3D7700B3A420 /* Configs.xcconfig */ = {isa = PBXFileReference; lastKnownFileType = text.xcconfig; path = Configs.xcconfig; sourceTree = "<group>"; };
+		D63390F82CF756ED001164C8 /* MainView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MainView.swift; sourceTree = "<group>"; };
 		D636D2342CD247E900C8C1E2 /* HeadScrollViewRow.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HeadScrollViewRow.swift; sourceTree = "<group>"; };
 		D636D2372CD24E9900C8C1E2 /* ComponentExtension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ComponentExtension.swift; sourceTree = "<group>"; };
 		D636D23B2CD260A300C8C1E2 /* ApptitleView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ApptitleView.swift; sourceTree = "<group>"; };
@@ -202,6 +204,14 @@
 			path = Server;
 			sourceTree = "<group>";
 		};
+		D63390F72CF756D1001164C8 /* SwiftUI */ = {
+			isa = PBXGroup;
+			children = (
+				D63390F82CF756ED001164C8 /* MainView.swift */,
+			);
+			path = SwiftUI;
+			sourceTree = "<group>";
+		};
 		D636D2362CD24E8600C8C1E2 /* Extension */ = {
 			isa = PBXGroup;
 			children = (
@@ -268,6 +278,7 @@
 		D63E7C292CCB64D50092D225 /* Sopt_Appstore */ = {
 			isa = PBXGroup;
 			children = (
+				D63390F72CF756D1001164C8 /* SwiftUI */,
 				D63E7C222CCB64D50092D225 /* Info.plist */,
 				D621CD7C2CDE004400B3A420 /* Server */,
 				D621CD7B2CDE002D00B3A420 /* VIew */,
@@ -498,6 +509,7 @@
 				D63E7C322CCB64D50092D225 /* UpdateInfoViewController.swift in Sources */,
 				D63E7C3D2CCBC7BD0092D225 /* VersionPageViewController.swift in Sources */,
 				D65BFECE2CD3FB1700797234 /* CharListView.swift in Sources */,
+				D63390F92CF756ED001164C8 /* MainView.swift in Sources */,
 				D636D2492CD2ABCA00C8C1E2 /* AppHorizontalScrollView.swift in Sources */,
 				D63E7C332CCB64D50092D225 /* AppDelegate.swift in Sources */,
 				D636D2382CD24E9900C8C1E2 /* ComponentExtension.swift in Sources */,
