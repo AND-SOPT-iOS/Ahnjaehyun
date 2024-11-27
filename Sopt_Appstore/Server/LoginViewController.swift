@@ -92,20 +92,27 @@ extension LoginViewController {
             
             switch result {
             case .success(let token):
-                print("Login successful, received token: \(token)")
-                
-                if self.secureSaveToken(token: token) {
-                    self.showAlert(title: "성공", message: "로그인 성공!") {
-                        let queryViewController = QueryViewController()
-                        self.navigationController?.pushViewController(queryViewController, animated: true)
-                    }
-                } else {
-                    self.showAlert(title: "오류", message: "토큰 저장에 실패했습니다.")
-                }
-                
+                self.handleLoginSuccess(token: token)
             case .failure(let error):
-                self.showAlert(title: "오류", message: "로그인 실패: \(error.errorMessage)")
+                self.handleLoginFailure(error: error)
             }
         }
+    }
+    
+    private func handleLoginSuccess(token: String) {
+        
+        if secureSaveToken(token: token) {
+            showAlert(title: "성공", message: "로그인 성공!") { [weak self] in
+                guard let self = self else { return }
+                let queryViewController = QueryViewController()
+                self.navigationController?.pushViewController(queryViewController, animated: true)
+            }
+        } else {
+            showAlert(title: "오류", message: "토큰 저장 실패")
+        }
+    }
+    
+    private func handleLoginFailure(error: NetworkError) {
+        showAlert(title: "오류", message: "로그인 실패: \(error.errorMessage)")
     }
 }

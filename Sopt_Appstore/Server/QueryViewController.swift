@@ -68,7 +68,10 @@ class QueryViewController: UIViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
         setupUI()
-        
+        setupButtonTargets()
+    }
+    
+    private func setupButtonTargets() {
         myHobbyButton.addTarget(self, action: #selector(handleMyHobbyQuery), for: .touchUpInside)
         otherUserHobbyButton.addTarget(self, action: #selector(handleOtherUserHobbyQuery), for: .touchUpInside)
         updateUserInfoButton.addTarget(self, action: #selector(handleUpdateUserInfo), for: .touchUpInside)
@@ -128,97 +131,103 @@ class QueryViewController: UIViewController {
         }
     }
     
-    @objc private func handleMyHobbyQuery() {
-        guard let token = keychain.get("userToken") else {
-            myHobbyLabel.text = "오류: 토큰이 없습니다. 다시 로그인해주세요."
-            return
-        }
-        
-        userService.getMyHobby(token: token) { [weak self] result in
-            guard let self = self else { return }
-            
-            DispatchQueue.main.async {
-                switch result {
-                case .success(let hobby):
-                    self.myHobbyLabel.text = "내 취미: \(hobby)"
-                case .failure(let error):
-                    self.myHobbyLabel.text = "오류: 내 취미 조회 실패 - \(error.errorMessage)"
-                }
-            }
-        }
-    }
     
-    @objc private func handleOtherUserHobbyQuery() {
-        guard let token = keychain.get("userToken") else {
-            showAlert(message: "오류: 토큰이 없습니다. 다시 로그인해주세요.")
-            return
-        }
-        
-        guard let userNo = userIdTextField.text, !userNo.isEmpty else {
-            showAlert(message: "오류: 유저 ID를 입력해주세요.")
-            return
-        }
-        
-        userService.getOtherUserHobby(token: token, userNo: userNo) { [weak self] result in
-            guard let self = self else { return }
-            
-            DispatchQueue.main.async {
-                switch result {
-                case .success(let hobby):
-                    let message = "\(userNo)님의 취미는 \(hobby)입니다."
-                    self.showAlert(message: message)
-                case .failure(let error):
-                    self.showAlert(message: "오류: 다른 유저 취미 조회 실패 - \(error.errorMessage)")
-                }
-            }
-        }
-    }
-    
-    @objc private func handleUpdateUserInfo() {
-        guard let token = keychain.get("userToken") else {
-            updateUserInfoLabel.text = "오류: 토큰이 없습니다. 다시 로그인해주세요."
-            return
-        }
-        
-        let newPassword = passwordTextField.text
-        let newHobby = hobbyTextField.text
-        
-        if (newPassword == nil || newPassword!.isEmpty) && (newHobby == nil || newHobby!.isEmpty) {
-            updateUserInfoLabel.text = "오류: 변경할 비밀번호 또는 취미를 입력해주세요."
-            return
-        }
-        
-        userService.updateUserInfo(token: token, newPassword: newPassword, newHobby: newHobby) { [weak self] result in
-            guard let self = self else { return }
-            
-            DispatchQueue.main.async {
-                switch result {
-                case .success:
-                    self.updateUserInfoLabel.text = "유저 정보가 성공적으로 변경되었습니다."
-                case .failure(let error):
-                    self.updateUserInfoLabel.text = "오류: 유저 정보 변경 실패 - \(error.errorMessage)"
-                }
-            }
-        }
-    }
+      private func getTokenOrShowError() -> String? {
+          guard let token = keychain.get("userToken") else {
+              showAlert(message: "오류: 토큰이 없습니다. 다시 로그인해주세요.")
+              return nil
+          }
+          return token
+      }
+      
+      @objc private func handleMyHobbyQuery() {
+          guard let token = getTokenOrShowError() else { return }
+          
+          userService.getMyHobby(token: token) { [weak self] result in
+              guard let self = self else { return }
+              
+              DispatchQueue.main.async {
+                  switch result {
+                  case .success(let hobby):
+                      self.myHobbyLabel.text = "내 취미: \(hobby)"
+                  case .failure(let error):
+                      self.myHobbyLabel.text = "오류: 내 취미 조회 실패 - \(error.errorMessage)"
+                  }
+              }
+          }
+      }
+      
+      @objc private func handleOtherUserHobbyQuery() {
+          guard let token = getTokenOrShowError() else { return }
+          guard let userNo = userIdTextField.text, !userNo.isEmpty else {
+              showAlert(message: "오류: 유저 ID를 입력해주세요.")
+              return
+          }
+          
+          userService.getOtherUserHobby(token: token, userNo: userNo) { [weak self] result in
+              guard let self = self else { return }
+              
+              DispatchQueue.main.async {
+                  switch result {
+                  case .success(let hobby):
+                      let message = "\(userNo)님의 취미는 \(hobby)입니다."
+                      self.showAlert(message: message)
+                  case .failure(let error):
+                      self.showAlert(message: "오류: 다른 유저 취미 조회 실패 - \(error.errorMessage)")
+                  }
+              }
+          }
+      }
+      
+      @objc private func handleUpdateUserInfo() {
+          guard let token = getTokenOrShowError() else { return }
+          
+          let newPassword = passwordTextField.text
+          let newHobby = hobbyTextField.text
+          
+          if (newPassword == nil || newPassword!.isEmpty) && (newHobby == nil || newHobby!.isEmpty) {
+              updateUserInfoLabel.text = "오류: 변경할 비밀번호 또는 취미를 입력해주세요."
+              return
+          }
+          
+          userService.updateUserInfo(token: token, newPassword: newPassword, newHobby: newHobby) { [weak self] result in
+              guard let self = self else { return }
+              
+              DispatchQueue.main.async {
+                  switch result {
+                  case .success:
+                      self.updateUserInfoLabel.text = "유저 정보가 성공적 변경."
+                  case .failure(let error):
+                      self.updateUserInfoLabel.text = "오류: 유저 정보 변경 실패 - \(error.errorMessage)"
+                  }
+              }
+          }
+      }
+      
+      private func showAlert(message: String, completion: (() -> Void)? = nil) {
+          let alertController = UIAlertController(title: nil, message: message, preferredStyle: .alert)
+          alertController.addAction(UIAlertAction(title: "확인", style: .default) { _ in
+              completion?()
+          })
+          present(alertController, animated: true)
+      }
+  }
 
-}
+  struct QueryViewController_Previews: PreviewProvider {
+      static var previews: some View {
+          UIViewControllerPreview {
+              QueryViewController()
+          }
+      }
+  }
 
-struct QueryViewController_Previews: PreviewProvider {
-    static var previews: some View {
-        UIViewControllerPreview {
-            QueryViewController()
-        }
-    }
-}
-
-// UIViewControllerPreview Helper
-struct UIViewControllerPreview: UIViewControllerRepresentable {
-    let viewController: () -> UIViewController
-    
-    func makeUIViewController(context: Context) -> UIViewController {
-        return viewController()
-    }
-    
-    func updateUIViewController(_ uiViewController: UIViewController, context: Context) {}
-}
+  // UIViewControllerPreview Helper
+  struct UIViewControllerPreview: UIViewControllerRepresentable {
+      let viewController: () -> UIViewController
+      
+      func makeUIViewController(context: Context) -> UIViewController {
+          return viewController()
+      }
+      
+      func updateUIViewController(_ uiViewController: UIViewController, context: Context) {}
+  }
