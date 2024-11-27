@@ -17,6 +17,7 @@
 		D621CD9B2CDE2A9900B3A420 /* QueryViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = D621CD9A2CDE2A9900B3A420 /* QueryViewController.swift */; };
 		D621CD9D2CDE3D7700B3A420 /* Configs.xcconfig in Resources */ = {isa = PBXBuildFile; fileRef = D621CD9C2CDE3D7700B3A420 /* Configs.xcconfig */; };
 		D63390F92CF756ED001164C8 /* MainView.swift in Sources */ = {isa = PBXBuildFile; fileRef = D63390F82CF756ED001164C8 /* MainView.swift */; };
+		D63390FB2CF75761001164C8 /* Tabbar.swift in Sources */ = {isa = PBXBuildFile; fileRef = D63390FA2CF75761001164C8 /* Tabbar.swift */; };
 		D636D2352CD247E900C8C1E2 /* HeadScrollViewRow.swift in Sources */ = {isa = PBXBuildFile; fileRef = D636D2342CD247E900C8C1E2 /* HeadScrollViewRow.swift */; };
 		D636D2382CD24E9900C8C1E2 /* ComponentExtension.swift in Sources */ = {isa = PBXBuildFile; fileRef = D636D2372CD24E9900C8C1E2 /* ComponentExtension.swift */; };
 		D636D23C2CD260A300C8C1E2 /* ApptitleView.swift in Sources */ = {isa = PBXBuildFile; fileRef = D636D23B2CD260A300C8C1E2 /* ApptitleView.swift */; };
@@ -80,6 +81,7 @@
 		D621CD9A2CDE2A9900B3A420 /* QueryViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = QueryViewController.swift; sourceTree = "<group>"; };
 		D621CD9C2CDE3D7700B3A420 /* Configs.xcconfig */ = {isa = PBXFileReference; lastKnownFileType = text.xcconfig; path = Configs.xcconfig; sourceTree = "<group>"; };
 		D63390F82CF756ED001164C8 /* MainView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MainView.swift; sourceTree = "<group>"; };
+		D63390FA2CF75761001164C8 /* Tabbar.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Tabbar.swift; sourceTree = "<group>"; };
 		D636D2342CD247E900C8C1E2 /* HeadScrollViewRow.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HeadScrollViewRow.swift; sourceTree = "<group>"; };
 		D636D2372CD24E9900C8C1E2 /* ComponentExtension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ComponentExtension.swift; sourceTree = "<group>"; };
 		D636D23B2CD260A300C8C1E2 /* ApptitleView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ApptitleView.swift; sourceTree = "<group>"; };
@@ -208,6 +210,7 @@
 			isa = PBXGroup;
 			children = (
 				D63390F82CF756ED001164C8 /* MainView.swift */,
+				D63390FA2CF75761001164C8 /* Tabbar.swift */,
 			);
 			path = SwiftUI;
 			sourceTree = "<group>";
@@ -496,6 +499,7 @@
 				D636D2442CD291DF00C8C1E2 /* AppRowView.swift in Sources */,
 				D636D2462CD2926800C8C1E2 /* ChartViewController.swift in Sources */,
 				D636D2502CD32D8300C8C1E2 /* PreviewScroll View.swift in Sources */,
+				D63390FB2CF75761001164C8 /* Tabbar.swift in Sources */,
 				D63E7C2D2CCB64D50092D225 /* InfoViewController.swift in Sources */,
 				D636D2352CD247E900C8C1E2 /* HeadScrollViewRow.swift in Sources */,
 				D63E7C2E2CCB64D50092D225 /* PreviewViewController.swift in Sources */,
