@@ -12,7 +12,7 @@ import UIKit
 struct App {
     let iconImage: UIImage
     let title: String
-    let downloadState: DawnloadState
+    let downloadState: DownloadState
     let subTitle: String
     let category: String
     let ranking: Int
@@ -45,11 +45,11 @@ extension App {
 }
 
 
-enum DawnloadState: String{
+enum DownloadState: String{
     
     case installed = "설치"
     case dawnload = "구매"
-    case redawnload = "재구매"
+    case redownload = "재구매"
     case update = "업데이트"
     
 }

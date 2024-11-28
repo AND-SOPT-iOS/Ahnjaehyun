@@ -62,7 +62,7 @@ class RootViewController: UIViewController {
         }
     }
     
-    @objc private func didTapButton1() {
+    @objc private func didTapButton3() {
         navigationController?.pushViewController(RegisterViewController(), animated: true)
     }
     
@@ -70,7 +70,7 @@ class RootViewController: UIViewController {
         navigationController?.pushViewController(TossViewController(), animated: true)
     }
     
-    @objc private func didTapButton3() {
+    @objc private func didTapButton1() {
         let mainView = UIHostingController(rootView: MainView())
         navigationController?.pushViewController(mainView, animated: true)
     }

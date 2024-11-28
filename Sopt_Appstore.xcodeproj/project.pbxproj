@@ -17,7 +17,6 @@
 		D621CD9B2CDE2A9900B3A420 /* QueryViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = D621CD9A2CDE2A9900B3A420 /* QueryViewController.swift */; };
 		D621CD9D2CDE3D7700B3A420 /* Configs.xcconfig in Resources */ = {isa = PBXBuildFile; fileRef = D621CD9C2CDE3D7700B3A420 /* Configs.xcconfig */; };
 		D63390F92CF756ED001164C8 /* MainView.swift in Sources */ = {isa = PBXBuildFile; fileRef = D63390F82CF756ED001164C8 /* MainView.swift */; };
-		D63390FB2CF75761001164C8 /* Tabbar.swift in Sources */ = {isa = PBXBuildFile; fileRef = D63390FA2CF75761001164C8 /* Tabbar.swift */; };
 		D63390FD2CF75797001164C8 /* Applist.swift in Sources */ = {isa = PBXBuildFile; fileRef = D63390FC2CF75797001164C8 /* Applist.swift */; };
 		D636D2352CD247E900C8C1E2 /* HeadScrollViewRow.swift in Sources */ = {isa = PBXBuildFile; fileRef = D636D2342CD247E900C8C1E2 /* HeadScrollViewRow.swift */; };
 		D636D2382CD24E9900C8C1E2 /* ComponentExtension.swift in Sources */ = {isa = PBXBuildFile; fileRef = D636D2372CD24E9900C8C1E2 /* ComponentExtension.swift */; };
@@ -48,6 +47,7 @@
 		D63E7C402CCBCA8C0092D225 /* ReviewPageViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = D63E7C3F2CCBCA8C0092D225 /* ReviewPageViewController.swift */; };
 		D65BFECE2CD3FB1700797234 /* CharListView.swift in Sources */ = {isa = PBXBuildFile; fileRef = D65BFECD2CD3FB1700797234 /* CharListView.swift */; };
 		D6B32D8B2CD1DD74003EF497 /* FinanceViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = D6B32D8A2CD1DD74003EF497 /* FinanceViewController.swift */; };
+		D6B825C52CF82D34006834CB /* DefalutView.swift in Sources */ = {isa = PBXBuildFile; fileRef = D6B825C42CF82D33006834CB /* DefalutView.swift */; };
 		D6BD34742CDC45E300D4E69C /* Alamofire in Frameworks */ = {isa = PBXBuildFile; productRef = D6BD34732CDC45E300D4E69C /* Alamofire */; };
 		D6D951162CF8171D00E34141 /* RootViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = D6D951152CF8171D00E34141 /* RootViewController.swift */; };
 		D6F6185F2CC959DB001EE4EA /* SnapKit in Frameworks */ = {isa = PBXBuildFile; productRef = D6F6185E2CC959DB001EE4EA /* SnapKit */; };
@@ -83,7 +83,6 @@
 		D621CD9A2CDE2A9900B3A420 /* QueryViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = QueryViewController.swift; sourceTree = "<group>"; };
 		D621CD9C2CDE3D7700B3A420 /* Configs.xcconfig */ = {isa = PBXFileReference; lastKnownFileType = text.xcconfig; path = Configs.xcconfig; sourceTree = "<group>"; };
 		D63390F82CF756ED001164C8 /* MainView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MainView.swift; sourceTree = "<group>"; };
-		D63390FA2CF75761001164C8 /* Tabbar.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Tabbar.swift; sourceTree = "<group>"; };
 		D63390FC2CF75797001164C8 /* Applist.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Applist.swift; sourceTree = "<group>"; };
 		D636D2342CD247E900C8C1E2 /* HeadScrollViewRow.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HeadScrollViewRow.swift; sourceTree = "<group>"; };
 		D636D2372CD24E9900C8C1E2 /* ComponentExtension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ComponentExtension.swift; sourceTree = "<group>"; };
@@ -114,6 +113,7 @@
 		D63E7C3F2CCBCA8C0092D225 /* ReviewPageViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ReviewPageViewController.swift; sourceTree = "<group>"; };
 		D65BFECD2CD3FB1700797234 /* CharListView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CharListView.swift; sourceTree = "<group>"; };
 		D6B32D8A2CD1DD74003EF497 /* FinanceViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FinanceViewController.swift; sourceTree = "<group>"; };
+		D6B825C42CF82D33006834CB /* DefalutView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DefalutView.swift; sourceTree = "<group>"; };
 		D6D951152CF8171D00E34141 /* RootViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RootViewController.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
@@ -214,8 +214,8 @@
 			isa = PBXGroup;
 			children = (
 				D63390F82CF756ED001164C8 /* MainView.swift */,
-				D63390FA2CF75761001164C8 /* Tabbar.swift */,
 				D63390FC2CF75797001164C8 /* Applist.swift */,
+				D6B825C42CF82D33006834CB /* DefalutView.swift */,
 			);
 			path = SwiftUI;
 			sourceTree = "<group>";
@@ -505,7 +505,6 @@
 				D636D2442CD291DF00C8C1E2 /* AppRowView.swift in Sources */,
 				D636D2462CD2926800C8C1E2 /* ChartViewController.swift in Sources */,
 				D636D2502CD32D8300C8C1E2 /* PreviewScroll View.swift in Sources */,
-				D63390FB2CF75761001164C8 /* Tabbar.swift in Sources */,
 				D63E7C2D2CCB64D50092D225 /* InfoViewController.swift in Sources */,
 				D636D2352CD247E900C8C1E2 /* HeadScrollViewRow.swift in Sources */,
 				D63E7C2E2CCB64D50092D225 /* PreviewViewController.swift in Sources */,
@@ -513,6 +512,7 @@
 				D636D2422CD291A700C8C1E2 /* AppDataSet.swift in Sources */,
 				D636D2532CD33A2E00C8C1E2 /* ReviewMidScrollView.swift in Sources */,
 				D621CD992CDE292200B3A420 /* RegisterViewController.swift in Sources */,
+				D6B825C52CF82D34006834CB /* DefalutView.swift in Sources */,
 				D63E7C302CCB64D50092D225 /* ReviewBottomViewController.swift in Sources */,
 				D621CD782CDDFEEA00B3A420 /* Environment.swift in Sources */,
 				D6D951162CF8171D00E34141 /* RootViewController.swift in Sources */,
@@ -588,7 +588,6 @@
 				INFOPLIST_FILE = Sopt_Appstore/Info.plist;
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
 				INFOPLIST_KEY_UILaunchStoryboardName = LaunchScreen;
-				INFOPLIST_KEY_UIMainStoryboardFile = Main;
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = "UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPhone = "UIInterfaceOrientationPortrait UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
 				LD_RUNPATH_SEARCH_PATHS = (
@@ -617,7 +616,6 @@
 				INFOPLIST_FILE = Sopt_Appstore/Info.plist;
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
 				INFOPLIST_KEY_UILaunchStoryboardName = LaunchScreen;
-				INFOPLIST_KEY_UIMainStoryboardFile = Main;
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = "UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPhone = "UIInterfaceOrientationPortrait UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
 				LD_RUNPATH_SEARCH_PATHS = (
