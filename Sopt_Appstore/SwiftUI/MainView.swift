@@ -101,7 +101,7 @@ struct MainView: View {
         .frame(height: 72)
         .background {
             RoundedRectangle(cornerRadius: 24)
-                .fill(Color.black.opacity(0.9))
+                .fill(Color(red: 22/255, green: 22/255, blue: 24/255).opacity(0.95))
                 .shadow(color: .white.opacity(0.15), radius: 8, y: 2)
         }
         .padding(.horizontal)
