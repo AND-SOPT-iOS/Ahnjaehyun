@@ -8,47 +8,30 @@
 import SwiftUI
 
 struct AppChartView: View {
+    
     let appList = App.mockData
 
-    
     var body: some View {
+        
         NavigationStack {
             
             ScrollView {
+                
                 VStack() {
+                    
                     ForEach(appList, id: \.ranking) { app in
                         AppRow(app: app)
                     }
                     .padding(.horizontal, 13)
-
+                    
                 }
-
-                
             }
             .background(Color.black.ignoresSafeArea())
-
-
         }
         .navigationTitle("Chart")
         .navigationBarTitleDisplayMode(.inline)
         .toolbarBackground(Color(red: 22/255, green: 22/255, blue: 24/255).opacity(0.95), for: .navigationBar)
-
-
-    }
     
-    private func navigateToTossView() {
-        print("네비")
-    }
-    
-    private func customizeNavigationBar() {
-        let appearance = UINavigationBarAppearance()
-        appearance.configureWithOpaqueBackground() // 불투명한 배경
-        appearance.backgroundColor = UIColor.black.withAlphaComponent(0.7) // 배경 색상 설정
-        
-    
-        UINavigationBar.appearance().standardAppearance = appearance
-        UINavigationBar.appearance().scrollEdgeAppearance = appearance
-        UINavigationBar.appearance().compactAppearance = appearance
     }
 }
 

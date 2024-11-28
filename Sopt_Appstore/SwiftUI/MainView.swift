@@ -7,12 +7,7 @@
 
 import SwiftUI
 
-enum Tab {
-    case a, b, c
-}
-
 struct MainView: View {
-   
     
     @State private var selected: Tab = .a
     
@@ -23,7 +18,6 @@ struct MainView: View {
                     NavigationStack {
                         AppChartView()
                     }
-                    
                     .tag(Tab.a)
                     
                     NavigationStack {
