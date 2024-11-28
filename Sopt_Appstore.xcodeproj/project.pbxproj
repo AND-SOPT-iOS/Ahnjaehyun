@@ -49,6 +49,7 @@
 		D65BFECE2CD3FB1700797234 /* CharListView.swift in Sources */ = {isa = PBXBuildFile; fileRef = D65BFECD2CD3FB1700797234 /* CharListView.swift */; };
 		D6B32D8B2CD1DD74003EF497 /* FinanceViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = D6B32D8A2CD1DD74003EF497 /* FinanceViewController.swift */; };
 		D6BD34742CDC45E300D4E69C /* Alamofire in Frameworks */ = {isa = PBXBuildFile; productRef = D6BD34732CDC45E300D4E69C /* Alamofire */; };
+		D6D951162CF8171D00E34141 /* RootViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = D6D951152CF8171D00E34141 /* RootViewController.swift */; };
 		D6F6185F2CC959DB001EE4EA /* SnapKit in Frameworks */ = {isa = PBXBuildFile; productRef = D6F6185E2CC959DB001EE4EA /* SnapKit */; };
 /* End PBXBuildFile section */
 
@@ -113,6 +114,7 @@
 		D63E7C3F2CCBCA8C0092D225 /* ReviewPageViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ReviewPageViewController.swift; sourceTree = "<group>"; };
 		D65BFECD2CD3FB1700797234 /* CharListView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CharListView.swift; sourceTree = "<group>"; };
 		D6B32D8A2CD1DD74003EF497 /* FinanceViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FinanceViewController.swift; sourceTree = "<group>"; };
+		D6D951152CF8171D00E34141 /* RootViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RootViewController.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFileSystemSynchronizedRootGroup section */
@@ -289,6 +291,7 @@
 				D621CD7C2CDE004400B3A420 /* Server */,
 				D621CD7B2CDE002D00B3A420 /* VIew */,
 				D6B32D882CD1DD20003EF497 /* Delegate */,
+				D6D951152CF8171D00E34141 /* RootViewController.swift */,
 			);
 			path = Sopt_Appstore;
 			sourceTree = "<group>";
@@ -512,6 +515,7 @@
 				D621CD992CDE292200B3A420 /* RegisterViewController.swift in Sources */,
 				D63E7C302CCB64D50092D225 /* ReviewBottomViewController.swift in Sources */,
 				D621CD782CDDFEEA00B3A420 /* Environment.swift in Sources */,
+				D6D951162CF8171D00E34141 /* RootViewController.swift in Sources */,
 				D636D24B2CD315FE00C8C1E2 /* CollectionViewRow.swift in Sources */,
 				D63E7C322CCB64D50092D225 /* UpdateInfoViewController.swift in Sources */,
 				D63E7C3D2CCBC7BD0092D225 /* VersionPageViewController.swift in Sources */,
