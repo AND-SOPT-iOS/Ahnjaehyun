@@ -23,6 +23,7 @@ struct MainView: View {
                     NavigationStack {
                         AppChartView()
                     }
+                    
                     .tag(Tab.a)
                     
                     NavigationStack {
@@ -42,6 +43,7 @@ struct MainView: View {
                 Spacer()
                 tabBar
             }
+            
         }
     }
     

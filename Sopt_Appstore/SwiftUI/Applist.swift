@@ -9,13 +9,10 @@ import SwiftUI
 
 struct AppChartView: View {
     let appList = App.mockData
-    
-    init() {
-          customizeNavigationBar()
-      }
+
     
     var body: some View {
-        NavigationView {
+        NavigationStack {
             
             ScrollView {
                 VStack() {
@@ -30,10 +27,12 @@ struct AppChartView: View {
             }
             .background(Color.black.ignoresSafeArea())
 
+
         }
         .navigationTitle("Chart")
         .navigationBarTitleDisplayMode(.inline)
-       
+        .toolbarBackground(Color(red: 22/255, green: 22/255, blue: 24/255).opacity(0.95), for: .navigationBar)
+
 
     }
     
