@@ -21,12 +21,12 @@ struct MainView: View {
                     .tag(Tab.a)
                     
                     NavigationStack {
-                        DefalutView()
+                        DefaultView()
                     }
                     .tag(Tab.b)
                     
                     NavigationStack {
-                        DefalutView()
+                        DefaultView2()
                     }
                     .tag(Tab.c)
                 }

@@ -46,6 +46,7 @@
 		D63E7C3D2CCBC7BD0092D225 /* VersionPageViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = D63E7C3C2CCBC7BD0092D225 /* VersionPageViewController.swift */; };
 		D63E7C402CCBCA8C0092D225 /* ReviewPageViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = D63E7C3F2CCBCA8C0092D225 /* ReviewPageViewController.swift */; };
 		D64571712CF88D690016DDD8 /* Tap.swift in Sources */ = {isa = PBXBuildFile; fileRef = D64571702CF88D690016DDD8 /* Tap.swift */; };
+		D645717F2CF8A0E30016DDD8 /* EntertainmentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = D645717E2CF8A0E30016DDD8 /* EntertainmentView.swift */; };
 		D65BFECE2CD3FB1700797234 /* CharListView.swift in Sources */ = {isa = PBXBuildFile; fileRef = D65BFECD2CD3FB1700797234 /* CharListView.swift */; };
 		D6B32D8B2CD1DD74003EF497 /* FinanceViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = D6B32D8A2CD1DD74003EF497 /* FinanceViewController.swift */; };
 		D6B825C52CF82D34006834CB /* DefalutView.swift in Sources */ = {isa = PBXBuildFile; fileRef = D6B825C42CF82D33006834CB /* DefalutView.swift */; };
@@ -113,6 +114,7 @@
 		D63E7C3C2CCBC7BD0092D225 /* VersionPageViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = VersionPageViewController.swift; sourceTree = "<group>"; };
 		D63E7C3F2CCBCA8C0092D225 /* ReviewPageViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ReviewPageViewController.swift; sourceTree = "<group>"; };
 		D64571702CF88D690016DDD8 /* Tap.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Tap.swift; sourceTree = "<group>"; };
+		D645717E2CF8A0E30016DDD8 /* EntertainmentView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EntertainmentView.swift; sourceTree = "<group>"; };
 		D65BFECD2CD3FB1700797234 /* CharListView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CharListView.swift; sourceTree = "<group>"; };
 		D6B32D8A2CD1DD74003EF497 /* FinanceViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FinanceViewController.swift; sourceTree = "<group>"; };
 		D6B825C42CF82D33006834CB /* DefalutView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DefalutView.swift; sourceTree = "<group>"; };
@@ -219,6 +221,7 @@
 				D63390FC2CF75797001164C8 /* Applist.swift */,
 				D6B825C42CF82D33006834CB /* DefalutView.swift */,
 				D64571702CF88D690016DDD8 /* Tap.swift */,
+				D645717E2CF8A0E30016DDD8 /* EntertainmentView.swift */,
 			);
 			path = SwiftUI;
 			sourceTree = "<group>";
@@ -501,6 +504,7 @@
 				D6B32D8B2CD1DD74003EF497 /* FinanceViewController.swift in Sources */,
 				D63E7C2B2CCB64D50092D225 /* ReviewMidView.swift in Sources */,
 				D621CD9B2CDE2A9900B3A420 /* QueryViewController.swift in Sources */,
+				D645717F2CF8A0E30016DDD8 /* EntertainmentView.swift in Sources */,
 				D636D24D2CD3265F00C8C1E2 /* HeadScrollView.swift in Sources */,
 				D636D2552CD33A4600C8C1E2 /* ReviewMidViewController.swift in Sources */,
 				D63E7C2C2CCB64D50092D225 /* HeaderViewController.swift in Sources */,

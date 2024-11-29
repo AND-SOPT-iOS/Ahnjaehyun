@@ -28,7 +28,7 @@ class AppHorizontalScrollView: UIViewController {
         collectionView = UICollectionView(frame: .zero, collectionViewLayout: layout)
         collectionView.backgroundColor = .black
         collectionView.showsVerticalScrollIndicator = false
-//        collectionView.isPagingEnabled = true
+
         collectionView.dataSource = self
         collectionView.delegate = self
         collectionView.register(AppRowView_Collection.self, forCellWithReuseIdentifier: AppRowView_Collection.identifier)

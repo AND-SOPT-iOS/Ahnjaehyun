@@ -10,6 +10,7 @@ import SwiftUI
 struct AppChartView: View {
     
     let appList = App.mockData
+    @State private var selectedApp: App?
 
     var body: some View {
         
@@ -21,25 +22,28 @@ struct AppChartView: View {
                     
                     ForEach(appList, id: \.ranking) { app in
                         AppRow(app: app)
+                        
                     }
                     .padding(.horizontal, 13)
                     
                 }
             }
             .background(Color.black.ignoresSafeArea())
-        }
+         
+                   }
         .navigationTitle("Chart")
         .navigationBarTitleDisplayMode(.inline)
         .toolbarBackground(Color(red: 22/255, green: 22/255, blue: 24/255).opacity(0.95), for: .navigationBar)
+          
+        }
     
-    }
 }
 
 
 struct AppRow: View {
     let app: App
-    var onActionButtonTapped: (() -> Void)? = nil
-    
+    @State private var showDetailView : Bool = false
+
     var body: some View {
         HStack(spacing: 12) {
             Image(uiImage: app.iconImage)
@@ -60,7 +64,7 @@ struct AppRow: View {
             Spacer()
             
             Button(action: {
-                onActionButtonTapped?()
+                showDetailView.toggle()
             }) {
                 Text(app.downloadState.rawValue)
                     .font(.body)
@@ -70,9 +74,21 @@ struct AppRow: View {
                     .background(Color.white.cornerRadius(10))
             }
         }
+        .onTapGesture {
+            showDetailView.toggle()
+        }
         .padding(10)
         .background(Color.black)
         .cornerRadius(10)
+        .navigationDestination(isPresented: $showDetailView) {
+            if app.ranking==7 {
+                EntertainmentView(app: app)
+            } else {
+                DefaultView()
+            }
+            
+            
+        }
     }
 }
 

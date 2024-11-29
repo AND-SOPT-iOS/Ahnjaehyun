@@ -9,7 +9,8 @@
 import UIKit
 
 
-struct App {
+struct App: Identifiable, Hashable {
+    let id = UUID()
     let iconImage: UIImage
     let title: String
     let downloadState: DownloadState
