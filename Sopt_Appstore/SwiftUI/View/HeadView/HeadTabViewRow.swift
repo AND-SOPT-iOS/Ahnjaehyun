@@ -7,7 +7,7 @@
 
 import SwiftUI
 
-struct HeadHorizenScrollViewRow: View {
+struct HeadTabViewRow: View {
     var title: String = "Fortune City - A Finance App"
     var subtitle: String = "게임을 하듯 관리하는 가계부"
     var overlayTitle: String = "抖音"
@@ -85,4 +85,4 @@ struct HeadHorizenScrollViewRow: View {
 }
 
 
-#Preview{HeadHorizenScrollViewRow()}
+#Preview{HeadTabViewRow()}

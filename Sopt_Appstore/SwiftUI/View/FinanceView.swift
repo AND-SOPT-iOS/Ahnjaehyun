@@ -18,8 +18,7 @@ struct FinanceView: View {
             ScrollView {
                 VStack(spacing: 20) {
                     
-                    HeadScrollView_SwiftUI(viewModel: viewModel)
-                        .padding(.leading)
+                    HeadTabView(viewModel: viewModel)
                     
                     AppSectionBoxView(headerTitle: "필수 금융 앱", apps: appList)
 

@@ -11,8 +11,8 @@
 		D60A8A302CFF007F00E48F24 /* AppBoxView.swift in Sources */ = {isa = PBXBuildFile; fileRef = D60A8A2F2CFF007F00E48F24 /* AppBoxView.swift */; };
 		D60A8A322CFF01FB00E48F24 /* Model.swift in Sources */ = {isa = PBXBuildFile; fileRef = D60A8A312CFF01FB00E48F24 /* Model.swift */; };
 		D60A8A342CFF021600E48F24 /* ViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = D60A8A332CFF021600E48F24 /* ViewModel.swift */; };
-		D60A8A362CFF0DD000E48F24 /* HeadHorizenScrollView.swift in Sources */ = {isa = PBXBuildFile; fileRef = D60A8A352CFF0DD000E48F24 /* HeadHorizenScrollView.swift */; };
-		D60A8A392CFF106000E48F24 /* HeadScrollview.swift in Sources */ = {isa = PBXBuildFile; fileRef = D60A8A382CFF106000E48F24 /* HeadScrollview.swift */; };
+		D60A8A362CFF0DD000E48F24 /* HeadTabViewRow.swift in Sources */ = {isa = PBXBuildFile; fileRef = D60A8A352CFF0DD000E48F24 /* HeadTabViewRow.swift */; };
+		D60A8A392CFF106000E48F24 /* HeadTabView.swift in Sources */ = {isa = PBXBuildFile; fileRef = D60A8A382CFF106000E48F24 /* HeadTabView.swift */; };
 		D621CD782CDDFEEA00B3A420 /* Environment.swift in Sources */ = {isa = PBXBuildFile; fileRef = D621CD772CDDFEEA00B3A420 /* Environment.swift */; };
 		D621CD7A2CDDFF1100B3A420 /* ErrorEnum.swift in Sources */ = {isa = PBXBuildFile; fileRef = D621CD792CDDFF1100B3A420 /* ErrorEnum.swift */; };
 		D621CD7E2CDE008400B3A420 /* DTO.swift in Sources */ = {isa = PBXBuildFile; fileRef = D621CD7D2CDE008400B3A420 /* DTO.swift */; };
@@ -83,8 +83,8 @@
 		D60A8A2F2CFF007F00E48F24 /* AppBoxView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppBoxView.swift; sourceTree = "<group>"; };
 		D60A8A312CFF01FB00E48F24 /* Model.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Model.swift; sourceTree = "<group>"; };
 		D60A8A332CFF021600E48F24 /* ViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewModel.swift; sourceTree = "<group>"; };
-		D60A8A352CFF0DD000E48F24 /* HeadHorizenScrollView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HeadHorizenScrollView.swift; sourceTree = "<group>"; };
-		D60A8A382CFF106000E48F24 /* HeadScrollview.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HeadScrollview.swift; sourceTree = "<group>"; };
+		D60A8A352CFF0DD000E48F24 /* HeadTabViewRow.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HeadTabViewRow.swift; sourceTree = "<group>"; };
+		D60A8A382CFF106000E48F24 /* HeadTabView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HeadTabView.swift; sourceTree = "<group>"; };
 		D62023572CC956FC002554FC /* Sopt_Appstore.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Sopt_Appstore.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		D620236D2CC956FD002554FC /* Sopt_AppstoreTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = Sopt_AppstoreTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		D62023772CC956FD002554FC /* Sopt_AppstoreUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = Sopt_AppstoreUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -214,8 +214,8 @@
 		D60A8A372CFF102C00E48F24 /* HeadView */ = {
 			isa = PBXGroup;
 			children = (
-				D60A8A352CFF0DD000E48F24 /* HeadHorizenScrollView.swift */,
-				D60A8A382CFF106000E48F24 /* HeadScrollview.swift */,
+				D60A8A352CFF0DD000E48F24 /* HeadTabViewRow.swift */,
+				D60A8A382CFF106000E48F24 /* HeadTabView.swift */,
 			);
 			path = HeadView;
 			sourceTree = "<group>";
@@ -566,7 +566,7 @@
 				D636D2502CD32D8300C8C1E2 /* PreviewScroll View.swift in Sources */,
 				D63E7C2D2CCB64D50092D225 /* InfoViewController.swift in Sources */,
 				D636D2352CD247E900C8C1E2 /* HeadScrollViewRow.swift in Sources */,
-				D60A8A362CFF0DD000E48F24 /* HeadHorizenScrollView.swift in Sources */,
+				D60A8A362CFF0DD000E48F24 /* HeadTabViewRow.swift in Sources */,
 				D63E7C2E2CCB64D50092D225 /* PreviewViewController.swift in Sources */,
 				D63E7C402CCBCA8C0092D225 /* ReviewPageViewController.swift in Sources */,
 				D636D2422CD291A700C8C1E2 /* AppDataSet.swift in Sources */,
@@ -577,7 +577,7 @@
 				D621CD782CDDFEEA00B3A420 /* Environment.swift in Sources */,
 				D64571712CF88D690016DDD8 /* Tap.swift in Sources */,
 				D60A8A302CFF007F00E48F24 /* AppBoxView.swift in Sources */,
-				D60A8A392CFF106000E48F24 /* HeadScrollview.swift in Sources */,
+				D60A8A392CFF106000E48F24 /* HeadTabView.swift in Sources */,
 				D6D951162CF8171D00E34141 /* RootViewController.swift in Sources */,
 				D636D24B2CD315FE00C8C1E2 /* CollectionViewRow.swift in Sources */,
 				D63E7C322CCB64D50092D225 /* UpdateInfoViewController.swift in Sources */,
