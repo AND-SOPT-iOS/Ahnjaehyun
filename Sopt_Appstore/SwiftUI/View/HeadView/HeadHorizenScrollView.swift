@@ -39,12 +39,12 @@ struct HeadHorizenScrollViewRow: View {
                     .cornerRadius(10)
                     .clipped()
                 
-                VStack(alignment: .leading, spacing: 4) {
+                VStack(alignment: .leading, spacing: -35) {
                     HStack {
                         Image(overlayIcon)
                             .resizable()
                             .frame(width: 40, height: 40)
-                            .clipShape(Circle())
+                            .cornerRadius(10)
                         
                         VStack(alignment: .leading) {
                             Text(overlayTitle)
@@ -85,4 +85,4 @@ struct HeadHorizenScrollViewRow: View {
 }
 
 
-#Preview{HeadScrollViewRow()}
+#Preview{HeadHorizenScrollViewRow()}

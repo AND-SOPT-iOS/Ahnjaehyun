@@ -9,9 +9,7 @@ import SwiftUI
 
 struct FinanceView: View {
     
-    
-    @ObservedObject var viewModel: HeadScrollViewViewModel
-
+    @StateObject private var viewModel = HeadScrollViewViewModel()
     
     let appList = App.mockData
 
@@ -20,7 +18,8 @@ struct FinanceView: View {
             ScrollView {
                 VStack(spacing: 20) {
                     
-                   
+                    HeadScrollView_SwiftUI(viewModel: viewModel)
+                        .padding(.leading)
                     
                     AppSectionBoxView(headerTitle: "필수 금융 앱", apps: appList)
 
@@ -35,3 +34,7 @@ struct FinanceView: View {
     }
 }
 
+
+#Preview {
+    FinanceView()
+}
