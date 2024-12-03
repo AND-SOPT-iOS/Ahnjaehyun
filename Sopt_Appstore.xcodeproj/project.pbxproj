@@ -10,7 +10,7 @@
 		D60A8A2E2CFEFE5600E48F24 /* FinanceView.swift in Sources */ = {isa = PBXBuildFile; fileRef = D60A8A2D2CFEFE5600E48F24 /* FinanceView.swift */; };
 		D60A8A302CFF007F00E48F24 /* AppSectionBoxView.swift in Sources */ = {isa = PBXBuildFile; fileRef = D60A8A2F2CFF007F00E48F24 /* AppSectionBoxView.swift */; };
 		D60A8A322CFF01FB00E48F24 /* HeadScrollViewRowData.swift in Sources */ = {isa = PBXBuildFile; fileRef = D60A8A312CFF01FB00E48F24 /* HeadScrollViewRowData.swift */; };
-		D60A8A342CFF021600E48F24 /* HeadScrollViewViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = D60A8A332CFF021600E48F24 /* HeadScrollViewViewModel.swift */; };
+		D60A8A342CFF021600E48F24 /* HeadTabviewViewViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = D60A8A332CFF021600E48F24 /* HeadTabviewViewViewModel.swift */; };
 		D60A8A362CFF0DD000E48F24 /* HeadTabViewRow.swift in Sources */ = {isa = PBXBuildFile; fileRef = D60A8A352CFF0DD000E48F24 /* HeadTabViewRow.swift */; };
 		D60A8A392CFF106000E48F24 /* HeadTabView.swift in Sources */ = {isa = PBXBuildFile; fileRef = D60A8A382CFF106000E48F24 /* HeadTabView.swift */; };
 		D621CD782CDDFEEA00B3A420 /* Environment.swift in Sources */ = {isa = PBXBuildFile; fileRef = D621CD772CDDFEEA00B3A420 /* Environment.swift */; };
@@ -85,7 +85,7 @@
 		D60A8A2D2CFEFE5600E48F24 /* FinanceView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FinanceView.swift; sourceTree = "<group>"; };
 		D60A8A2F2CFF007F00E48F24 /* AppSectionBoxView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppSectionBoxView.swift; sourceTree = "<group>"; };
 		D60A8A312CFF01FB00E48F24 /* HeadScrollViewRowData.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HeadScrollViewRowData.swift; sourceTree = "<group>"; };
-		D60A8A332CFF021600E48F24 /* HeadScrollViewViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HeadScrollViewViewModel.swift; sourceTree = "<group>"; };
+		D60A8A332CFF021600E48F24 /* HeadTabviewViewViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HeadTabviewViewViewModel.swift; sourceTree = "<group>"; };
 		D60A8A352CFF0DD000E48F24 /* HeadTabViewRow.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HeadTabViewRow.swift; sourceTree = "<group>"; };
 		D60A8A382CFF106000E48F24 /* HeadTabView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HeadTabView.swift; sourceTree = "<group>"; };
 		D62023572CC956FC002554FC /* Sopt_Appstore.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Sopt_Appstore.app; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -212,7 +212,7 @@
 		D60A8A2C2CFEFDE500E48F24 /* ViewModel */ = {
 			isa = PBXGroup;
 			children = (
-				D60A8A332CFF021600E48F24 /* HeadScrollViewViewModel.swift */,
+				D60A8A332CFF021600E48F24 /* HeadTabviewViewViewModel.swift */,
 				D64BC8452CFF271A00852010 /* SwiftUIAppViewModel.swift */,
 			);
 			path = ViewModel;
@@ -622,7 +622,7 @@
 				D636D2492CD2ABCA00C8C1E2 /* AppHorizontalScrollView.swift in Sources */,
 				D63E7C332CCB64D50092D225 /* AppDelegate.swift in Sources */,
 				D64BC8462CFF271A00852010 /* SwiftUIAppViewModel.swift in Sources */,
-				D60A8A342CFF021600E48F24 /* HeadScrollViewViewModel.swift in Sources */,
+				D60A8A342CFF021600E48F24 /* HeadTabviewViewViewModel.swift in Sources */,
 				D636D2382CD24E9900C8C1E2 /* ComponentExtension.swift in Sources */,
 				D636D23C2CD260A300C8C1E2 /* ApptitleView.swift in Sources */,
 				D63E7C342CCB64D50092D225 /* SceneDelegate.swift in Sources */,

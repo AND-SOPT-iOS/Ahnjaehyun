@@ -8,6 +8,7 @@
 import Foundation
 
 struct HeadScrollViewRowData: Identifiable {
+    
     let id = UUID()
     let title: String
     let subtitle: String
@@ -17,4 +18,5 @@ struct HeadScrollViewRowData: Identifiable {
     let purchaseText: String
     let backgroundImage: String
     let overlayIcon: String
+    
 }

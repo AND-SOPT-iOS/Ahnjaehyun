@@ -8,14 +8,14 @@
 import SwiftUI
 
 struct HeadTabViewRow: View {
-    var title: String = "Fortune City - A Finance App"
-    var subtitle: String = "게임을 하듯 관리하는 가계부"
-    var overlayTitle: String = "抖音"
-    var overlaySubtitle: String = "抖音是一款流行的短视频应用程序"
-    var buttonText: String = "받기"
-    var purchaseText: String = "앱 내 구입"
-    var backgroundImage: String = "background"
-    var overlayIcon: String = "tictokIcon"
+    var title: String
+    var subtitle: String
+    var overlayTitle: String
+    var overlaySubtitle: String
+    var buttonText: String
+    var purchaseText: String
+    var backgroundImage: String
+    var overlayIcon: String
     
     var body: some View {
         VStack(alignment: .leading, spacing: 10) {
@@ -85,4 +85,3 @@ struct HeadTabViewRow: View {
 }
 
 
-#Preview{HeadTabViewRow()}

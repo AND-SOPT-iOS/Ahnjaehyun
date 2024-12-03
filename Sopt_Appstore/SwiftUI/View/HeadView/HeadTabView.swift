@@ -9,7 +9,7 @@ import SwiftUI
 
 struct HeadTabView: View {
     
-    @ObservedObject var viewModel: HeadScrollViewViewModel
+    @ObservedObject var viewModel: HeadTabviewViewViewModel
     
     var body: some View {
         TabView {

@@ -7,7 +7,7 @@
 
 import SwiftUI
 
-class HeadScrollViewViewModel: ObservableObject {
+class HeadTabviewViewViewModel: ObservableObject {
  
     @Published var rows: [HeadScrollViewRowData] = []
     
