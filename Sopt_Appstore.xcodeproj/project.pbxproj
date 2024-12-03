@@ -53,7 +53,7 @@
 		D63E7C402CCBCA8C0092D225 /* ReviewPageViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = D63E7C3F2CCBCA8C0092D225 /* ReviewPageViewController.swift */; };
 		D64571712CF88D690016DDD8 /* Tap.swift in Sources */ = {isa = PBXBuildFile; fileRef = D64571702CF88D690016DDD8 /* Tap.swift */; };
 		D645717F2CF8A0E30016DDD8 /* EntertainmentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = D645717E2CF8A0E30016DDD8 /* EntertainmentView.swift */; };
-		D64BC8402CFF1A3D00852010 /* test.swift in Sources */ = {isa = PBXBuildFile; fileRef = D64BC83F2CFF1A3D00852010 /* test.swift */; };
+		D64BC8432CFF241200852010 /* AppRow.swift in Sources */ = {isa = PBXBuildFile; fileRef = D64BC8422CFF241200852010 /* AppRow.swift */; };
 		D65BFECE2CD3FB1700797234 /* CharListView.swift in Sources */ = {isa = PBXBuildFile; fileRef = D65BFECD2CD3FB1700797234 /* CharListView.swift */; };
 		D6B32D8B2CD1DD74003EF497 /* FinanceViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = D6B32D8A2CD1DD74003EF497 /* FinanceViewController.swift */; };
 		D6B825C52CF82D34006834CB /* DefalutView.swift in Sources */ = {isa = PBXBuildFile; fileRef = D6B825C42CF82D33006834CB /* DefalutView.swift */; };
@@ -128,7 +128,7 @@
 		D63E7C3F2CCBCA8C0092D225 /* ReviewPageViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ReviewPageViewController.swift; sourceTree = "<group>"; };
 		D64571702CF88D690016DDD8 /* Tap.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Tap.swift; sourceTree = "<group>"; };
 		D645717E2CF8A0E30016DDD8 /* EntertainmentView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EntertainmentView.swift; sourceTree = "<group>"; };
-		D64BC83F2CFF1A3D00852010 /* test.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = test.swift; sourceTree = "<group>"; };
+		D64BC8422CFF241200852010 /* AppRow.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppRow.swift; sourceTree = "<group>"; };
 		D65BFECD2CD3FB1700797234 /* CharListView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CharListView.swift; sourceTree = "<group>"; };
 		D6B32D8A2CD1DD74003EF497 /* FinanceViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FinanceViewController.swift; sourceTree = "<group>"; };
 		D6B825C42CF82D33006834CB /* DefalutView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DefalutView.swift; sourceTree = "<group>"; };
@@ -187,12 +187,10 @@
 			children = (
 				D64BC83E2CFF17C000852010 /* AppBoxView */,
 				D63390F82CF756ED001164C8 /* MainView.swift */,
-				D63390FC2CF75797001164C8 /* Applist.swift */,
-				D6B825C42CF82D33006834CB /* DefalutView.swift */,
-				D645717E2CF8A0E30016DDD8 /* EntertainmentView.swift */,
-				D60A8A2D2CFEFE5600E48F24 /* FinanceView.swift */,
-				D64BC83F2CFF1A3D00852010 /* test.swift */,
+				D64BC8412CFF23F800852010 /* AppChart */,
+				D64BC8442CFF241D00852010 /* NavigtionView */,
 				D60A8A372CFF102C00E48F24 /* HeadView */,
+				D60A8A2D2CFEFE5600E48F24 /* FinanceView.swift */,
 			);
 			path = View;
 			sourceTree = "<group>";
@@ -370,6 +368,24 @@
 				D60A8A2F2CFF007F00E48F24 /* AppSectionBoxView.swift */,
 			);
 			path = AppBoxView;
+			sourceTree = "<group>";
+		};
+		D64BC8412CFF23F800852010 /* AppChart */ = {
+			isa = PBXGroup;
+			children = (
+				D63390FC2CF75797001164C8 /* Applist.swift */,
+				D64BC8422CFF241200852010 /* AppRow.swift */,
+			);
+			path = AppChart;
+			sourceTree = "<group>";
+		};
+		D64BC8442CFF241D00852010 /* NavigtionView */ = {
+			isa = PBXGroup;
+			children = (
+				D645717E2CF8A0E30016DDD8 /* EntertainmentView.swift */,
+				D6B825C42CF82D33006834CB /* DefalutView.swift */,
+			);
+			path = NavigtionView;
 			sourceTree = "<group>";
 		};
 		D67AC1C72CD4952C00C1A948 /* HeadScrollViewRow */ = {
@@ -575,6 +591,7 @@
 				D636D2442CD291DF00C8C1E2 /* AppRowView.swift in Sources */,
 				D636D2462CD2926800C8C1E2 /* ChartViewController.swift in Sources */,
 				D636D2502CD32D8300C8C1E2 /* PreviewScroll View.swift in Sources */,
+				D64BC8432CFF241200852010 /* AppRow.swift in Sources */,
 				D63E7C2D2CCB64D50092D225 /* InfoViewController.swift in Sources */,
 				D636D2352CD247E900C8C1E2 /* HeadScrollViewRow.swift in Sources */,
 				D60A8A362CFF0DD000E48F24 /* HeadTabViewRow.swift in Sources */,
@@ -599,7 +616,6 @@
 				D63E7C332CCB64D50092D225 /* AppDelegate.swift in Sources */,
 				D60A8A342CFF021600E48F24 /* ViewModel.swift in Sources */,
 				D636D2382CD24E9900C8C1E2 /* ComponentExtension.swift in Sources */,
-				D64BC8402CFF1A3D00852010 /* test.swift in Sources */,
 				D636D23C2CD260A300C8C1E2 /* ApptitleView.swift in Sources */,
 				D63E7C342CCB64D50092D225 /* SceneDelegate.swift in Sources */,
 				D63390FD2CF75797001164C8 /* Applist.swift in Sources */,
