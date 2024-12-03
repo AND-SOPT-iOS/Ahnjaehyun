@@ -9,6 +9,10 @@ import SwiftUI
 
 struct FinanceView: View {
     
+    
+    @ObservedObject var viewModel: HeadScrollViewViewModel
+
+    
     let appList = App.mockData
 
     var body: some View {
@@ -16,32 +20,7 @@ struct FinanceView: View {
             ScrollView {
                 VStack(spacing: 20) {
                     
-                    Section(header: Text("새로운 앱")
-                        .font(.title2)
-                        .fontWeight(.bold)
-                        .foregroundColor(.white)
-                        .padding(.horizontal)) {
-                        ScrollView(.horizontal, showsIndicators: false) {
-                            HStack(spacing: 16) {
-                                ForEach(appList) { app in
-                                    VStack {
-                                        Image(uiImage: app.iconImage)
-                                            .resizable()
-                                            .aspectRatio(contentMode: .fill)
-                                            .frame(width: 150, height: 150)
-                                            .clipShape(RoundedRectangle(cornerRadius: 10))
-                                        Text(app.title)
-                                            .font(.headline)
-                                            .foregroundColor(.white)
-                                            .lineLimit(1)
-                                    }
-                                    .frame(width: 150)
-                                }
-                            }
-                            .padding(.horizontal)
-                        }
-                    }
-
+                   
                     
                     AppSectionBoxView(headerTitle: "필수 금융 앱", apps: appList)
 
@@ -56,7 +35,3 @@ struct FinanceView: View {
     }
 }
 
-
-#Preview{
-    FinanceView()
-}
