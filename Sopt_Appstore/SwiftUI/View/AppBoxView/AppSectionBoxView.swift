@@ -26,7 +26,7 @@ struct AppSectionBoxView: View {
                     .foregroundColor(.white)
                     .padding(.leading)
                 
-                NavigationLink(destination: DefaultView()) {
+                NavigationLink(destination: AppChartView()) {
                     Image(systemName: "chevron.right")
                         .foregroundColor(.gray)
                 }

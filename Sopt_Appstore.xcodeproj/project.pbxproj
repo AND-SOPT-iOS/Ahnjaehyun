@@ -57,6 +57,7 @@
 		D64BC8462CFF271A00852010 /* SwiftUIAppViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = D64BC8452CFF271A00852010 /* SwiftUIAppViewModel.swift */; };
 		D64BC8482CFF273300852010 /* SwiftUIApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = D64BC8472CFF273300852010 /* SwiftUIApp.swift */; };
 		D65BFECE2CD3FB1700797234 /* CharListView.swift in Sources */ = {isa = PBXBuildFile; fileRef = D65BFECD2CD3FB1700797234 /* CharListView.swift */; };
+		D669BF812CFF387F00F196DF /* GotoTossView.swift in Sources */ = {isa = PBXBuildFile; fileRef = D669BF802CFF387F00F196DF /* GotoTossView.swift */; };
 		D6B32D8B2CD1DD74003EF497 /* FinanceViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = D6B32D8A2CD1DD74003EF497 /* FinanceViewController.swift */; };
 		D6B825C52CF82D34006834CB /* DefalutView.swift in Sources */ = {isa = PBXBuildFile; fileRef = D6B825C42CF82D33006834CB /* DefalutView.swift */; };
 		D6BD34742CDC45E300D4E69C /* Alamofire in Frameworks */ = {isa = PBXBuildFile; productRef = D6BD34732CDC45E300D4E69C /* Alamofire */; };
@@ -134,6 +135,7 @@
 		D64BC8452CFF271A00852010 /* SwiftUIAppViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SwiftUIAppViewModel.swift; sourceTree = "<group>"; };
 		D64BC8472CFF273300852010 /* SwiftUIApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SwiftUIApp.swift; sourceTree = "<group>"; };
 		D65BFECD2CD3FB1700797234 /* CharListView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CharListView.swift; sourceTree = "<group>"; };
+		D669BF802CFF387F00F196DF /* GotoTossView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GotoTossView.swift; sourceTree = "<group>"; };
 		D6B32D8A2CD1DD74003EF497 /* FinanceViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FinanceViewController.swift; sourceTree = "<group>"; };
 		D6B825C42CF82D33006834CB /* DefalutView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DefalutView.swift; sourceTree = "<group>"; };
 		D6D951152CF8171D00E34141 /* RootViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RootViewController.swift; sourceTree = "<group>"; };
@@ -195,6 +197,7 @@
 				D64BC8442CFF241D00852010 /* NavigtionView */,
 				D60A8A372CFF102C00E48F24 /* HeadView */,
 				D60A8A2D2CFEFE5600E48F24 /* FinanceView.swift */,
+				D669BF802CFF387F00F196DF /* GotoTossView.swift */,
 			);
 			path = View;
 			sourceTree = "<group>";
@@ -585,6 +588,7 @@
 			files = (
 				D60A8A322CFF01FB00E48F24 /* HeadScrollViewRowData.swift in Sources */,
 				D60A8A2E2CFEFE5600E48F24 /* FinanceView.swift in Sources */,
+				D669BF812CFF387F00F196DF /* GotoTossView.swift in Sources */,
 				D63E7C2A2CCB64D50092D225 /* ReviewTopViewController.swift in Sources */,
 				D6B32D8B2CD1DD74003EF497 /* FinanceViewController.swift in Sources */,
 				D63E7C2B2CCB64D50092D225 /* ReviewMidView.swift in Sources */,

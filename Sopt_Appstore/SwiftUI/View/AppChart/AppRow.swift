@@ -50,6 +50,8 @@ struct AppRow: View {
         .navigationDestination(isPresented: $showDetailView) {
             if app.ranking==7 {
                 EntertainmentView(app: app)
+            } else if app.ranking==1 {
+                TossViewRepresentable()
             } else {
                 DefaultView()
             }
