@@ -9,7 +9,7 @@ import SwiftUI
 
 
 
-struct BoxView: View {
+struct AppSectionBoxView: View {
     let headerTitle: String
     let apps: [App]
 

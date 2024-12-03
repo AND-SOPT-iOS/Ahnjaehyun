@@ -1,5 +1,5 @@
 //
-//  HorizenScrollview.swift
+//  FinanceView.swift
 //  Sopt_Appstore
 //
 //  Created by Jaehyun Ahn on 12/3/24.
@@ -7,7 +7,7 @@
 
 import SwiftUI
 
-struct HorizenScrollview: View {
+struct FinanceView: View {
     
     let appList = App.mockData
 
@@ -43,10 +43,10 @@ struct HorizenScrollview: View {
                     }
 
                     
-                    BoxView(headerTitle: "필수 금융 앱", apps: appList)
+                    AppSectionBoxView(headerTitle: "필수 금융 앱", apps: appList)
 
                     
-                    BoxView(headerTitle: "유료 순위", apps: appList)
+                    AppSectionBoxView(headerTitle: "유료 순위", apps: appList)
                 }
             }
             .background(Color.black.edgesIgnoringSafeArea(.all))
@@ -58,5 +58,5 @@ struct HorizenScrollview: View {
 
 
 #Preview{
-    HorizenScrollview()
+    FinanceView()
 }
