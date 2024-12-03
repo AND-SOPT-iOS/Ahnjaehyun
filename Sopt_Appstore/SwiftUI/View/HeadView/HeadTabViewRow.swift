@@ -16,7 +16,7 @@ struct HeadTabViewRow: View {
     var purchaseText: String = "앱 내 구입"
     var backgroundImage: String = "background"
     var overlayIcon: String = "tictokIcon"
-
+    
     var body: some View {
         VStack(alignment: .leading, spacing: 10) {
             Text("新しい経験")

@@ -21,11 +21,10 @@ struct FinanceView: View {
                     HeadTabView(viewModel: viewModel)
                     
                     AppSectionBoxView(headerTitle: "필수 금융 앱",headerDescript: "App Store 에디터가 직접 골랐습니다", apps: appList)
-                        .frame(height: 300)
+                        .frame(height: 310)
 
-                    
                     AppSectionBoxView(headerTitle: "유료 순위",headerDescript: "App Store 에디터가 직접 골랐습니다", apps: appList)
-                        .frame(height: 300)
+                        .frame(height: 310)
 
                 }
             }

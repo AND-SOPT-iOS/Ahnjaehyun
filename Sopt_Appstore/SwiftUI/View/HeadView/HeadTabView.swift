@@ -8,6 +8,7 @@
 import SwiftUI
 
 struct HeadTabView: View {
+    
     @ObservedObject var viewModel: HeadScrollViewViewModel
     
     var body: some View {
@@ -27,8 +28,8 @@ struct HeadTabView: View {
                 .padding(.horizontal, 15)
             }
         }
-        .tabViewStyle(PageTabViewStyle(indexDisplayMode: .always)) // 페이징 스타일 설정
-        .frame(height: 300) // 높이 지정
+        .tabViewStyle(PageTabViewStyle(indexDisplayMode: .always))
+        .frame(height: 300) 
     }
 }
 

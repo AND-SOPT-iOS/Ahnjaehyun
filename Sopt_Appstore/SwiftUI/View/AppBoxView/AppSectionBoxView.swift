@@ -34,7 +34,7 @@ struct AppSectionBoxView: View {
             
             Text(headerDescript)
                 .font(.caption)
-                .foregroundStyle(.secondary)
+                .foregroundStyle(.gray)
                 .padding(.leading)
             
             TabView {

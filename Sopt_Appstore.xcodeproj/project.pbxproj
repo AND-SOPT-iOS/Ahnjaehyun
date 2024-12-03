@@ -9,8 +9,8 @@
 /* Begin PBXBuildFile section */
 		D60A8A2E2CFEFE5600E48F24 /* FinanceView.swift in Sources */ = {isa = PBXBuildFile; fileRef = D60A8A2D2CFEFE5600E48F24 /* FinanceView.swift */; };
 		D60A8A302CFF007F00E48F24 /* AppSectionBoxView.swift in Sources */ = {isa = PBXBuildFile; fileRef = D60A8A2F2CFF007F00E48F24 /* AppSectionBoxView.swift */; };
-		D60A8A322CFF01FB00E48F24 /* Model.swift in Sources */ = {isa = PBXBuildFile; fileRef = D60A8A312CFF01FB00E48F24 /* Model.swift */; };
-		D60A8A342CFF021600E48F24 /* ViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = D60A8A332CFF021600E48F24 /* ViewModel.swift */; };
+		D60A8A322CFF01FB00E48F24 /* HeadScrollViewRowData.swift in Sources */ = {isa = PBXBuildFile; fileRef = D60A8A312CFF01FB00E48F24 /* HeadScrollViewRowData.swift */; };
+		D60A8A342CFF021600E48F24 /* HeadScrollViewViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = D60A8A332CFF021600E48F24 /* HeadScrollViewViewModel.swift */; };
 		D60A8A362CFF0DD000E48F24 /* HeadTabViewRow.swift in Sources */ = {isa = PBXBuildFile; fileRef = D60A8A352CFF0DD000E48F24 /* HeadTabViewRow.swift */; };
 		D60A8A392CFF106000E48F24 /* HeadTabView.swift in Sources */ = {isa = PBXBuildFile; fileRef = D60A8A382CFF106000E48F24 /* HeadTabView.swift */; };
 		D621CD782CDDFEEA00B3A420 /* Environment.swift in Sources */ = {isa = PBXBuildFile; fileRef = D621CD772CDDFEEA00B3A420 /* Environment.swift */; };
@@ -54,6 +54,8 @@
 		D64571712CF88D690016DDD8 /* Tap.swift in Sources */ = {isa = PBXBuildFile; fileRef = D64571702CF88D690016DDD8 /* Tap.swift */; };
 		D645717F2CF8A0E30016DDD8 /* EntertainmentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = D645717E2CF8A0E30016DDD8 /* EntertainmentView.swift */; };
 		D64BC8432CFF241200852010 /* AppRow.swift in Sources */ = {isa = PBXBuildFile; fileRef = D64BC8422CFF241200852010 /* AppRow.swift */; };
+		D64BC8462CFF271A00852010 /* SwiftUIAppViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = D64BC8452CFF271A00852010 /* SwiftUIAppViewModel.swift */; };
+		D64BC8482CFF273300852010 /* SwiftUIApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = D64BC8472CFF273300852010 /* SwiftUIApp.swift */; };
 		D65BFECE2CD3FB1700797234 /* CharListView.swift in Sources */ = {isa = PBXBuildFile; fileRef = D65BFECD2CD3FB1700797234 /* CharListView.swift */; };
 		D6B32D8B2CD1DD74003EF497 /* FinanceViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = D6B32D8A2CD1DD74003EF497 /* FinanceViewController.swift */; };
 		D6B825C52CF82D34006834CB /* DefalutView.swift in Sources */ = {isa = PBXBuildFile; fileRef = D6B825C42CF82D33006834CB /* DefalutView.swift */; };
@@ -82,8 +84,8 @@
 /* Begin PBXFileReference section */
 		D60A8A2D2CFEFE5600E48F24 /* FinanceView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FinanceView.swift; sourceTree = "<group>"; };
 		D60A8A2F2CFF007F00E48F24 /* AppSectionBoxView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppSectionBoxView.swift; sourceTree = "<group>"; };
-		D60A8A312CFF01FB00E48F24 /* Model.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Model.swift; sourceTree = "<group>"; };
-		D60A8A332CFF021600E48F24 /* ViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewModel.swift; sourceTree = "<group>"; };
+		D60A8A312CFF01FB00E48F24 /* HeadScrollViewRowData.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HeadScrollViewRowData.swift; sourceTree = "<group>"; };
+		D60A8A332CFF021600E48F24 /* HeadScrollViewViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HeadScrollViewViewModel.swift; sourceTree = "<group>"; };
 		D60A8A352CFF0DD000E48F24 /* HeadTabViewRow.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HeadTabViewRow.swift; sourceTree = "<group>"; };
 		D60A8A382CFF106000E48F24 /* HeadTabView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HeadTabView.swift; sourceTree = "<group>"; };
 		D62023572CC956FC002554FC /* Sopt_Appstore.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Sopt_Appstore.app; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -129,6 +131,8 @@
 		D64571702CF88D690016DDD8 /* Tap.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Tap.swift; sourceTree = "<group>"; };
 		D645717E2CF8A0E30016DDD8 /* EntertainmentView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EntertainmentView.swift; sourceTree = "<group>"; };
 		D64BC8422CFF241200852010 /* AppRow.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppRow.swift; sourceTree = "<group>"; };
+		D64BC8452CFF271A00852010 /* SwiftUIAppViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SwiftUIAppViewModel.swift; sourceTree = "<group>"; };
+		D64BC8472CFF273300852010 /* SwiftUIApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SwiftUIApp.swift; sourceTree = "<group>"; };
 		D65BFECD2CD3FB1700797234 /* CharListView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CharListView.swift; sourceTree = "<group>"; };
 		D6B32D8A2CD1DD74003EF497 /* FinanceViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FinanceViewController.swift; sourceTree = "<group>"; };
 		D6B825C42CF82D33006834CB /* DefalutView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DefalutView.swift; sourceTree = "<group>"; };
@@ -199,7 +203,8 @@
 			isa = PBXGroup;
 			children = (
 				D64571702CF88D690016DDD8 /* Tap.swift */,
-				D60A8A312CFF01FB00E48F24 /* Model.swift */,
+				D60A8A312CFF01FB00E48F24 /* HeadScrollViewRowData.swift */,
+				D64BC8472CFF273300852010 /* SwiftUIApp.swift */,
 			);
 			path = Model;
 			sourceTree = "<group>";
@@ -207,7 +212,8 @@
 		D60A8A2C2CFEFDE500E48F24 /* ViewModel */ = {
 			isa = PBXGroup;
 			children = (
-				D60A8A332CFF021600E48F24 /* ViewModel.swift */,
+				D60A8A332CFF021600E48F24 /* HeadScrollViewViewModel.swift */,
+				D64BC8452CFF271A00852010 /* SwiftUIAppViewModel.swift */,
 			);
 			path = ViewModel;
 			sourceTree = "<group>";
@@ -577,7 +583,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				D60A8A322CFF01FB00E48F24 /* Model.swift in Sources */,
+				D60A8A322CFF01FB00E48F24 /* HeadScrollViewRowData.swift in Sources */,
 				D60A8A2E2CFEFE5600E48F24 /* FinanceView.swift in Sources */,
 				D63E7C2A2CCB64D50092D225 /* ReviewTopViewController.swift in Sources */,
 				D6B32D8B2CD1DD74003EF497 /* FinanceViewController.swift in Sources */,
@@ -607,6 +613,7 @@
 				D60A8A302CFF007F00E48F24 /* AppSectionBoxView.swift in Sources */,
 				D60A8A392CFF106000E48F24 /* HeadTabView.swift in Sources */,
 				D6D951162CF8171D00E34141 /* RootViewController.swift in Sources */,
+				D64BC8482CFF273300852010 /* SwiftUIApp.swift in Sources */,
 				D636D24B2CD315FE00C8C1E2 /* CollectionViewRow.swift in Sources */,
 				D63E7C322CCB64D50092D225 /* UpdateInfoViewController.swift in Sources */,
 				D63E7C3D2CCBC7BD0092D225 /* VersionPageViewController.swift in Sources */,
@@ -614,7 +621,8 @@
 				D63390F92CF756ED001164C8 /* MainView.swift in Sources */,
 				D636D2492CD2ABCA00C8C1E2 /* AppHorizontalScrollView.swift in Sources */,
 				D63E7C332CCB64D50092D225 /* AppDelegate.swift in Sources */,
-				D60A8A342CFF021600E48F24 /* ViewModel.swift in Sources */,
+				D64BC8462CFF271A00852010 /* SwiftUIAppViewModel.swift in Sources */,
+				D60A8A342CFF021600E48F24 /* HeadScrollViewViewModel.swift in Sources */,
 				D636D2382CD24E9900C8C1E2 /* ComponentExtension.swift in Sources */,
 				D636D23C2CD260A300C8C1E2 /* ApptitleView.swift in Sources */,
 				D63E7C342CCB64D50092D225 /* SceneDelegate.swift in Sources */,
