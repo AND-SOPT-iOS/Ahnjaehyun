@@ -9,6 +9,7 @@ import SwiftUI
 
 struct AppChartView: View {
     
+    @ObservedObject var viewModel: NavigationViewModel
     let appList = App.mockData
     @State private var selectedApp: App?
     
@@ -20,8 +21,15 @@ struct AppChartView: View {
                 
                 ForEach(appList, id: \.ranking) { app in
                     AppRow(app: app)
+                        .onTapGesture {
+                            viewModel.isNavigating = true
+                        }
                 }
                 .padding(.horizontal, 13)
+                
+            }
+            .onAppear{
+                print("\(viewModel.isNavigating)")
                 
             }
             .background(Color.black.ignoresSafeArea())
@@ -34,7 +42,3 @@ struct AppChartView: View {
 }
 
 
-
-#Preview{
-    AppChartView()
-}

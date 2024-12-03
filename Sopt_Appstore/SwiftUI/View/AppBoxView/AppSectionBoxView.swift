@@ -8,6 +8,9 @@
 import SwiftUI
 
 struct AppSectionBoxView: View {
+    
+    @ObservedObject var viewModel: NavigationViewModel
+    
     let headerTitle: String
     let headerDescript: String
     
@@ -26,7 +29,7 @@ struct AppSectionBoxView: View {
                     .foregroundColor(.white)
                     .padding(.leading)
                 
-                NavigationLink(destination: AppChartView()) {
+                NavigationLink(destination: AppChartView(viewModel:viewModel)) {
                     Image(systemName: "chevron.right")
                         .foregroundColor(.gray)
                 }
@@ -43,6 +46,7 @@ struct AppSectionBoxView: View {
                     LazyVGrid(columns: columns, spacing: 6) {
                         ForEach(pageApps) { app in
                             HomeAppRow(app: app)
+                               
                         }
                     }
                     .padding(.horizontal)

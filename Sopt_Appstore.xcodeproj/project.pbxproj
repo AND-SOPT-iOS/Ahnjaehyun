@@ -58,6 +58,7 @@
 		D64BC8482CFF273300852010 /* SwiftUIApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = D64BC8472CFF273300852010 /* SwiftUIApp.swift */; };
 		D65BFECE2CD3FB1700797234 /* CharListView.swift in Sources */ = {isa = PBXBuildFile; fileRef = D65BFECD2CD3FB1700797234 /* CharListView.swift */; };
 		D669BF812CFF387F00F196DF /* GotoTossView.swift in Sources */ = {isa = PBXBuildFile; fileRef = D669BF802CFF387F00F196DF /* GotoTossView.swift */; };
+		D669BF832CFF3D0E00F196DF /* NavigationViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = D669BF822CFF3D0E00F196DF /* NavigationViewModel.swift */; };
 		D6B32D8B2CD1DD74003EF497 /* FinanceViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = D6B32D8A2CD1DD74003EF497 /* FinanceViewController.swift */; };
 		D6B825C52CF82D34006834CB /* DefalutView.swift in Sources */ = {isa = PBXBuildFile; fileRef = D6B825C42CF82D33006834CB /* DefalutView.swift */; };
 		D6BD34742CDC45E300D4E69C /* Alamofire in Frameworks */ = {isa = PBXBuildFile; productRef = D6BD34732CDC45E300D4E69C /* Alamofire */; };
@@ -136,6 +137,7 @@
 		D64BC8472CFF273300852010 /* SwiftUIApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SwiftUIApp.swift; sourceTree = "<group>"; };
 		D65BFECD2CD3FB1700797234 /* CharListView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CharListView.swift; sourceTree = "<group>"; };
 		D669BF802CFF387F00F196DF /* GotoTossView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GotoTossView.swift; sourceTree = "<group>"; };
+		D669BF822CFF3D0E00F196DF /* NavigationViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NavigationViewModel.swift; sourceTree = "<group>"; };
 		D6B32D8A2CD1DD74003EF497 /* FinanceViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FinanceViewController.swift; sourceTree = "<group>"; };
 		D6B825C42CF82D33006834CB /* DefalutView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DefalutView.swift; sourceTree = "<group>"; };
 		D6D951152CF8171D00E34141 /* RootViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RootViewController.swift; sourceTree = "<group>"; };
@@ -217,6 +219,7 @@
 			children = (
 				D60A8A332CFF021600E48F24 /* HeadTabviewViewViewModel.swift */,
 				D64BC8452CFF271A00852010 /* SwiftUIAppViewModel.swift */,
+				D669BF822CFF3D0E00F196DF /* NavigationViewModel.swift */,
 			);
 			path = ViewModel;
 			sourceTree = "<group>";
@@ -612,6 +615,7 @@
 				D621CD992CDE292200B3A420 /* RegisterViewController.swift in Sources */,
 				D6B825C52CF82D34006834CB /* DefalutView.swift in Sources */,
 				D63E7C302CCB64D50092D225 /* ReviewBottomViewController.swift in Sources */,
+				D669BF832CFF3D0E00F196DF /* NavigationViewModel.swift in Sources */,
 				D621CD782CDDFEEA00B3A420 /* Environment.swift in Sources */,
 				D64571712CF88D690016DDD8 /* Tap.swift in Sources */,
 				D60A8A302CFF007F00E48F24 /* AppSectionBoxView.swift in Sources */,

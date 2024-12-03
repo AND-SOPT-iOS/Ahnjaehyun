@@ -10,36 +10,38 @@ import SwiftUI
 struct MainView: View {
     
     @State private var selected: Tab = .left
-    @State private var isNavigating = false
-    
+    @StateObject private var navigationViewModel = NavigationViewModel()
+
     var body: some View {
-        ZStack {
-            NavigationStack {
-                Group {
-                    if selected == .left {
-                        FinanceView(isNavigating: $isNavigating)
-                            .toolbar(.hidden, for: .tabBar)
-                    } else if selected == .center {
-                        AppChartView()
-                            .toolbar(.hidden, for: .tabBar)
-                    } else if selected == .right {
-                        DefaultView2()
-                            .toolbar(.hidden, for: .tabBar)
+        NavigationStack {
+            ZStack {
+            
+                
+                if selected == .left {
+                    FinanceView(viewModel: navigationViewModel)
+                        .toolbar(.hidden, for: .tabBar)
+                } else if selected == .center {
+                    AppChartView(viewModel: navigationViewModel)
+                        .toolbar(.hidden, for: .tabBar)
+                } else if selected == .right {
+                    DefaultView2()
+                        .toolbar(.hidden, for: .tabBar)
+                }
+                
+                
+                
+                VStack {
+                    Spacer()
+                    if !navigationViewModel.isNavigating {
+                        tabBar
                     }
                 }
             }
+            .background(Color.black)
             
-            VStack {
-                Spacer()
-                if !isNavigating {
-                    tabBar
-                }
-            }
-        }
+        }.navigationBarBackButtonHidden(true)
         
     }
-    
-    
     var tabBar: some View {
         HStack {
             Spacer()

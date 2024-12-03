@@ -9,7 +9,7 @@ import SwiftUI
 
 struct FinanceView: View {
     
-    @Binding var isNavigating: Bool
+    @ObservedObject var viewModel: NavigationViewModel
 
     @StateObject private var tabviewViewModel = HeadTabviewViewViewModel()
     @StateObject private var appViewModel = SwiftUIAppViewModel()
@@ -21,10 +21,10 @@ struct FinanceView: View {
                     
                     HeadTabView(viewModel: tabviewViewModel)
                     
-                    AppSectionBoxView(headerTitle: "필수 금융 앱",headerDescript: "App Store 에디터가 직접 골랐습니다", apps: appViewModel.filterApps(by: "utilities"))
+                    AppSectionBoxView(viewModel: viewModel, headerTitle: "필수 금융 앱",headerDescript: "App Store 에디터가 직접 골랐습니다", apps: appViewModel.filterApps(by: "utilities"))
                         .frame(height: 310)
                     
-                    AppSectionBoxView(headerTitle: "유료 순위",headerDescript: "App Store 에디터가 직접 골랐습니다", apps: appViewModel.sortAppsByRanking())
+                    AppSectionBoxView(viewModel: viewModel, headerTitle: "유료 순위",headerDescript: "App Store 에디터가 직접 골랐습니다", apps: appViewModel.sortAppsByRanking())
                         .frame(height: 310)
                     
                 }
@@ -33,8 +33,8 @@ struct FinanceView: View {
             .navigationTitle("금융")
             .navigationBarTitleDisplayMode(.inline)
             .toolbarBackground(Color(red: 22/255, green: 22/255, blue: 24/255).opacity(0.95), for: .navigationBar)
-            .onAppear{
-                isNavigating = false
+            .onAppear {
+                viewModel.isNavigating = false
             }
         }
     }
