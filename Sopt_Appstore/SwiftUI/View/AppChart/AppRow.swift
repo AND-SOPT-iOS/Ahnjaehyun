@@ -31,7 +31,7 @@ struct AppRow: View {
             Spacer()
             
             Button(action: {
-
+                
             }) {
                 Text(app.downloadState.rawValue)
                     .font(.body)
@@ -86,7 +86,7 @@ struct HomeAppRow: View {
             Spacer()
             
             Button(action: {
-
+                
             }) {
                 Text(app.downloadState.rawValue)
                     .font(.body)
@@ -102,7 +102,7 @@ struct HomeAppRow: View {
         .padding(10)
         .background(Color.black)
         .cornerRadius(10)
-    
+        
     }
 }
 

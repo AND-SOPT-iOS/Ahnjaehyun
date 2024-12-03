@@ -10,36 +10,35 @@ import SwiftUI
 struct MainView: View {
     
     @State private var selected: Tab = .left
+    @State private var isNavigating = false
     
     var body: some View {
         ZStack {
-            TabView(selection: $selected) {
+            NavigationStack {
                 Group {
-                    NavigationStack {
-                        FinanceView()
-                    }
-                    .tag(Tab.left)
-                    
-                    NavigationStack {
+                    if selected == .left {
+                        FinanceView(isNavigating: $isNavigating)
+                            .toolbar(.hidden, for: .tabBar)
+                    } else if selected == .center {
                         AppChartView()
-                    }
-                    .tag(Tab.center)
-                    
-                    NavigationStack {
+                            .toolbar(.hidden, for: .tabBar)
+                    } else if selected == .right {
                         DefaultView2()
+                            .toolbar(.hidden, for: .tabBar)
                     }
-                    .tag(Tab.right)
                 }
-                .toolbar(.hidden, for: .tabBar)
             }
             
             VStack {
                 Spacer()
-                tabBar
+                if !isNavigating {
+                    tabBar
+                }
             }
-            
         }
+        
     }
+    
     
     var tabBar: some View {
         HStack {

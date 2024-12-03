@@ -9,10 +9,11 @@ import SwiftUI
 
 struct FinanceView: View {
     
+    @Binding var isNavigating: Bool
+
     @StateObject private var tabviewViewModel = HeadTabviewViewViewModel()
     @StateObject private var appViewModel = SwiftUIAppViewModel()
-
-
+    
     var body: some View {
         NavigationStack {
             ScrollView {
@@ -22,21 +23,20 @@ struct FinanceView: View {
                     
                     AppSectionBoxView(headerTitle: "필수 금융 앱",headerDescript: "App Store 에디터가 직접 골랐습니다", apps: appViewModel.filterApps(by: "utilities"))
                         .frame(height: 310)
-
+                    
                     AppSectionBoxView(headerTitle: "유료 순위",headerDescript: "App Store 에디터가 직접 골랐습니다", apps: appViewModel.sortAppsByRanking())
                         .frame(height: 310)
-
+                    
                 }
             }
             .background(Color.black.edgesIgnoringSafeArea(.all))
             .navigationTitle("금융")
             .navigationBarTitleDisplayMode(.inline)
             .toolbarBackground(Color(red: 22/255, green: 22/255, blue: 24/255).opacity(0.95), for: .navigationBar)
+            .onAppear{
+                isNavigating = false
+            }
         }
     }
 }
 
-
-#Preview {
-    FinanceView()
-}

@@ -29,7 +29,7 @@ struct HeadTabView: View {
             }
         }
         .tabViewStyle(PageTabViewStyle(indexDisplayMode: .always))
-        .frame(height: 300) 
+        .frame(height: 300)
     }
 }
 
