@@ -21,7 +21,7 @@ struct FinanceView: View {
                     
                     HeadTabView(viewModel: tabviewViewModel)
                     
-                    AppSectionBoxView(headerTitle: "필수 금융 앱",headerDescript: "App Store 에디터가 직접 골랐습니다", apps: appList)
+                    AppSectionBoxView(headerTitle: "필수 금융 앱",headerDescript: "App Store 에디터가 직접 골랐습니다", apps: appViewModel.filterApps(by: "utilities"))
                         .frame(height: 310)
 
                     AppSectionBoxView(headerTitle: "유료 순위",headerDescript: "App Store 에디터가 직접 골랐습니다", apps: appList)

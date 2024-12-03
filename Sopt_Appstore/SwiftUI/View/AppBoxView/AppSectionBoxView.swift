@@ -11,7 +11,8 @@ struct AppSectionBoxView: View {
     let headerTitle: String
     let headerDescript: String
     
-    let apps: [App]
+    let apps: [SwiftUIApp]
+    
     let columns = Array(repeating: GridItem(.flexible(), spacing: 8), count: 1)
     
     var body: some View {
@@ -51,17 +52,9 @@ struct AppSectionBoxView: View {
         }
     }
     
-    private func paginate(apps: [App], itemsPerPage: Int) -> [[App]] {
+    private func paginate(apps: [SwiftUIApp], itemsPerPage: Int) -> [[SwiftUIApp]] {
         stride(from: 0, to: apps.count, by: itemsPerPage).map {
             Array(apps[$0..<min($0 + itemsPerPage, apps.count)])
         }
     }
-}
-
-#Preview {
-    AppSectionBoxView(
-        headerTitle: "필수 금융 앱",
-        headerDescript: "App Store 에디터가 직접 골랐습니다",
-        apps: App.mockData
-    )
 }
