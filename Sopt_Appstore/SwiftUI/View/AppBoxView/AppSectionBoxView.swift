@@ -9,16 +9,33 @@ import SwiftUI
 
 struct AppSectionBoxView: View {
     let headerTitle: String
+    let headerDescript: String
+    
     let apps: [App]
     let columns = Array(repeating: GridItem(.flexible(), spacing: 8), count: 1)
     
     var body: some View {
-        VStack(alignment: .leading, spacing: 16) {
-            Text(headerTitle)
-                .font(.title2)
-                .fontWeight(.bold)
-                .foregroundColor(.white)
-                .padding(.horizontal)
+        VStack(alignment: .leading, spacing: 0) {
+            
+            HStack{
+                
+                Text(headerTitle)
+                    .font(.title2)
+                    .fontWeight(.bold)
+                    .foregroundColor(.white)
+                    .padding(.leading)
+                
+                NavigationLink(destination: DefaultView()) {
+                    Image(systemName: "chevron.right")
+                        .foregroundColor(.gray)
+                }
+                
+            }
+            
+            Text(headerDescript)
+                .font(.caption)
+                .foregroundStyle(.secondary)
+                .padding(.leading)
             
             TabView {
                 ForEach(paginate(apps: apps, itemsPerPage: 3), id: \.self) { pageApps in
@@ -30,7 +47,7 @@ struct AppSectionBoxView: View {
                     .padding(.horizontal)
                 }
             }
-            .tabViewStyle(PageTabViewStyle(indexDisplayMode: .always))
+            .tabViewStyle(PageTabViewStyle(indexDisplayMode: .never))
         }
     }
     
@@ -44,6 +61,7 @@ struct AppSectionBoxView: View {
 #Preview {
     AppSectionBoxView(
         headerTitle: "필수 금융 앱",
+        headerDescript: "App Store 에디터가 직접 골랐습니다",
         apps: App.mockData
     )
 }

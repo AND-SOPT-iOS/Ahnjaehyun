@@ -16,12 +16,12 @@ struct MainView: View {
             TabView(selection: $selected) {
                 Group {
                     NavigationStack {
-                        AppChartView()
+                        FinanceView()
                     }
                     .tag(Tab.left)
                     
                     NavigationStack {
-                        DefaultView()
+                        AppChartView()
                     }
                     .tag(Tab.center)
                     
