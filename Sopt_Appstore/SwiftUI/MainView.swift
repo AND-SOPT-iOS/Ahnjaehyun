@@ -9,7 +9,7 @@ import SwiftUI
 
 struct MainView: View {
     
-    @State private var selected: Tab = .a
+    @State private var selected: Tab = .left
     
     var body: some View {
         ZStack {
@@ -18,17 +18,17 @@ struct MainView: View {
                     NavigationStack {
                         AppChartView()
                     }
-                    .tag(Tab.a)
+                    .tag(Tab.left)
                     
                     NavigationStack {
                         DefaultView()
                     }
-                    .tag(Tab.b)
+                    .tag(Tab.center)
                     
                     NavigationStack {
                         DefaultView2()
                     }
-                    .tag(Tab.c)
+                    .tag(Tab.right)
                 }
                 .toolbar(.hidden, for: .tabBar)
             }
@@ -45,52 +45,52 @@ struct MainView: View {
         HStack {
             Spacer()
             Button {
-                selected = .a
+                selected = .left
             } label: {
                 VStack(alignment: .center) {
                     Image(systemName: "house.fill")
                         .resizable()
                         .scaledToFit()
                         .frame(width: 22)
-                    if selected == .a {
+                    if selected == .left {
                         Text("투데이")
                             .font(.system(size: 11))
                     }
                 }
             }
-            .foregroundStyle(selected == .a ? Color.accentColor : Color.gray)
+            .foregroundStyle(selected == .left ? Color.accentColor : Color.gray)
             Spacer()
             Button {
-                selected = .b
+                selected = .center
             } label: {
                 VStack(alignment: .center) {
                     Image(systemName: "app.fill")
                         .resizable()
                         .scaledToFit()
                         .frame(width: 22)
-                    if selected == .b {
+                    if selected == .center {
                         Text("앱")
                             .font(.system(size: 11))
                     }
                 }
             }
-            .foregroundStyle(selected == .b ? Color.accentColor : Color.gray)
+            .foregroundStyle(selected == .center ? Color.accentColor : Color.gray)
             Spacer()
             Button {
-                selected = .c
+                selected = .right
             } label: {
                 VStack(alignment: .center) {
                     Image(systemName: "cube.box.fill")
                         .resizable()
                         .scaledToFit()
                         .frame(width: 22)
-                    if selected == .c {
+                    if selected == .right {
                         Text("아케이드")
                             .font(.system(size: 11))
                     }
                 }
             }
-            .foregroundStyle(selected == .c ? Color.accentColor : Color.gray)
+            .foregroundStyle(selected == .right ? Color.accentColor : Color.gray)
             Spacer()
         }
         .padding()

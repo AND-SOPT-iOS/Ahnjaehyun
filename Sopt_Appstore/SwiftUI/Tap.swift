@@ -8,5 +8,5 @@
 import Foundation
 
 enum Tab {
-    case a, b, c
+    case left, center, right
 }

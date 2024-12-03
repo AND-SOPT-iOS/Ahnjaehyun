@@ -18,14 +18,10 @@ struct AppChartView: View {
             
             ScrollView {
                 
-                
-                
                 ForEach(appList, id: \.ranking) { app in
                     AppRow(app: app)
-                    
                 }
                 .padding(.horizontal, 13)
-                
                 
             }
             .background(Color.black.ignoresSafeArea())
@@ -34,9 +30,7 @@ struct AppChartView: View {
         .navigationTitle("Chart")
         .navigationBarTitleDisplayMode(.inline)
         .toolbarBackground(Color(red: 22/255, green: 22/255, blue: 24/255).opacity(0.95), for: .navigationBar)
-        
     }
-    
 }
 
 
