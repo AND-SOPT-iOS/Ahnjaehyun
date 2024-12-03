@@ -40,8 +40,15 @@ class SwiftUIAppViewModel: ObservableObject {
     }
     
     func filterApps(by category: String) -> [SwiftUIApp] {
-        apps.filter { $0.category == category }
-    }
+            apps
+                .filter { $0.category == category }
+                .enumerated()
+                .map { index, app in
+                    var updatedApp = app
+                    updatedApp.ranking = index + 1
+                    return updatedApp
+                }
+        }
     
     func sortAppsByRanking() -> [SwiftUIApp] {
         apps.sorted { $0.ranking < $1.ranking }

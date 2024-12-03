@@ -42,7 +42,7 @@ struct AppSectionBoxView: View {
                 ForEach(paginate(apps: apps, itemsPerPage: 3), id: \.self) { pageApps in
                     LazyVGrid(columns: columns, spacing: 6) {
                         ForEach(pageApps) { app in
-                            AppRow(app: app)
+                            HomeAppRow(app: app)
                         }
                     }
                     .padding(.horizontal)

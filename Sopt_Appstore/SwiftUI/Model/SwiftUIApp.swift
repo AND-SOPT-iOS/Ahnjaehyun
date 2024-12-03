@@ -14,6 +14,6 @@ struct SwiftUIApp: Identifiable, Hashable {
     let downloadState: DownloadState
     let subTitle: String
     let category: String
-    let ranking: Int
+    var ranking: Int
 }
 
