@@ -52,6 +52,7 @@ struct AppRow: View {
                 EntertainmentView(app: app)
             } else if app.ranking==1 {
                 TossViewRepresentable()
+                    .ignoresSafeArea()
             } else {
                 DefaultView()
             }

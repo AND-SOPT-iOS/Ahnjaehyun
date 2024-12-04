@@ -121,7 +121,10 @@ class TossViewController: UIViewController, UIScrollViewDelegate {
         myTabBarController.view.snp.makeConstraints { make in
             make.leading.trailing.bottom.equalTo(view)
             make.height.equalTo(50)
+            make.bottom.equalTo(myTabBarController.tabBar.snp.top)
         }
+        myTabBarController.additionalSafeAreaInsets.bottom = 0
+
     }
     
     
